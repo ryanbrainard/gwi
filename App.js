@@ -1,23 +1,41 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import {StyleSheet, View, FlatList, SafeAreaView} from 'react-native';
 import CharacterTile from "./CharacterTile";
 
 export default class App extends React.Component {
+
     render() {
         return (
-            <View style={styles.container}>
-                <CharacterTile char='키'/>
-                <CharacterTile char='끼'/>
-            </View>
+            <SafeAreaView style={styles.safeArea}>
+                <View style={styles.container}>
+                    <FlatList
+                        data={[
+                            {key: '기', color: 'red'},
+                            {key: '키', color: 'orange'},
+                            {key: '끼', color: 'yellow'},
+                            {key: '삼', color: 'green'},
+                            {key: '쌈', color: 'blue'},
+                        ]}
+                        renderItem={({item}) =>
+                            <CharacterTile
+                                char={item.key}
+                                color={item.color}
+                            />}
+                        numColumns={3}
+                    />
+                </View>
+            </SafeAreaView>
         );
     }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    safeArea: {
+        flex: 1,
+    },
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+        alignItems: 'center',
+    },
 });
