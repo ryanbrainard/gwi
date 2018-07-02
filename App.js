@@ -1,26 +1,20 @@
 import React from "react";
-import { StyleSheet, View, FlatList, SafeAreaView } from "react-native";
-import CharacterTile from "./components/CharacterTile";
+import { SafeAreaView, StyleSheet } from "react-native";
+import CharacterGrid from "./components/CharacterGrid";
 
 export default class App extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.safeArea}>
-        <View style={styles.container}>
-          <FlatList
-            data={[
-              { key: "기", color: "red" },
-              { key: "키", color: "orange" },
-              { key: "끼", color: "yellow" },
-              { key: "삼", color: "green" },
-              { key: "쌈", color: "blue" }
-            ]}
-            renderItem={({ item }) => (
-              <CharacterTile char={item.key} color={item.color} />
-            )}
-            numColumns={3}
-          />
-        </View>
+        <CharacterGrid
+          data={[
+            { key: "기", color: "red" },
+            { key: "키", color: "orange" },
+            { key: "끼", color: "yellow" },
+            { key: "삼", color: "green" },
+            { key: "쌈", color: "blue" }
+          ]}
+        />
       </SafeAreaView>
     );
   }
@@ -29,10 +23,5 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    alignItems: "center"
   }
 });

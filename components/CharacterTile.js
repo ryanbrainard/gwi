@@ -36,8 +36,8 @@ export default class CharacterTile extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: Dimensions.get("window").width * 0.3,
-    height: Dimensions.get("window").width * 0.3,
+    width: Dimensions.get("window").width * 0.3, // TODO: customizable with grid size
+    height: Dimensions.get("window").width * 0.3, // TODO: customizable with grid size
     borderWidth: 2,
     borderColor: "white",
     alignItems: "center",
