@@ -5,16 +5,16 @@ import PropTypes from "prop-types";
 
 export default class CharacterGrid extends React.Component {
   static propTypes = {
-    data: PropTypes.arrayOf(PropTypes.shape({ key: PropTypes.string }))
+    characterSet: PropTypes.arrayOf(PropTypes.string)
   };
 
   render() {
-    const { data } = this.props;
+    const { characterSet } = this.props;
 
     return (
       <View style={styles.container}>
         <FlatList
-          data={data}
+          data={characterSet.map(char => ({ key: char }))}
           renderItem={({ item }) => (
             <CharacterTile char={item.key} color={this.nextColor()} />
           )}

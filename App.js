@@ -1,27 +1,27 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
-import CharacterGrid from "./components/CharacterGrid";
+import { createStackNavigator } from "react-navigation";
+import HomeScreen from "./components/HomeScreen";
+import PracticeListScreen from "./components/PracticeListScreen";
+import PracticeDetailScreen from "./components/PracticeDetailScreen";
+import QuizListScreen from "./components/QuizListScreen";
+import QuizDetailScreen from "./components/QuizDetailScreen";
 
 export default class App extends React.Component {
   render() {
-    return (
-      <SafeAreaView style={styles.safeArea}>
-        <CharacterGrid
-          data={[
-            { key: "기", color: "red" },
-            { key: "키", color: "orange" },
-            { key: "끼", color: "yellow" },
-            { key: "삼", color: "green" },
-            { key: "쌈", color: "blue" }
-          ]}
-        />
-      </SafeAreaView>
-    );
+    return <RootStack />;
   }
 }
 
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1
+// TODO: can these constants be extracted somewhere?
+const RootStack = createStackNavigator(
+  {
+    Home: HomeScreen,
+    PracticeList: PracticeListScreen,
+    PracticeDetail: PracticeDetailScreen,
+    QuizList: QuizListScreen,
+    QuizDetail: QuizDetailScreen
+  },
+  {
+    initialRouteName: "Home"
   }
-});
+);
