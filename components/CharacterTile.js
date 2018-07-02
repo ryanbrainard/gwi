@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
-import assets from "./assets";
+import assets from "../assets";
 
 export default class CharacterTile extends React.Component {
   static propTypes = {
