@@ -1,12 +1,7 @@
 import React from "react";
 import CharacterGrid from "./CharacterGrid";
 import { View } from "react-native";
-
-// TODO: extract
-const characterSets = {
-  ㄱㄲㅋ: ["기", "키", "끼"],
-  ㅅㅆ: ["삼", "쌈"]
-};
+import characterSets from "../characterSets";
 
 export default class PracticeDetailScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
