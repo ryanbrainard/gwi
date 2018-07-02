@@ -20,9 +20,9 @@ export default class CharacterTile extends React.Component {
     const { char, color } = this.props;
 
     return (
-      <View style={[styles.container, { backgroundColor: color }]}>
+      <View style={styles.container}>
         <TouchableOpacity
-          color={color}
+          style={[styles.button, { backgroundColor: color }]}
           onPress={() => {
             Expo.Audio.Sound.create(assets.sounds[char], { shouldPlay: true });
           }}
@@ -36,10 +36,12 @@ export default class CharacterTile extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    borderWidth: 2,
+    borderColor: "white"
+  },
+  button: {
     width: Dimensions.get("window").width * 0.3, // TODO: customizable with grid size
     height: Dimensions.get("window").width * 0.3, // TODO: customizable with grid size
-    borderWidth: 2,
-    borderColor: "white",
     alignItems: "center",
     justifyContent: "center"
   },
