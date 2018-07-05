@@ -1,6 +1,7 @@
 import React from "react";
 import PracticeDetailButton from "./PracticeDetailButton";
 import { View } from "react-native";
+import CharacterSet from "../models/CharacterSet";
 
 export default class PracticeListScreen extends React.Component {
   static navigationOptions = {
@@ -12,11 +13,13 @@ export default class PracticeListScreen extends React.Component {
 
     return (
       <View>
-        <PracticeDetailButton
-          characterSetName="ㄱㄲㅋ"
-          navigation={navigation}
-        />
-        <PracticeDetailButton characterSetName="ㅅㅆ" navigation={navigation} />
+        {CharacterSet.all().map(charSet => (
+          <PracticeDetailButton
+            key={charSet.key}
+            charSet={charSet}
+            navigation={navigation}
+          />
+        ))}
       </View>
     );
   }

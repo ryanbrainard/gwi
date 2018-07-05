@@ -8,11 +8,11 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
-import assets from "../assets";
+import Character from "../models/Character";
 
 export default class CharacterTile extends React.Component {
   static propTypes = {
-    char: PropTypes.string,
+    char: PropTypes.instanceOf(Character).isRequired,
     color: PropTypes.string
   };
 
@@ -24,10 +24,13 @@ export default class CharacterTile extends React.Component {
         <TouchableOpacity
           style={[styles.button, { backgroundColor: color }]}
           onPress={() => {
-            Expo.Audio.Sound.create(assets.sounds[char], { shouldPlay: true });
+            // TODO: error handle
+            // TODO: show indicator while playing?
+            // TODO: pass in sound? make it controlled on model?
+            Expo.Audio.Sound.create(char.voices.default, { shouldPlay: true });
           }}
         >
-          <Text style={styles.text}>{char}</Text>
+          <Text style={styles.text}>{char.name}</Text>
         </TouchableOpacity>
       </View>
     );

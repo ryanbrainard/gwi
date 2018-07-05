@@ -1,21 +1,21 @@
 import React from "react";
 import CharacterGrid from "./CharacterGrid";
 import { View } from "react-native";
-import characterSets from "../characterSets";
 
 export default class PracticeDetailScreen extends React.Component {
+  // TODO: how to do prop types on navigation params
+
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam("characterSetName")
+    title: navigation.getParam("charSet").name
   });
 
   render() {
     const { navigation } = this.props;
-    const characterSetName = navigation.getParam("characterSetName");
-    const characterSet = characterSets[characterSetName];
+    const charSet = navigation.getParam("charSet");
 
     return (
       <View style={{ flex: 1 }}>
-        <CharacterGrid characterSet={characterSet} />
+        <CharacterGrid charSet={charSet} />
       </View>
     );
   }

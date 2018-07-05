@@ -2,21 +2,22 @@ import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
 import CharacterTile from "./CharacterTile";
 import PropTypes from "prop-types";
+import CharacterSet from "../models/CharacterSet";
 
 export default class CharacterGrid extends React.Component {
   static propTypes = {
-    characterSet: PropTypes.arrayOf(PropTypes.string)
+    charSet: PropTypes.instanceOf(CharacterSet).isRequired
   };
 
   render() {
-    const { characterSet } = this.props;
+    const { charSet } = this.props;
 
     return (
       <View style={styles.container}>
         <FlatList
-          data={characterSet.map(char => ({ key: char }))}
+          data={charSet.characters}
           renderItem={({ item }) => (
-            <CharacterTile char={item.key} color={this.nextColor()} />
+            <CharacterTile char={item} color={this.nextColor()} />
           )}
           numColumns={3} // TODO: customizable and change tiles
         />
