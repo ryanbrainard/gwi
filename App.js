@@ -4,10 +4,12 @@ import {
   createBottomTabNavigator,
   createStackNavigator
 } from "react-navigation";
+import AboutScreen from "./components/AboutScreen";
 import PracticeDetailScreen from "./components/PracticeDetailScreen";
 import PracticeListScreen from "./components/PracticeListScreen";
 import QuizDetailScreen from "./components/QuizDetailScreen";
 import QuizListScreen from "./components/QuizListScreen";
+import SettingsScreen from "./components/SettingsScreen";
 
 export default class App extends React.Component {
   render() {
@@ -25,10 +27,20 @@ const QuizStack = createStackNavigator({
   QuizDetail: QuizDetailScreen
 });
 
+const SettingsStack = createStackNavigator({
+  _: SettingsScreen
+});
+
+const AboutStack = createStackNavigator({
+  _: AboutScreen
+});
+
 const RootStack = createBottomTabNavigator(
   {
     Practice: PracticeStack,
-    Quiz: QuizStack
+    Quiz: QuizStack,
+    Settings: SettingsStack,
+    About: AboutStack
   },
   {
     initialRouteName: "Practice",
@@ -40,6 +52,10 @@ const RootStack = createBottomTabNavigator(
           iconName = "book-open-page-variant";
         } else if (routeName === "Quiz") {
           iconName = "cards-outline";
+        } else if (routeName === "Settings") {
+          iconName = "settings";
+        } else if (routeName === "About") {
+          iconName = "information";
         }
 
         // You can return any component that you like here! We usually use an
