@@ -1,22 +1,22 @@
-import React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
-import CharacterTile from "./CharacterTile";
 import PropTypes from "prop-types";
-import CharacterSet from "../models/CharacterSet";
+import React from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import Character from "../models/Character";
+import CharacterTile from "./CharacterTile";
 
 export default class CharacterGrid extends React.Component {
   static propTypes = {
-    charSet: PropTypes.instanceOf(CharacterSet).isRequired
+    chars: PropTypes.arrayOf(PropTypes.instanceOf(Character)).isRequired
   };
 
   render() {
-    const { charSet } = this.props;
+    const { chars } = this.props;
 
     return (
       <View style={styles.container}>
         <FlatList
-          data={charSet.characters}
-          renderItem={({ item }) => (
+          data={chars}
+          renderItem={({ item, index }) => (
             <CharacterTile char={item} color={this.nextColor()} />
           )}
           numColumns={3} // TODO: customizable and change tiles

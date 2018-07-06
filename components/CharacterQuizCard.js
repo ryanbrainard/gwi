@@ -1,16 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Expo from "expo";
-import Character from "../models/Character";
-import _ from "lodash";
-import { Button, StyleSheet, Text, View } from "react-native";
-import CharacterTile from "./CharacterTile";
 import { Feather } from "@expo/vector-icons";
+import PropTypes from "prop-types";
+import React from "react";
+import { Button, StyleSheet, View } from "react-native";
+import Character from "../models/Character";
+import CharacterTile from "./CharacterTile";
 
-export default class CharacterQuiz extends React.Component {
+export default class CharacterQuizCard extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
-    charUniverse: PropTypes.arrayOf(PropTypes.instanceOf(Character)).isRequired,
+    gotoNext: PropTypes.func,
     numChoices: PropTypes.number
   };
 
@@ -20,42 +18,38 @@ export default class CharacterQuiz extends React.Component {
 
   constructor(props) {
     super(props);
-    const { char, charUniverse, numChoices } = this.props;
+    const { char, numChoices } = this.props;
     this.state = {
-      charChoices: _.shuffle(
-        _.sampleSize(
-          charUniverse.filter(cu => cu !== char),
-          numChoices - 1
-        ).concat(char)
-      ),
+      charChoices: char.choices(numChoices),
       success: undefined
     };
   }
 
   render() {
-    const { char } = this.props;
+    const { char, gotoNext } = this.props;
     const { charChoices, success } = this.state;
-    const unanswered = success === undefined;
 
     return (
       <View style={styles.container}>
         <CharacterTile
           char={char}
           content={<Feather name="play-circle" size={76} />}
-          playOnRender={unanswered}
         />
+
         {charChoices.map(cc => (
           <Button
             key={cc.key}
             title={cc.name}
             onPress={() => {
-              // TODO: error handle sound
-              Expo.Audio.Sound.create(cc.voices.default, { shouldPlay: true });
+              cc.play();
               this.setState({ success: cc === char });
             }}
           />
         ))}
-        {this.renderSuccess(success)}x
+
+        {this.renderSuccess(success)}
+
+        {success && gotoNext && <Button title="Next" onPress={gotoNext} />}
       </View>
     );
   }

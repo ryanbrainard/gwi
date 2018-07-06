@@ -29,7 +29,7 @@ export default class CharacterSet {
         return new CharacterSet(
           setName,
           Object.entries(setValue).map(([charName, charValue]) => {
-            return new Character(charName, charValue.voices);
+            return new Character(setName, charName, charValue.voices);
           })
         );
       }

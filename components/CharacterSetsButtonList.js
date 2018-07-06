@@ -1,7 +1,7 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { Button, View } from "react-native";
 import CharacterSet from "../models/CharacterSet";
-import PropTypes from "prop-types";
 
 export default class CharacterSetsButtonList extends React.Component {
   static propTypes = {

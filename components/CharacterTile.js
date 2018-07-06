@@ -1,6 +1,5 @@
-import React from "react";
-import Expo from "expo";
 import PropTypes from "prop-types";
+import React from "react";
 import {
   Dimensions,
   StyleSheet,
@@ -14,36 +13,22 @@ export default class CharacterTile extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
     color: PropTypes.string,
-    content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-    playOnRender: PropTypes.bool
+    content: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
   };
 
   render() {
-    const { char, color, content, playOnRender } = this.props;
-
-    if (playOnRender) {
-      this.play();
-    }
+    const { char, color, content } = this.props;
 
     return (
       <View style={styles.container}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: color }]}
-          onPress={this.play.bind(this)}
+          onPress={char.play.bind(char)}
         >
           {content ? content : <Text style={styles.text}>{char.name}</Text>}
         </TouchableOpacity>
       </View>
     );
-  }
-
-  play() {
-    // TODO: error handle
-    // TODO: show indicator while playing?
-    // TODO: pass in sound? make it controlled on model?
-    Expo.Audio.Sound.create(this.props.char.voices.default, {
-      shouldPlay: true
-    });
   }
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import CharacterQuiz from "./CharacterQuiz";
+import CharacterQuizCarousel from "./CharacterQuizCarousel";
 
 export default class QuizDetailScreen extends React.Component {
   // TODO: how to do prop types on navigation params
@@ -13,13 +13,9 @@ export default class QuizDetailScreen extends React.Component {
     const { navigation } = this.props;
     const charSet = navigation.getParam("charSet");
 
-    // TODO: allow user to flip through cards
     return (
       <View style={{ flex: 1 }}>
-        <CharacterQuiz
-          char={charSet.characters[0]}
-          charUniverse={charSet.characters}
-        />
+        <CharacterQuizCarousel chars={charSet.characters} />
       </View>
     );
   }
