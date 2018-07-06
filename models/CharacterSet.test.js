@@ -6,7 +6,6 @@ it("#all", () => {
   expect(all[0].name).toBe("ㄱㄲㅋ");
   expect(all[0].characters.length).toBe(3);
   expect(all[0].characters[0].name).toBe("기");
-  expect(all[0].characters[0].voices.default).toBeTruthy();
 });
 
 it("#find", () => {
