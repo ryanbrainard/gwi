@@ -13,27 +13,37 @@ import Character from "../models/Character";
 export default class CharacterTile extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
-    color: PropTypes.string
+    color: PropTypes.string,
+    content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    playOnRender: PropTypes.bool
   };
 
   render() {
-    const { char, color } = this.props;
+    const { char, color, content, playOnRender } = this.props;
+
+    if (playOnRender) {
+      this.play();
+    }
 
     return (
       <View style={styles.container}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: color }]}
-          onPress={() => {
-            // TODO: error handle
-            // TODO: show indicator while playing?
-            // TODO: pass in sound? make it controlled on model?
-            Expo.Audio.Sound.create(char.voices.default, { shouldPlay: true });
-          }}
+          onPress={this.play.bind(this)}
         >
-          <Text style={styles.text}>{char.name}</Text>
+          {content ? content : <Text style={styles.text}>{char.name}</Text>}
         </TouchableOpacity>
       </View>
     );
+  }
+
+  play() {
+    // TODO: error handle
+    // TODO: show indicator while playing?
+    // TODO: pass in sound? make it controlled on model?
+    Expo.Audio.Sound.create(this.props.char.voices.default, {
+      shouldPlay: true
+    });
   }
 }
 
