@@ -19,10 +19,9 @@ export default class CharacterQuizCarousel extends React.Component {
         ref={c => {
           this._carousel = c;
         }}
-        sliderWidth={windowDims.width * 0.9}
-        // sliderHeight={windowDims.height * 0.9}
+        layout={"stack"}
+        sliderWidth={windowDims.width}
         itemWidth={windowDims.width * 0.7}
-        // itemHeight={windowDims.height * 0.7}
         data={chars}
         renderItem={({ item, index }) => (
           <CharacterQuizCard
