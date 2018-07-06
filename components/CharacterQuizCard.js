@@ -61,7 +61,7 @@ export default class CharacterQuizCard extends React.Component {
       case true:
         return <Feather name="check-circle" size={48} color="#3F681C" />;
       case false:
-        return <Feather name="x-circle" size={48} color="#FB6542" />;
+        return <Feather name="x-circle" size={48} color="tomato" />;
     }
   }
 }
