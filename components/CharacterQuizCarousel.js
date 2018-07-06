@@ -15,12 +15,12 @@ export default class CharacterQuizCarousel extends React.Component {
     const windowDims = Dimensions.get("window");
 
     return (
-      <View style={{ height: windowDims.height * 0.8 }}>
+      <View style={{ height: windowDims.height * 0.7 }}>
         <Carousel
           ref={c => {
             this._carousel = c;
           }}
-          layout={"stack"}
+          loop={true}
           sliderWidth={windowDims.width}
           itemWidth={windowDims.width * 0.8}
           data={chars}

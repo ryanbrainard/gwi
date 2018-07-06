@@ -25,6 +25,12 @@ export default class CharacterQuizCard extends React.Component {
     };
   }
 
+  componentDidUpdate(_, prevState) {
+    if (this.props.gotoNext && this.state.success && !prevState.success) {
+      this.props.gotoNext();
+    }
+  }
+
   render() {
     const { char, gotoNext } = this.props;
     const { charChoices, success } = this.state;
@@ -36,20 +42,23 @@ export default class CharacterQuizCard extends React.Component {
           content={<Feather name="play-circle" size={76} />}
         />
 
-        {charChoices.map(cc => (
-          <Button
-            key={cc.key}
-            title={cc.name}
-            onPress={() => {
-              cc.play();
-              this.setState({ success: cc === char });
-            }}
-          />
-        ))}
+        {charChoices.map(cc => {
+          const ccSuccess = cc === char;
+          return (
+            <Button
+              key={cc.key}
+              title={cc.name}
+              onPress={() => {
+                if (!ccSuccess) {
+                  cc.play();
+                }
+                this.setState({ success: ccSuccess });
+              }}
+            />
+          );
+        })}
 
         {this.renderSuccess(success)}
-
-        {success && gotoNext && <Button title="Next" onPress={gotoNext} />}
       </View>
     );
   }

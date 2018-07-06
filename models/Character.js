@@ -21,8 +21,20 @@ export default class Character {
   // TODO: error handle
   // TODO: show indicator while playing?
   // TODO: pass in sound? make it controlled on model?
-  play() {
-    return Expo.Audio.Sound.create(this._voices.default, { shouldPlay: true });
+  play(onFinish) {
+    return Expo.Audio.Sound.create(this._voices.default, {
+      shouldPlay: true
+    })
+      .then(playback => {
+        playback.setOnPlaybackStatusUpdate(playbackStatus => {
+          if (playbackStatus.didJustFinish) {
+            onFinish && onFinish();
+          }
+        });
+      })
+      .catch(rejection => {
+        /*TODO*/
+      });
   }
 
   // TODO: should this go here?
