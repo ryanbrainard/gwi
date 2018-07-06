@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { Dimensions, View } from "react-native";
 import CharacterQuizCarousel from "./CharacterQuizCarousel";
 
 export default class QuizDetailScreen extends React.Component {
@@ -14,7 +14,13 @@ export default class QuizDetailScreen extends React.Component {
     const charSet = navigation.getParam("charSet");
 
     return (
-      <View style={{ flex: 1 }}>
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
         <CharacterQuizCarousel chars={charSet.characters} />
       </View>
     );

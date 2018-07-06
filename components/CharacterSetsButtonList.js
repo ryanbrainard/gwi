@@ -13,7 +13,7 @@ export default class CharacterSetsButtonList extends React.Component {
     const { navigation, onPressUrl } = this.props;
 
     return (
-      <View>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         {CharacterSet.all().map(charSet => (
           <Button
             key={charSet.key}
