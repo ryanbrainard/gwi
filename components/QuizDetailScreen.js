@@ -1,5 +1,5 @@
 import React from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
 import CharacterQuizCarousel from "./CharacterQuizCarousel";
 
 export default class QuizDetailScreen extends React.Component {

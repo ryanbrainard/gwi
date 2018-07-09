@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 933.8,
+      }
+    }
+  >
+    <RCTScrollView
+      activeAnimationOptions={null}
+      activeAnimationType="timing"
+      activeSlideAlignment="center"
+      activeSlideOffset={20}
+      apparitionDelay={0}
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDelay={5000}
+      autoplayInterval={3000}
+      callbackOffsetMargin={5}
+      collapsable={undefined}
+      containerCustomStyle={Object {}}
+      contentContainerCustomStyle={Object {}}
+      contentContainerStyle={
+        Array [
+          Object {},
+          Object {
+            "paddingLeft": 75,
+            "paddingRight": 75,
+          },
+        ]
+      }
+      data={Array []}
+      decelerationRate="fast"
+      directionalLockEnabled={true}
+      disableVirtualization={false}
+      enableMomentum={false}
+      enableSnap={true}
+      firstItem={0}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      getItemLayout={undefined}
+      hasParallaxImages={false}
+      horizontal={true}
+      inactiveSlideOpacity={0.7}
+      inactiveSlideScale={0.9}
+      inactiveSlideShift={0}
+      initialNumToRender={7}
+      initialScrollIndex={undefined}
+      invertStickyHeaders={false}
+      inverted={false}
+      itemWidth={600}
+      keyExtractor={[Function]}
+      layout="default"
+      lockScrollTimeoutDuration={1000}
+      lockScrollWhileSnapping={false}
+      loop={true}
+      loopClonesPerSide={3}
+      maxToRenderPerBatch={15}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onResponderRelease={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      onSnapToItem={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      onTouchStart={[Function]}
+      overScrollMode="never"
+      pinchGestureEnabled={false}
+      removeClippedSubviews={true}
+      renderItem={[Function]}
+      scrollEventThrottle={1}
+      scrollsToTop={false}
+      shouldOptimizeUpdates={true}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+      slideStyle={Object {}}
+      sliderWidth={750}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "flexDirection": "row",
+          "opacity": 0,
+          "width": 750,
+        }
+      }
+      swipeThreshold={20}
+      updateCellsBatchingPeriod={50}
+      useScrollView={false}
+      vertical={false}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={15}
+    >
+      <View />
+    </RCTScrollView>
+  </View>
+</View>
+`;
