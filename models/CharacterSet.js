@@ -20,11 +20,11 @@ export default class CharacterSet {
   }
 
   static _load() {
-    if (this._all && this._all_index) {
+    if (this._list) {
       return;
     }
 
-    this._all = Object.entries(config.characterSets).map(
+    this._list = Object.entries(config.characterSets).map(
       ([setName, setValue]) => {
         return new CharacterSet(
           setName,
@@ -34,20 +34,10 @@ export default class CharacterSet {
         );
       }
     );
-
-    this._all_index = this._all.reduce((ai, set) => {
-      return Object.assign(ai, { [set.name]: set });
-    }, {});
   }
 
-  static all() {
+  static list() {
     this._load();
-    return this._all;
-  }
-
-  // TODO: is this needed?
-  static find(name) {
-    this._load();
-    return this._all_index[name];
+    return this._list;
   }
 }

@@ -14,7 +14,7 @@ export default class CharacterSetsButtonList extends React.Component {
 
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        {CharacterSet.all().map(charSet => (
+        {CharacterSet.list().map(charSet => (
           <Button
             key={charSet.key}
             title={charSet.name}
