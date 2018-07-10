@@ -11,7 +11,18 @@ exports[`renders correctly 1`] = `
   }
 >
   <RCTScrollView
-    data={undefined}
+    data={
+      Array [
+        Character {
+          "_name": "A",
+          "_voices": undefined,
+        },
+        Character {
+          "_name": "B",
+          "_voices": undefined,
+        },
+      ]
+    }
     disableVirtualization={false}
     getItem={[Function]}
     getItemCount={[Function]}
@@ -35,7 +46,130 @@ exports[`renders correctly 1`] = `
     viewabilityConfigCallbackPairs={Array []}
     windowSize={21}
   >
-    <View />
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderColor": "white",
+                "borderWidth": 2,
+              }
+            }
+          >
+            <View
+              accessibilityComponentType={undefined}
+              accessibilityLabel={undefined}
+              accessibilityTraits={undefined}
+              accessible={true}
+              collapsable={undefined}
+              hasTVPreferredFocus={undefined}
+              hitSlop={undefined}
+              isTVSelectable={true}
+              nativeID={undefined}
+              onLayout={undefined}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#375E97",
+                  "height": 225,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 225,
+                }
+              }
+              testID={undefined}
+              tvParallaxProperties={undefined}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 24,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                A
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "borderColor": "white",
+                "borderWidth": 2,
+              }
+            }
+          >
+            <View
+              accessibilityComponentType={undefined}
+              accessibilityLabel={undefined}
+              accessibilityTraits={undefined}
+              accessible={true}
+              collapsable={undefined}
+              hasTVPreferredFocus={undefined}
+              hitSlop={undefined}
+              isTVSelectable={true}
+              nativeID={undefined}
+              onLayout={undefined}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FB6542",
+                  "height": 225,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 225,
+                }
+              }
+              testID={undefined}
+              tvParallaxProperties={undefined}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontSize": 24,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                B
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
   </RCTScrollView>
 </View>
 `;
