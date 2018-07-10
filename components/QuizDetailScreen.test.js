@@ -3,6 +3,8 @@ import renderer from "react-test-renderer";
 import QuizDetailScreen from "./QuizDetailScreen";
 
 test("renders correctly", () => {
+  jest.mock("Animated");
+
   const navigation = {
     getParam: jest.fn(() => ({ characters: [] }))
   };
