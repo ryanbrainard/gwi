@@ -1,9 +1,10 @@
 import Expo from "expo";
 
 export default class Character {
-  constructor(name, voices) {
+  constructor(name, voices, color) {
     this._name = name;
     this._voices = voices;
+    this._color = color;
   }
 
   get key() {
@@ -12,6 +13,10 @@ export default class Character {
 
   get name() {
     return this._name;
+  }
+
+  get color() {
+    return this._color;
   }
 
   // TODO: should this go here

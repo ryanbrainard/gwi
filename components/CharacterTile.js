@@ -12,20 +12,23 @@ import Character from "../models/Character";
 export default class CharacterTile extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
-    color: PropTypes.string,
-    content: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+    show: PropTypes.bool
+  };
+
+  static defaultProps = {
+    show: true
   };
 
   render() {
-    const { char, color, content } = this.props;
+    const { char, show } = this.props;
 
     return (
       <View style={styles.container}>
         <TouchableOpacity
-          style={[styles.button, { backgroundColor: color }]}
+          style={[styles.button, { backgroundColor: char.color }]}
           onPress={char.play.bind(char)}
         >
-          {content ? content : <Text style={styles.text}>{char.name}</Text>}
+          {<Text style={styles.text}>{show ? char.name : "?"}</Text>}
         </TouchableOpacity>
       </View>
     );
@@ -45,6 +48,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: "bold",
-    fontSize: 24
+    fontSize: 24,
+    color: "black"
   }
 });
