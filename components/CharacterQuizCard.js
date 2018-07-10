@@ -1,4 +1,5 @@
 import { Feather } from "@expo/vector-icons";
+import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 import { Button, StyleSheet, View } from "react-native";
@@ -8,21 +9,36 @@ import CharacterTile from "./CharacterTile";
 export default class CharacterQuizCard extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
+    universe: PropTypes.arrayOf(PropTypes.instanceOf(Character)).isRequired,
     gotoNext: PropTypes.func,
-    numChoices: PropTypes.number
+    numChoices: PropTypes.number,
+    _shuffle: PropTypes.func
   };
 
   static defaultProps = {
-    numChoices: 3
+    numChoices: 3,
+    _shuffle: _.shuffle
   };
 
   constructor(props) {
     super(props);
-    const { char, numChoices } = this.props;
+
     this.state = {
-      charChoices: char.choices(numChoices),
+      charChoices: this.generateChoices(),
       success: undefined
     };
+  }
+
+  generateChoices() {
+    const { char, universe, numChoices, _shuffle } = this.props;
+
+    const others = universe.filter(cu => cu !== char);
+    const shuffledOthers = _shuffle(others);
+    const enoughShuffledOthers = shuffledOthers.slice(0, numChoices - 1);
+    const choices = enoughShuffledOthers.concat(char);
+    const shuffledChoices = _shuffle(choices);
+
+    return shuffledChoices;
   }
 
   componentDidUpdate(_, prevState) {

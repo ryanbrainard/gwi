@@ -29,7 +29,7 @@ export default class CharacterSet {
         return new CharacterSet(
           setName,
           Object.entries(setValue).map(([charName, charValue]) => {
-            return new Character(setName, charName, charValue.voices);
+            return new Character(charName, charValue.voices);
           })
         );
       }
@@ -45,6 +45,7 @@ export default class CharacterSet {
     return this._all;
   }
 
+  // TODO: is this needed?
   static find(name) {
     this._load();
     return this._all_index[name];

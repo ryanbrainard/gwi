@@ -27,6 +27,7 @@ export default class CharacterQuizCarousel extends React.Component {
           renderItem={({ item, index }) => (
             <CharacterQuizCard
               char={item}
+              universe={chars}
               gotoNext={this._carousel.snapToNext.bind(this._carousel)}
             />
           )}

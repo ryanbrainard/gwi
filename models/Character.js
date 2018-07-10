@@ -1,10 +1,7 @@
 import Expo from "expo";
-import _ from "lodash";
-import CharacterSet from "./CharacterSet";
 
 export default class Character {
-  constructor(charSetName, name, voices) {
-    this._charSetName = charSetName;
+  constructor(name, voices) {
     this._name = name;
     this._voices = voices;
   }
@@ -35,17 +32,5 @@ export default class Character {
       .catch(rejection => {
         /*TODO*/
       });
-  }
-
-  // TODO: should this go here?
-  choices(numChoices) {
-    return _.shuffle(
-      _.sampleSize(
-        CharacterSet.find(this._charSetName).characters.filter(
-          cu => cu !== this
-        ),
-        numChoices - 1
-      ).concat(this)
-    );
   }
 }
