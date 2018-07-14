@@ -29,5 +29,6 @@ export default {
         }
       }
     }
-  }
+  },
+  colors: ["#375E97", "#FB6542", "#FFBB00", "#3F681C"]
 };

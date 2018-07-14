@@ -1,6 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import CharacterQuizCarousel from "./CharacterQuizCarousel";
+import _ from "lodash";
 
 export default class QuizDetailScreen extends React.Component {
   // TODO: how to do prop types on navigation params
@@ -21,7 +22,7 @@ export default class QuizDetailScreen extends React.Component {
           justifyContent: "center"
         }}
       >
-        <CharacterQuizCarousel chars={charSet.characters} />
+        <CharacterQuizCarousel chars={_.shuffle(charSet.characters)} />
       </View>
     );
   }
