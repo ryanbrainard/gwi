@@ -14,10 +14,12 @@ exports[`renders correctly 1`] = `
     data={
       Array [
         Character {
+          "_color": undefined,
           "_name": "A",
           "_voices": undefined,
         },
         Character {
+          "_color": undefined,
           "_name": "B",
           "_voices": undefined,
         },
@@ -89,7 +91,7 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#375E97",
+                  "backgroundColor": undefined,
                   "height": 225,
                   "justifyContent": "center",
                   "opacity": 1,
@@ -105,6 +107,7 @@ exports[`renders correctly 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
+                    "color": "black",
                     "fontSize": 24,
                     "fontWeight": "bold",
                   }
@@ -142,7 +145,7 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#FB6542",
+                  "backgroundColor": undefined,
                   "height": 225,
                   "justifyContent": "center",
                   "opacity": 1,
@@ -158,6 +161,7 @@ exports[`renders correctly 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
+                    "color": "black",
                     "fontSize": 24,
                     "fontWeight": "bold",
                   }

@@ -52,7 +52,16 @@ exports[`renders correctly 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-      />
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        ?
+      </Text>
     </View>
   </View>
   <View
