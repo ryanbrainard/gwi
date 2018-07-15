@@ -23,8 +23,10 @@ export default class Character {
   // TODO: error handle
   // TODO: show indicator while playing?
   // TODO: pass in sound? make it controlled on model?
+  // TODO: customizable voice
+  // TODO: fix onFinish
   play(onFinish) {
-    return Expo.Audio.Sound.create(this._voices.default, {
+    return Expo.Audio.Sound.create(this._voices.jane, {
       shouldPlay: true
     })
       .then(playback => {
