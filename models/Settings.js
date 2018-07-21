@@ -4,6 +4,9 @@ class Settings {
   _CONFIG = {
     ADVANCE_ON_SUCCESS: {
       default: false
+    },
+    TYPE_ANSWERS: {
+      default: false
     }
   };
 

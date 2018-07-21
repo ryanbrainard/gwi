@@ -22,12 +22,15 @@ export default class SettingsScreen extends React.Component {
 
   toggleFor(key) {
     return value => {
-      Settings.set(key, value).then(() =>
-        this.setState({
+      this.setState(
+        {
           settings: Object.assign(this.state.settings, {
             [key]: value
           })
-        })
+        },
+        () => {
+          Settings.set(key, value);
+        }
       );
     };
   }

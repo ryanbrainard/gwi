@@ -2,7 +2,7 @@ import { Feather } from "@expo/vector-icons";
 import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
-import { Button, StyleSheet, View } from "react-native";
+import { Button, TextInput, StyleSheet, View } from "react-native";
 import Character from "../models/Character";
 import CharacterTile from "./CharacterTile";
 import Settings from "../models/Settings";
@@ -25,9 +25,78 @@ export default class CharacterQuizCard extends React.Component {
     super(props);
 
     this.state = {
+      typeAnswers: false,
+      typedAnswer: "",
       charChoices: this.generateChoices(),
       success: undefined
     };
+  }
+
+  componentWillMount() {
+    this.refreshState();
+  }
+
+  componentWillUpdate() {
+    this.refreshState();
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (this.props.gotoNext && this.state.success && !prevState.success) {
+      Settings.get(Settings.KEYS.ADVANCE_ON_SUCCESS).then(
+        setting => setting && this.props.gotoNext()
+      );
+    }
+  }
+
+  render() {
+    const { char } = this.props;
+    const { typeAnswers, typedAnswer, charChoices, success } = this.state;
+
+    return (
+      <View style={styles.container}>
+        <CharacterTile char={char} show={!!success} />
+
+        {typeAnswers ? (
+          <TextInput
+            value={typedAnswer}
+            returnKeyType="done"
+            autoFocus={false}
+            spellCheck={false}
+            onChangeText={text => this.setState({ typedAnswer: text })}
+            onSubmitEditing={() => {
+              this.setState({
+                success: this.state.typedAnswer.trim() === char.name
+              });
+            }}
+            placeholder="type answer"
+          />
+        ) : (
+          charChoices.map(cc => {
+            const ccSuccess = cc === char;
+            return (
+              <Button
+                key={cc.key}
+                title={cc.name}
+                onPress={() => {
+                  if (!ccSuccess) {
+                    cc.play();
+                  }
+                  this.setState({ success: ccSuccess });
+                }}
+              />
+            );
+          })
+        )}
+
+        {this.renderSuccess(success)}
+      </View>
+    );
+  }
+
+  refreshState() {
+    Settings.get(Settings.KEYS.TYPE_ANSWERS).then(typeAnswers =>
+      this.setState({ typeAnswers })
+    );
   }
 
   generateChoices() {
@@ -40,43 +109,6 @@ export default class CharacterQuizCard extends React.Component {
     const shuffledChoices = _shuffle(choices);
 
     return shuffledChoices;
-  }
-
-  componentDidUpdate(_, prevState) {
-    if (this.props.gotoNext && this.state.success && !prevState.success) {
-      Settings.get(Settings.KEYS.ADVANCE_ON_SUCCESS).then(
-        setting => setting && this.props.gotoNext()
-      );
-    }
-  }
-
-  render() {
-    const { char, gotoNext } = this.props;
-    const { charChoices, success } = this.state;
-
-    return (
-      <View style={styles.container}>
-        <CharacterTile char={char} show={false} />
-
-        {charChoices.map(cc => {
-          const ccSuccess = cc === char;
-          return (
-            <Button
-              key={cc.key}
-              title={cc.name}
-              onPress={() => {
-                if (!ccSuccess) {
-                  cc.play();
-                }
-                this.setState({ success: ccSuccess });
-              }}
-            />
-          );
-        })}
-
-        {this.renderSuccess(success)}
-      </View>
-    );
   }
 
   renderSuccess(success) {
