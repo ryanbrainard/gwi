@@ -5,6 +5,7 @@ import React from "react";
 import { Button, StyleSheet, View } from "react-native";
 import Character from "../models/Character";
 import CharacterTile from "./CharacterTile";
+import Settings from "../models/Settings";
 
 export default class CharacterQuizCard extends React.Component {
   static propTypes = {
@@ -43,7 +44,9 @@ export default class CharacterQuizCard extends React.Component {
 
   componentDidUpdate(_, prevState) {
     if (this.props.gotoNext && this.state.success && !prevState.success) {
-      this.props.gotoNext();
+      Settings.get(Settings.KEYS.ADVANCE_ON_SUCCESS).then(
+        setting => setting && this.props.gotoNext()
+      );
     }
   }
 
