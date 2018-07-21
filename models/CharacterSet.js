@@ -31,9 +31,11 @@ export default class CharacterSet {
       ([setName, setValue]) => {
         return new CharacterSet(
           setName,
-          Object.entries(setValue).map(([charName, charValue]) => {
-            return new Character(charName, charValue.voices, colors.next());
-          })
+          Object.entries(setValue)
+            .filter(([charName]) => charName.length === 1)
+            .map(([charName, charValue]) => {
+              return new Character(charName, charValue.voices, colors.next());
+            })
         );
       }
     );
