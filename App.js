@@ -39,7 +39,7 @@ const RootStack = createBottomTabNavigator(
   {
     Practice: PracticeStack,
     Quiz: QuizStack,
-    Settings: SettingsStack,
+    // Settings: SettingsStack,
     About: AboutStack
   },
   {
