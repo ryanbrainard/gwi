@@ -612,10 +612,12 @@ export default {
     }
   },
   colors: {
-    background: "white",
-    text: "black",
+    background: "#FFFFFF",
+    text: "#000000",
     primary: "#6495ED",
-    accent: "tomato",
-    neutral: "grey"
+    accent: "#FF6347",
+    neutral: "#A9A9A9",
+    success: "#2E8B57",
+    error: "#FF6347"
   }
 };

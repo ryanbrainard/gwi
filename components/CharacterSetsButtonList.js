@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-between",
-    margin: 100
+    padding: 100
   },
   button: {
     backgroundColor: config.colors.primary,

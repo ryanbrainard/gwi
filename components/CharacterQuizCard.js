@@ -1,12 +1,12 @@
-import { Feather } from "@expo/vector-icons";
+import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
-import { Button, StyleSheet, View } from "react-native";
+import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "../config";
 import Character from "../models/Character";
-import CharacterTile from "./CharacterTile";
 import Settings from "../models/Settings";
+import CharacterTile from "./CharacterTile";
 
 export default class CharacterQuizCard extends React.Component {
   static propTypes = {
@@ -58,36 +58,65 @@ export default class CharacterQuizCard extends React.Component {
     return (
       <View style={styles.container}>
         <CharacterTile char={char} show={!!success} />
-
-        {charChoices.map(cc => {
-          const ccSuccess = cc === char;
-          return (
-            <Button
-              key={cc.key}
-              title={cc.name}
-              onPress={() => {
-                if (!ccSuccess) {
+        <View style={styles.choicesContainer}>
+          {charChoices.map(cc => {
+            const correctChoice = cc === char;
+            return (
+              <TouchableOpacity
+                key={cc.key}
+                style={[
+                  styles.choicesButton,
+                  {
+                    backgroundColor:
+                      correctChoice && success
+                        ? config.colors.success
+                        : config.colors.neutral
+                  }
+                ]}
+                onPress={() => {
+                  this.setState({
+                    success: success || correctChoice
+                  });
                   cc.play();
-                }
-                this.setState({ success: ccSuccess });
-              }}
-            />
-          );
-        })}
+                }}
+              >
+                <Text style={styles.choicesText}>{cc.name}</Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
 
-        {this.renderSuccess(success)}
+        {this.renderSuccessIcon(success, gotoNext)}
+
+        {success && (
+          <TouchableOpacity style={styles.nextButton} onPress={gotoNext}>
+            <MaterialCommunityIcons
+              name="skip-next"
+              size={30}
+              color={config.colors.success}
+            />
+          </TouchableOpacity>
+        )}
       </View>
     );
   }
 
-  renderSuccess(success) {
+  renderSuccessIcon(success) {
     switch (success) {
       case null:
         return null;
       case true:
-        return <Feather name="check-circle" size={48} color="#3F681C" />;
+        return (
+          <Feather
+            name="check-circle"
+            size={48}
+            color={config.colors.success}
+          />
+        );
       case false:
-        return <Feather name="x-circle" size={48} color="tomato" />;
+        return (
+          <Feather name="x-circle" size={48} color={config.colors.error} />
+        );
     }
   }
 }
@@ -96,6 +125,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: config.colors.background,
-    alignItems: "center"
+    alignItems: "center",
+    padding: 50
+  },
+  choicesContainer: {
+    margin: 20
+  },
+  choicesButton: {
+    backgroundColor: config.colors.neutral,
+    borderRadius: 75,
+    width: 75,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    margin: 10
+  },
+  choicesText: {
+    fontWeight: "bold",
+    fontSize: 18,
+    color: config.colors.text
+  },
+  nextButton: {
+    position: "absolute",
+    bottom: 10,
+    right: 10
   }
 });

@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
   <View
     style={
       Object {
-        "height": 933.8,
+        "height": 1000.5,
       }
     }
   >
@@ -35,8 +35,8 @@ exports[`renders correctly 1`] = `
         Array [
           Object {},
           Object {
-            "paddingLeft": 75,
-            "paddingRight": 75,
+            "paddingLeft": 37.5,
+            "paddingRight": 37.5,
           },
         ]
       }
@@ -59,7 +59,7 @@ exports[`renders correctly 1`] = `
       initialScrollIndex={undefined}
       invertStickyHeaders={false}
       inverted={false}
-      itemWidth={600}
+      itemWidth={675}
       keyExtractor={[Function]}
       layout="default"
       lockScrollTimeoutDuration={1000}
