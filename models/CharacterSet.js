@@ -1,6 +1,5 @@
 import config from "../config";
 import Character from "./Character";
-import ColorIterator from "./ColorIterator";
 
 export default class CharacterSet {
   constructor(name, characters) {
@@ -25,8 +24,6 @@ export default class CharacterSet {
       return;
     }
 
-    const colors = ColorIterator.default();
-
     this._list = Object.entries(config.characterSets).map(
       ([setName, setValue]) => {
         return new CharacterSet(
@@ -34,7 +31,11 @@ export default class CharacterSet {
           Object.entries(setValue)
             .filter(([charName]) => charName.length === 1)
             .map(([charName, charValue]) => {
-              return new Character(charName, charValue.voices, colors.next());
+              return new Character(
+                charName,
+                charValue.voices,
+                config.colors.primary
+              );
             })
         );
       }

@@ -10,6 +10,7 @@ import PracticeListScreen from "./components/PracticeListScreen";
 import QuizDetailScreen from "./components/QuizDetailScreen";
 import QuizListScreen from "./components/QuizListScreen";
 import SettingsScreen from "./components/SettingsScreen";
+import config from "./config";
 
 export default class App extends React.Component {
   render() {
@@ -39,7 +40,7 @@ const RootStack = createBottomTabNavigator(
   {
     Practice: PracticeStack,
     Quiz: QuizStack,
-    // Settings: SettingsStack,
+    // Settings: SettingsStack, // disabled until we actually need user-facing settings
     About: AboutStack
   },
   {
@@ -58,16 +59,14 @@ const RootStack = createBottomTabNavigator(
           iconName = "information";
         }
 
-        // You can return any component that you like here! We usually use an
-        // icon component from react-native-vector-icons
         return (
           <MaterialCommunityIcons name={iconName} size={25} color={tintColor} />
         );
       }
     }),
     tabBarOptions: {
-      activeTintColor: "tomato", // TODO: choose colors
-      inactiveTintColor: "gray"
+      activeTintColor: config.colors.accent,
+      inactiveTintColor: config.colors.neutral
     }
   }
 );

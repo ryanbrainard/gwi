@@ -611,5 +611,11 @@ export default {
       }
     }
   },
-  colors: ["gray"]
+  colors: {
+    background: "white",
+    text: "black",
+    primary: "#6495ED",
+    accent: "tomato",
+    neutral: "grey"
+  }
 };

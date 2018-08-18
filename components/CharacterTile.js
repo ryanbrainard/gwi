@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
+import config from "../config";
 import Character from "../models/Character";
 
 export default class CharacterTile extends React.Component {
@@ -38,7 +39,7 @@ export default class CharacterTile extends React.Component {
 const styles = StyleSheet.create({
   container: {
     borderWidth: 2,
-    borderColor: "white"
+    borderColor: config.colors.background
   },
   button: {
     width: Dimensions.get("window").width * 0.3, // TODO: customizable with grid size
@@ -49,6 +50,6 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: "bold",
     fontSize: 24,
-    color: "black"
+    color: config.colors.text
   }
 });

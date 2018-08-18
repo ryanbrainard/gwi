@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
+import config from "../config";
 import Character from "../models/Character";
 import CharacterTile from "./CharacterTile";
 
@@ -27,7 +28,7 @@ export default class CharacterGrid extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: config.colors.background,
     alignItems: "center"
   }
 });
