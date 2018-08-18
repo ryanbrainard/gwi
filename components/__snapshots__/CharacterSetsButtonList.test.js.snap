@@ -6,18 +6,15 @@ exports[`renders correctly 1`] = `
     Object {
       "alignItems": "center",
       "flex": 1,
-      "justifyContent": "center",
+      "justifyContent": "space-between",
+      "margin": 100,
     }
   }
 >
   <View
-    accessibilityComponentType="button"
+    accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
-    accessibilityTraits={
-      Array [
-        "button",
-      ]
-    }
+    accessibilityTraits={undefined}
     accessible={true}
     collapsable={undefined}
     hasTVPreferredFocus={undefined}
@@ -33,47 +30,38 @@ exports[`renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
+        "backgroundColor": "#6495ED",
+        "borderRadius": 75,
+        "height": 75,
+        "justifyContent": "center",
+        "margin": 10,
         "opacity": 1,
+        "width": 75,
       }
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={undefined}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
-      >
-        ㄱㄲㅋ
-      </Text>
-    </View>
+      ㄱㄲㅋ
+    </Text>
   </View>
   <View
-    accessibilityComponentType="button"
+    accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
-    accessibilityTraits={
-      Array [
-        "button",
-      ]
-    }
+    accessibilityTraits={undefined}
     accessible={true}
     collapsable={undefined}
     hasTVPreferredFocus={undefined}
@@ -89,47 +77,38 @@ exports[`renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
+        "backgroundColor": "#6495ED",
+        "borderRadius": 75,
+        "height": 75,
+        "justifyContent": "center",
+        "margin": 10,
         "opacity": 1,
+        "width": 75,
       }
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={undefined}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
-      >
-        ㄷㄸㅌ
-      </Text>
-    </View>
+      ㄷㄸㅌ
+    </Text>
   </View>
   <View
-    accessibilityComponentType="button"
+    accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
-    accessibilityTraits={
-      Array [
-        "button",
-      ]
-    }
+    accessibilityTraits={undefined}
     accessible={true}
     collapsable={undefined}
     hasTVPreferredFocus={undefined}
@@ -145,47 +124,38 @@ exports[`renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
+        "backgroundColor": "#6495ED",
+        "borderRadius": 75,
+        "height": 75,
+        "justifyContent": "center",
+        "margin": 10,
         "opacity": 1,
+        "width": 75,
       }
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={undefined}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
-      >
-        ㅂㅃㅍ
-      </Text>
-    </View>
+      ㅂㅃㅍ
+    </Text>
   </View>
   <View
-    accessibilityComponentType="button"
+    accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
-    accessibilityTraits={
-      Array [
-        "button",
-      ]
-    }
+    accessibilityTraits={undefined}
     accessible={true}
     collapsable={undefined}
     hasTVPreferredFocus={undefined}
@@ -201,47 +171,38 @@ exports[`renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
+        "backgroundColor": "#6495ED",
+        "borderRadius": 75,
+        "height": 75,
+        "justifyContent": "center",
+        "margin": 10,
         "opacity": 1,
+        "width": 75,
       }
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={undefined}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
-      >
-        ㅅㅆ
-      </Text>
-    </View>
+      ㅅㅆ
+    </Text>
   </View>
   <View
-    accessibilityComponentType="button"
+    accessibilityComponentType={undefined}
     accessibilityLabel={undefined}
-    accessibilityTraits={
-      Array [
-        "button",
-      ]
-    }
+    accessibilityTraits={undefined}
     accessible={true}
     collapsable={undefined}
     hasTVPreferredFocus={undefined}
@@ -257,38 +218,33 @@ exports[`renders correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
+        "backgroundColor": "#6495ED",
+        "borderRadius": 75,
+        "height": 75,
+        "justifyContent": "center",
+        "margin": 10,
         "opacity": 1,
+        "width": 75,
       }
     }
     testID={undefined}
     tvParallaxProperties={undefined}
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
-        Array [
-          Object {},
-        ]
+        Object {
+          "color": "black",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={undefined}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "padding": 8,
-              "textAlign": "center",
-            },
-          ]
-        }
-      >
-        ㅈㅉㅊ
-      </Text>
-    </View>
+      ㅈㅉㅊ
+    </Text>
   </View>
 </View>
 `;
