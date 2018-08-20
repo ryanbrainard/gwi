@@ -15,7 +15,7 @@ export default class PracticeDetailScreen extends React.Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <CharacterGrid chars={charSet.characters} />
+        <CharacterGrid chars={charSet.groups} />
       </View>
     );
   }

@@ -1,10 +1,11 @@
 import config from "../config";
 import Character from "./Character";
+import _ from "lodash";
 
 export default class CharacterSet {
-  constructor(name, characters) {
+  constructor(name, groups) {
     this._name = name;
-    this._characters = characters;
+    this._groups = groups;
   }
 
   get key() {
@@ -15,8 +16,16 @@ export default class CharacterSet {
     return this._name;
   }
 
-  get characters() {
-    return this._characters;
+  get groups() {
+    return this._groups;
+  }
+
+  // TODO: probably doesn't belong here, but here for testing for now...
+  // TODO: consider moving inside of Character class
+  charsWithGroups() {
+    return _.flatten(
+      this.groups.map(group => group.map(char => [char, group]))
+    );
   }
 
   static _load() {
@@ -25,18 +34,20 @@ export default class CharacterSet {
     }
 
     this._list = Object.entries(config.characterSets).map(
-      ([setName, setValue]) => {
+      ([setName, setGroups]) => {
         return new CharacterSet(
           setName,
-          Object.entries(setValue)
-            .filter(([charName]) => charName.length === 1)
-            .map(([charName, charValue]) => {
-              return new Character(
-                charName,
-                charValue.voices,
-                config.colors.primary
-              );
-            })
+          setGroups.map(setGroup => {
+            return Object.entries(setGroup)
+              .filter(([charName]) => charName.length === 1)
+              .map(([charName, charValue]) => {
+                return new Character(
+                  charName,
+                  charValue.voices,
+                  config.colors.primary
+                );
+              });
+          })
         );
       }
     );
