@@ -14,13 +14,11 @@ exports[`renders correctly 1`] = `
     data={
       Array [
         Character {
-          "_color": undefined,
           "_group": undefined,
           "_name": "A",
           "_voices": undefined,
         },
         Character {
-          "_color": undefined,
           "_group": undefined,
           "_name": "B",
           "_voices": undefined,
@@ -93,7 +91,7 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": undefined,
+                  "backgroundColor": "#6495ED",
                   "height": 225,
                   "justifyContent": "center",
                   "opacity": 1,
@@ -147,7 +145,7 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": undefined,
+                  "backgroundColor": "#6495ED",
                   "height": 225,
                   "justifyContent": "center",
                   "opacity": 1,

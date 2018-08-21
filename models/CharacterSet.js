@@ -41,8 +41,7 @@ export default class CharacterSet {
                 new Character(
                   charName,
                   setGroupFiltered.map(([k]) => k),
-                  charValue.voices,
-                  config.colors.primary
+                  charValue.voices
                 )
               );
             });

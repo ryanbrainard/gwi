@@ -26,7 +26,7 @@ export default class CharacterTile extends React.Component {
     return (
       <View style={styles.container}>
         <TouchableOpacity
-          style={[styles.button, { backgroundColor: char.color }]}
+          style={[styles.button, { backgroundColor: config.colors.primary }]}
           onPress={char.play.bind(char)}
         >
           {<Text style={styles.text}>{show ? char.name : "?"}</Text>}

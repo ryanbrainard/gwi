@@ -12,11 +12,10 @@ export default class Character {
     return this._chars[name];
   }
 
-  constructor(name, group, voices, color) {
+  constructor(name, group, voices) {
     this._name = name;
     this._group = group;
     this._voices = voices;
-    this._color = color;
   }
 
   get key() {
@@ -29,10 +28,6 @@ export default class Character {
 
   get group() {
     return this._group.map(c => Character.find(c));
-  }
-
-  get color() {
-    return this._color;
   }
 
   // TODO: should this go here
