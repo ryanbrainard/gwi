@@ -15,11 +15,13 @@ exports[`renders correctly 1`] = `
       Array [
         Character {
           "_color": undefined,
+          "_group": undefined,
           "_name": "A",
           "_voices": undefined,
         },
         Character {
           "_color": undefined,
+          "_group": undefined,
           "_name": "B",
           "_voices": undefined,
         },

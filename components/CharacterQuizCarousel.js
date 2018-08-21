@@ -1,19 +1,17 @@
-import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 import { Dimensions, View } from "react-native";
 import Carousel from "react-native-snap-carousel";
-import CharacterSet from "../models/CharacterSet";
+import Character from "../models/Character";
 import CharacterQuizCard from "./CharacterQuizCard";
 
 export default class CharacterQuizCarousel extends React.Component {
   static propTypes = {
-    charSet: PropTypes.instanceOf(CharacterSet).isRequired
+    characters: PropTypes.arrayOf(PropTypes.instanceOf(Character)).isRequired
   };
 
   render() {
-    const { charSet } = this.props;
-    const items = _.shuffle(charSet.charsWithGroups());
+    const { characters } = this.props;
     const windowDims = Dimensions.get("window");
 
     return (
@@ -25,16 +23,16 @@ export default class CharacterQuizCarousel extends React.Component {
           loop={true}
           sliderWidth={windowDims.width}
           itemWidth={windowDims.width * 0.9}
-          data={items}
-          renderItem={({ item: [char, group] }) => (
+          data={characters}
+          renderItem={({ item }) => (
             <CharacterQuizCard
-              char={char}
-              universe={group}
+              char={item}
+              universe={item.group}
               gotoNext={this._carousel.snapToNext.bind(this._carousel)}
             />
           )}
-          onLayout={() => items[0][0].play()}
-          onSnapToItem={index => items[index][0].play()}
+          onLayout={() => characters[0].play()}
+          onSnapToItem={index => characters[index].play()}
         />
       </View>
     );

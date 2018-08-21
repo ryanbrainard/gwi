@@ -18,7 +18,7 @@ exports[`renders correctly 1`] = `
     }
   >
     <RCTScrollView
-      data={Array []}
+      data={undefined}
       disableVirtualization={false}
       getItem={[Function]}
       getItemCount={[Function]}

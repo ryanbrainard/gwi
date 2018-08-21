@@ -1,8 +1,20 @@
 import Expo from "expo";
 
 export default class Character {
-  constructor(name, voices, color) {
+  static _chars = {};
+
+  static register(char) {
+    this._chars[char.name] = char;
+    return char;
+  }
+
+  static find(name) {
+    return this._chars[name];
+  }
+
+  constructor(name, group, voices, color) {
     this._name = name;
+    this._group = group;
     this._voices = voices;
     this._color = color;
   }
@@ -13,6 +25,10 @@ export default class Character {
 
   get name() {
     return this._name;
+  }
+
+  get group() {
+    return this._group.map(c => Character.find(c));
   }
 
   get color() {

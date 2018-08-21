@@ -9,12 +9,19 @@ it("#list", () => {
   expect(all[0].groups[0][0].name).toBe("겁");
 });
 
-it("#charsWithGroups", () => {
-  const charAndUniverse = CharacterSet.list()[0].charsWithGroups()[0];
-  expect(charAndUniverse.length).toBe(2);
-  expect(charAndUniverse[0].name).toBe("겁");
-  expect(charAndUniverse[1].length).toBe(3);
-  expect(charAndUniverse[1][0].name).toBe("겁");
-  expect(charAndUniverse[1][1].name).toBe("껍");
-  expect(charAndUniverse[1][2].name).toBe("컵");
+it("#groups", () => {
+  const group = CharacterSet.list()[0].groups[0];
+  expect(group.length).toBe(3);
+  expect(group[0].name).toBe("겁");
+  expect(group[1].name).toBe("껍");
+  expect(group[2].name).toBe("컵");
+});
+
+it("#characters", () => {
+  const char = CharacterSet.list()[0].characters[0];
+  expect(char.name).toBe("겁");
+  expect(char.group.length).toBe(3);
+  expect(char.group[0].name).toBe("겁");
+  expect(char.group[1].name).toBe("껍");
+  expect(char.group[2].name).toBe("컵");
 });

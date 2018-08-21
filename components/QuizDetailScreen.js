@@ -1,3 +1,4 @@
+import _ from "lodash";
 import React from "react";
 import { View } from "react-native";
 import CharacterQuizCarousel from "./CharacterQuizCarousel";
@@ -21,7 +22,7 @@ export default class QuizDetailScreen extends React.Component {
           justifyContent: "center"
         }}
       >
-        <CharacterQuizCarousel charSet={charSet} />
+        <CharacterQuizCarousel characters={_.shuffle(charSet.characters)} />
       </View>
     );
   }

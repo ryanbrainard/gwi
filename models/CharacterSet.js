@@ -20,14 +20,9 @@ export default class CharacterSet {
     return this._groups;
   }
 
-  // TODO: probably doesn't belong here, but here for testing for now...
-  // TODO: consider moving inside of Character class
-  charsWithGroups() {
-    return _.flatten(
-      this.groups.map(group => group.map(char => [char, group]))
-    );
+  get characters() {
+    return _.flatten(this.groups);
   }
-
   static _load() {
     if (this._list) {
       return;
@@ -38,15 +33,19 @@ export default class CharacterSet {
         return new CharacterSet(
           setName,
           setGroups.map(setGroup => {
-            return Object.entries(setGroup)
-              .filter(([charName]) => charName.length === 1)
-              .map(([charName, charValue]) => {
-                return new Character(
+            const setGroupFiltered = Object.entries(setGroup).filter(
+              ([charName]) => charName.length === 1
+            );
+            return setGroupFiltered.map(([charName, charValue]) => {
+              return Character.register(
+                new Character(
                   charName,
+                  setGroupFiltered.map(([k]) => k),
                   charValue.voices,
                   config.colors.primary
-                );
-              });
+                )
+              );
+            });
           })
         );
       }
