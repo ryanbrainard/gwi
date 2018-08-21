@@ -664,6 +664,16 @@ export default {
     accent: "#FF6347",
     neutral: "#A9A9A9",
     success: "#2E8B57",
-    error: "#FF6347"
+    error: "#FF6347",
+
+    practice: {
+      primary: "#FF7F50" // TODO placeholder
+    },
+    quiz: {
+      primary: "#6495ED" // TODO placeholder
+    },
+    about: {
+      primary: "#6495ED" // TODO placeholder
+    }
   }
 };

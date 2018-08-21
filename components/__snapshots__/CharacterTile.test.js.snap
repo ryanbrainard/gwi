@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#6495ED",
+        "backgroundColor": undefined,
         "height": 225,
         "justifyContent": "center",
         "opacity": 1,

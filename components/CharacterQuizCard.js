@@ -57,7 +57,11 @@ export default class CharacterQuizCard extends React.Component {
 
     return (
       <View style={styles.container}>
-        <CharacterTile char={char} show={!!success} />
+        <CharacterTile
+          char={char}
+          show={!!success}
+          color={config.colors.quiz.primary}
+        />
         <View style={styles.choicesContainer}>
           {charChoices.map(cc => {
             const correctChoice = cc === char;

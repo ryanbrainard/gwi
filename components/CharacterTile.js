@@ -13,6 +13,7 @@ import Character from "../models/Character";
 export default class CharacterTile extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
+    color: PropTypes.string,
     show: PropTypes.bool
   };
 
@@ -21,12 +22,12 @@ export default class CharacterTile extends React.Component {
   };
 
   render() {
-    const { char, show } = this.props;
+    const { char, color, show } = this.props;
 
     return (
       <View style={styles.container}>
         <TouchableOpacity
-          style={[styles.button, { backgroundColor: config.colors.primary }]}
+          style={[styles.button, { backgroundColor: color }]}
           onPress={char.play.bind(char)}
         >
           {<Text style={styles.text}>{show ? char.name : "?"}</Text>}

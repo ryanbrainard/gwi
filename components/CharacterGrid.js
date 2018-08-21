@@ -7,17 +7,18 @@ import CharacterTile from "./CharacterTile";
 
 export default class CharacterGrid extends React.Component {
   static propTypes = {
-    chars: PropTypes.arrayOf(PropTypes.instanceOf(Character)).isRequired
+    chars: PropTypes.arrayOf(PropTypes.instanceOf(Character)).isRequired,
+    color: PropTypes.string
   };
 
   render() {
-    const { chars } = this.props;
+    const { chars, color } = this.props;
 
     return (
       <View style={styles.container}>
         <FlatList
           data={chars}
-          renderItem={({ item, index }) => <CharacterTile char={item} />}
+          renderItem={({ item }) => <CharacterTile char={item} color={color} />}
           numColumns={3} // TODO: customizable and change tiles
         />
       </View>

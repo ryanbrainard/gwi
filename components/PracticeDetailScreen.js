@@ -1,5 +1,6 @@
 import React from "react";
 import { View } from "react-native";
+import config from "../config";
 import CharacterGrid from "./CharacterGrid";
 
 export default class PracticeDetailScreen extends React.Component {
@@ -15,7 +16,10 @@ export default class PracticeDetailScreen extends React.Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <CharacterGrid chars={charSet.characters} />
+        <CharacterGrid
+          chars={charSet.characters}
+          color={config.colors.practice.primary}
+        />
       </View>
     );
   }

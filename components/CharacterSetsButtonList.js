@@ -13,18 +13,19 @@ import CharacterSet from "../models/CharacterSet";
 export default class CharacterSetsButtonList extends React.Component {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
-    onPressUrl: PropTypes.string.isRequired
+    onPressUrl: PropTypes.string.isRequired,
+    color: PropTypes.string
   };
 
   render() {
-    const { navigation, onPressUrl } = this.props;
+    const { navigation, onPressUrl, color } = this.props;
 
     return (
       <View style={styles.container}>
         {CharacterSet.list().map(charSet => (
           <TouchableOpacity
             key={charSet.key}
-            style={styles.button}
+            style={[styles.button, { backgroundColor: color }]}
             onPress={() =>
               navigation.navigate(onPressUrl, {
                 charSet: charSet
