@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#FF7F50",
+        "backgroundColor": "#6495ED",
         "borderRadius": 75,
         "height": 75,
         "justifyContent": "center",
@@ -78,7 +78,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#FF7F50",
+        "backgroundColor": "#6495ED",
         "borderRadius": 75,
         "height": 75,
         "justifyContent": "center",
@@ -125,7 +125,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#FF7F50",
+        "backgroundColor": "#6495ED",
         "borderRadius": 75,
         "height": 75,
         "justifyContent": "center",
@@ -172,7 +172,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#FF7F50",
+        "backgroundColor": "#6495ED",
         "borderRadius": 75,
         "height": 75,
         "justifyContent": "center",
@@ -219,7 +219,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#FF7F50",
+        "backgroundColor": "#6495ED",
         "borderRadius": 75,
         "height": 75,
         "justifyContent": "center",

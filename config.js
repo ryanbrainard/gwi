@@ -660,20 +660,17 @@ export default {
   colors: {
     background: "#FFFFFF",
     text: "#000000",
-    primary: "#6495ED",
-    accent: "#FF6347",
     neutral: "#A9A9A9",
     success: "#2E8B57",
     error: "#FF6347",
-
     practice: {
-      primary: "#FF7F50" // TODO placeholder
+      primary: "#6495ED"
     },
     quiz: {
-      primary: "#6495ED" // TODO placeholder
+      primary: "#FFA500"
     },
     about: {
-      primary: "#6495ED" // TODO placeholder
+      primary: "#3CB371"
     }
   }
 };

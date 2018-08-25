@@ -59,13 +59,17 @@ const RootStack = createBottomTabNavigator(
           iconName = "information";
         }
 
+        const iconColor = focused
+          ? config.colors[routeName.toLowerCase()].primary
+          : config.colors.neutral;
+
         return (
-          <MaterialCommunityIcons name={iconName} size={25} color={tintColor} />
+          <MaterialCommunityIcons name={iconName} size={25} color={iconColor} />
         );
       }
     }),
     tabBarOptions: {
-      activeTintColor: config.colors.accent,
+      activeTintColor: config.colors.text,
       inactiveTintColor: config.colors.neutral
     }
   }
