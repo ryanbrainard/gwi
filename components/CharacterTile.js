@@ -14,20 +14,30 @@ export default class CharacterTile extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
     color: PropTypes.string,
-    show: PropTypes.bool
+    show: PropTypes.bool,
+    percentOfWidth: PropTypes.number
   };
 
   static defaultProps = {
-    show: true
+    show: true,
+    percentOfWidth: 0.3
   };
 
   render() {
-    const { char, color, show } = this.props;
+    const { char, color, show, percentOfWidth } = this.props;
+    const size = Dimensions.get("window").width * percentOfWidth;
 
     return (
       <View style={styles.container}>
         <TouchableOpacity
-          style={[styles.button, { backgroundColor: color }]}
+          style={[
+            styles.button,
+            {
+              backgroundColor: color,
+              width: size,
+              height: size
+            }
+          ]}
           onPress={char.play.bind(char)}
         >
           {<Text style={styles.text}>{show ? char.name : "?"}</Text>}
@@ -43,8 +53,6 @@ const styles = StyleSheet.create({
     borderColor: config.colors.background
   },
   button: {
-    width: Dimensions.get("window").width * 0.3, // TODO: customizable with grid size
-    height: Dimensions.get("window").width * 0.3, // TODO: customizable with grid size
     alignItems: "center",
     justifyContent: "center"
   },
