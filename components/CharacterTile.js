@@ -13,9 +13,9 @@ import Character from "../models/Character";
 export default class CharacterTile extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
+    size: PropTypes.number,
     color: PropTypes.string,
-    show: PropTypes.bool,
-    percentOfWidth: PropTypes.number
+    show: PropTypes.bool
   };
 
   static defaultProps = {
@@ -24,8 +24,7 @@ export default class CharacterTile extends React.Component {
   };
 
   render() {
-    const { char, color, show, percentOfWidth } = this.props;
-    const size = Dimensions.get("window").width * percentOfWidth;
+    const { char, size, color, show } = this.props;
 
     return (
       <View style={styles.container}>

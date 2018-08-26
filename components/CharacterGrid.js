@@ -15,15 +15,17 @@ export default class CharacterGrid extends React.Component {
   render() {
     return (
       <DimensionsConsumer>
-        {({ isPortrait }) => this.renderInternal(isPortrait)}
+        {({ window: { width }, isPortrait }) =>
+          this.renderInternal(width, isPortrait)
+        }
       </DimensionsConsumer>
     );
   }
 
-  renderInternal(isPortrait) {
+  renderInternal(width, isPortrait) {
     const { chars, color } = this.props;
     const cols = isPortrait ? 3 : 4;
-    const percentOfWidth = (1 / cols) * 0.9;
+    const size = (width / cols) * 0.9;
 
     return (
       <View style={styles.container}>
@@ -31,11 +33,7 @@ export default class CharacterGrid extends React.Component {
           key={cols /* force refresh, per recommendation */}
           data={chars}
           renderItem={({ item }) => (
-            <CharacterTile
-              char={item}
-              color={color}
-              percentOfWidth={percentOfWidth}
-            />
+            <CharacterTile char={item} size={size} color={color} />
           )}
           numColumns={cols} // TODO: customizable and change tiles
         />
