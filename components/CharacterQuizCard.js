@@ -2,11 +2,12 @@ import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "../config";
 import Character from "../models/Character";
 import Settings from "../models/Settings";
 import CharacterTile from "./CharacterTile";
+import { DimensionsConsumer } from "./DimensionsContext";
 
 export default class CharacterQuizCard extends React.Component {
   static propTypes = {
@@ -57,11 +58,15 @@ export default class CharacterQuizCard extends React.Component {
 
     return (
       <View style={styles.container}>
-        <CharacterTile
-          char={char}
-          show={!!success}
-          color={config.colors.quiz.primary}
-        />
+        <DimensionsConsumer>
+          {({ window: { width, height } }) => (
+            <CharacterTile
+              char={char}
+              show={!!success}
+              size={Math.min(width, height) * 0.3}
+            />
+          )}
+        </DimensionsConsumer>
         <View style={styles.choicesContainer}>
           {charChoices.map(cc => {
             const correctChoice = cc === char;

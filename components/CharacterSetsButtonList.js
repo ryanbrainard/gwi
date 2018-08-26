@@ -1,41 +1,38 @@
 import PropTypes from "prop-types";
 import React from "react";
-import {
-  Dimensions,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "../config";
 import CharacterSet from "../models/CharacterSet";
 
 export default class CharacterSetsButtonList extends React.Component {
   static propTypes = {
     navigation: PropTypes.object.isRequired,
-    onPressUrl: PropTypes.string.isRequired,
-    color: PropTypes.string
+    onPressUrl: PropTypes.string.isRequired
   };
 
   render() {
-    const { navigation, onPressUrl, color } = this.props;
+    const { navigation, onPressUrl } = this.props;
 
     return (
-      <View style={styles.container}>
-        {CharacterSet.list().map(charSet => (
-          <TouchableOpacity
-            key={charSet.key}
-            style={[styles.button, { backgroundColor: color }]}
-            onPress={() =>
-              navigation.navigate(onPressUrl, {
-                charSet: charSet
-              })
-            }
-          >
-            <Text style={styles.text}>{charSet.name}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+      <ColorsContext.Consumer>
+        {colors => (
+          <View style={styles.container}>
+            {CharacterSet.list().map(charSet => (
+              <TouchableOpacity
+                key={charSet.key}
+                style={[styles.button, { backgroundColor: colors.primary }]}
+                onPress={() =>
+                  navigation.navigate(onPressUrl, {
+                    charSet: charSet
+                  })
+                }
+              >
+                <Text style={styles.text}>{charSet.name}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        )}
+      </ColorsContext.Consumer>
     );
   }
 }

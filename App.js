@@ -11,6 +11,7 @@ import PracticeListScreen from "./components/PracticeListScreen";
 import QuizDetailScreen from "./components/QuizDetailScreen";
 import QuizListScreen from "./components/QuizListScreen";
 import SettingsScreen from "./components/SettingsScreen";
+import { provideColors } from "./components/ColorsContext";
 import config from "./config";
 
 export default class App extends React.Component {
@@ -24,13 +25,13 @@ export default class App extends React.Component {
 }
 
 const PracticeStack = createStackNavigator({
-  PracticeList: PracticeListScreen,
-  PracticeDetail: PracticeDetailScreen
+  PracticeList: provideColors(config.colors.practice, PracticeListScreen),
+  PracticeDetail: provideColors(config.colors.practice, PracticeDetailScreen)
 });
 
 const QuizStack = createStackNavigator({
-  QuizList: QuizListScreen,
-  QuizDetail: QuizDetailScreen
+  QuizList: provideColors(config.colors.quiz, QuizListScreen),
+  QuizDetail: provideColors(config.colors.quiz, QuizDetailScreen)
 });
 
 const SettingsStack = createStackNavigator({
@@ -38,7 +39,7 @@ const SettingsStack = createStackNavigator({
 });
 
 const AboutStack = createStackNavigator({
-  _: AboutScreen
+  _: provideColors(config.colors.about, AboutScreen)
 });
 
 const RootStack = createBottomTabNavigator(

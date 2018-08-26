@@ -9,39 +9,42 @@ import {
 } from "react-native";
 import config from "../config";
 import Character from "../models/Character";
+import ColorsContext from "./ColorsContext";
 
 export default class CharacterTile extends React.Component {
   static propTypes = {
     char: PropTypes.instanceOf(Character).isRequired,
-    size: PropTypes.number,
-    color: PropTypes.string,
+    size: PropTypes.number.isRequired,
     show: PropTypes.bool
   };
 
   static defaultProps = {
-    show: true,
-    percentOfWidth: 0.3
+    show: true
   };
 
   render() {
-    const { char, size, color, show } = this.props;
+    const { char, size, show } = this.props;
 
     return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={[
-            styles.button,
-            {
-              backgroundColor: color,
-              width: size,
-              height: size
-            }
-          ]}
-          onPress={char.play.bind(char)}
-        >
-          {<Text style={styles.text}>{show ? char.name : "?"}</Text>}
-        </TouchableOpacity>
-      </View>
+      <ColorsContext.Consumer>
+        {colors => (
+          <View style={styles.container}>
+            <TouchableOpacity
+              style={[
+                styles.button,
+                {
+                  backgroundColor: colors.primary,
+                  width: size,
+                  height: size
+                }
+              ]}
+              onPress={char.play.bind(char)}
+            >
+              {<Text style={styles.text}>{show ? char.name : "?"}</Text>}
+            </TouchableOpacity>
+          </View>
+        )}
+      </ColorsContext.Consumer>
     );
   }
 }

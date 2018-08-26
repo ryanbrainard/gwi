@@ -19,7 +19,6 @@ export default class QuizListScreen extends React.Component {
       <CharacterSetsButtonList
         navigation={navigation}
         onPressUrl="QuizDetail"
-        color={config.colors.quiz.primary}
       />
     );
   }
