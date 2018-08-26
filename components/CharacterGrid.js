@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Dimensions, FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import config from "../config";
 import Character from "../models/Character";
 import CharacterTile from "./CharacterTile";
-import { isHortizontal } from "../utils";
+import { DimensionsConsumer } from "./DimensionsContext";
 
 export default class CharacterGrid extends React.Component {
   static propTypes = {
@@ -12,27 +12,17 @@ export default class CharacterGrid extends React.Component {
     color: PropTypes.string
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isHorizontal: isHortizontal()
-    };
-  }
-
-  componentDidMount() {
-    Dimensions.addEventListener("change", () => {
-      this.setState({ isHorizontal: isHortizontal() });
-    });
-  }
-
-  componentWillUnmount() {
-    Dimensions.removeEventListener("change", () => {});
-  }
-
   render() {
+    return (
+      <DimensionsConsumer>
+        {({ isPortrait }) => this.renderInternal(isPortrait)}
+      </DimensionsConsumer>
+    );
+  }
+
+  renderInternal(isPortrait) {
     const { chars, color } = this.props;
-    const { isHorizontal } = this.state;
-    const cols = isHorizontal ? 4 : 3;
+    const cols = isPortrait ? 3 : 4;
     const percentOfWidth = (1 / cols) * 0.9;
 
     return (

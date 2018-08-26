@@ -5,6 +5,7 @@ import {
   createStackNavigator
 } from "react-navigation";
 import AboutScreen from "./components/AboutScreen";
+import { DimensionsProvider } from "./components/DimensionsContext";
 import PracticeDetailScreen from "./components/PracticeDetailScreen";
 import PracticeListScreen from "./components/PracticeListScreen";
 import QuizDetailScreen from "./components/QuizDetailScreen";
@@ -14,7 +15,11 @@ import config from "./config";
 
 export default class App extends React.Component {
   render() {
-    return <RootStack />;
+    return (
+      <DimensionsProvider>
+        <RootStack />
+      </DimensionsProvider>
+    );
   }
 }
 
