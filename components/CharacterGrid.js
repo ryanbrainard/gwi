@@ -24,7 +24,7 @@ export default class CharacterGrid extends React.Component {
 
   renderInternal(width, isPortrait) {
     const { chars, color } = this.props;
-    const cols = isPortrait ? 3 : 4;
+    const cols = isPortrait ? 3 : 5;
     const size = (width / cols) * 0.9;
 
     return (
