@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
 import config from "../config";
 import CharacterSet from "../models/CharacterSet";
+import { DimensionsConsumer } from "./DimensionsContext";
 
 export default class CharacterSetsButtonList extends React.Component {
   static propTypes = {
@@ -11,13 +18,24 @@ export default class CharacterSetsButtonList extends React.Component {
   };
 
   render() {
+    return (
+      <DimensionsConsumer>
+        {({ isPortrait }) => this.renderInternal(isPortrait)}
+      </DimensionsConsumer>
+    );
+  }
+
+  renderInternal(isPortrait) {
     const { navigation, onPressUrl } = this.props;
+    const numCols = isPortrait ? 2 : 3;
 
     return (
       <ColorsContext.Consumer>
         {colors => (
-          <View style={styles.container}>
-            {CharacterSet.list().map(charSet => (
+          <FlatList
+            key={numCols}
+            data={CharacterSet.list()}
+            renderItem={({ item: charSet }) => (
               <TouchableOpacity
                 key={charSet.key}
                 style={[styles.button, { backgroundColor: colors.primary }]}
@@ -29,8 +47,10 @@ export default class CharacterSetsButtonList extends React.Component {
               >
                 <Text style={styles.text}>{charSet.name}</Text>
               </TouchableOpacity>
-            ))}
-          </View>
+            )}
+            contentContainerStyle={styles.container}
+            numColumns={numCols}
+          />
         )}
       </ColorsContext.Consumer>
     );
@@ -39,10 +59,8 @@ export default class CharacterSetsButtonList extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
-    justifyContent: "space-between",
-    padding: 100
+    padding: 20
   },
   button: {
     borderRadius: 75,
@@ -50,7 +68,7 @@ const styles = StyleSheet.create({
     height: 75,
     alignItems: "center",
     justifyContent: "center",
-    margin: 10
+    margin: 20
   },
   text: {
     fontWeight: "bold",

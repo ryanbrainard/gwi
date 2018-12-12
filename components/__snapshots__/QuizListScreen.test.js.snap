@@ -1,250 +1,1043 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<View
-  style={
+<RCTScrollView
+  contentContainerStyle={
     Object {
       "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "space-between",
-      "padding": 100,
+      "padding": 20,
     }
   }
+  data={
+    Array [
+      CharacterSet {
+        "_groups": Array [
+          Array [
+            Character {
+              "_group": Array [
+                "겁",
+                "껍",
+                "컵",
+              ],
+              "_name": "겁",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "겁",
+                "껍",
+                "컵",
+              ],
+              "_name": "껍",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "겁",
+                "껍",
+                "컵",
+              ],
+              "_name": "컵",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "고",
+                "꼬",
+                "코",
+              ],
+              "_name": "고",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "고",
+                "꼬",
+                "코",
+              ],
+              "_name": "꼬",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "고",
+                "꼬",
+                "코",
+              ],
+              "_name": "코",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "글",
+                "끌",
+                "클",
+              ],
+              "_name": "글",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "글",
+                "끌",
+                "클",
+              ],
+              "_name": "끌",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "글",
+                "끌",
+                "클",
+              ],
+              "_name": "클",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "기",
+                "끼",
+                "키",
+              ],
+              "_name": "기",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "기",
+                "끼",
+                "키",
+              ],
+              "_name": "끼",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "기",
+                "끼",
+                "키",
+              ],
+              "_name": "키",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+        ],
+        "_name": "ㄱㄲㅋ",
+      },
+      CharacterSet {
+        "_groups": Array [
+          Array [
+            Character {
+              "_group": Array [
+                "달",
+                "딸",
+                "탈",
+              ],
+              "_name": "달",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "달",
+                "딸",
+                "탈",
+              ],
+              "_name": "딸",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "달",
+                "딸",
+                "탈",
+              ],
+              "_name": "탈",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "대",
+                "때",
+                "태",
+              ],
+              "_name": "대",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "대",
+                "때",
+                "태",
+              ],
+              "_name": "때",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "대",
+                "때",
+                "태",
+              ],
+              "_name": "태",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "도",
+                "또",
+                "토",
+              ],
+              "_name": "도",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "도",
+                "또",
+                "토",
+              ],
+              "_name": "또",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "도",
+                "또",
+                "토",
+              ],
+              "_name": "토",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "들",
+                "뜰",
+                "틀",
+              ],
+              "_name": "들",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "들",
+                "뜰",
+                "틀",
+              ],
+              "_name": "뜰",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "들",
+                "뜰",
+                "틀",
+              ],
+              "_name": "틀",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+        ],
+        "_name": "ㄷㄸㅌ",
+      },
+      CharacterSet {
+        "_groups": Array [
+          Array [
+            Character {
+              "_group": Array [
+                "발",
+                "빨",
+                "팔",
+              ],
+              "_name": "발",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "발",
+                "빨",
+                "팔",
+              ],
+              "_name": "빨",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "발",
+                "빨",
+                "팔",
+              ],
+              "_name": "팔",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "배",
+                "빼",
+                "패",
+              ],
+              "_name": "배",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "배",
+                "빼",
+                "패",
+              ],
+              "_name": "빼",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "배",
+                "빼",
+                "패",
+              ],
+              "_name": "패",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "벼",
+                "뼈",
+                "펴",
+              ],
+              "_name": "벼",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "벼",
+                "뼈",
+                "펴",
+              ],
+              "_name": "뼈",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "벼",
+                "뼈",
+                "펴",
+              ],
+              "_name": "펴",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "불",
+                "뿔",
+                "풀",
+              ],
+              "_name": "불",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "불",
+                "뿔",
+                "풀",
+              ],
+              "_name": "뿔",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "불",
+                "뿔",
+                "풀",
+              ],
+              "_name": "풀",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+        ],
+        "_name": "ㅂㅃㅍ",
+      },
+      CharacterSet {
+        "_groups": Array [
+          Array [
+            Character {
+              "_group": Array [
+                "산",
+                "삼",
+                "쌈",
+              ],
+              "_name": "산",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "산",
+                "삼",
+                "쌈",
+              ],
+              "_name": "삼",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "산",
+                "삼",
+                "쌈",
+              ],
+              "_name": "쌈",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "서",
+                "써",
+                "섯",
+              ],
+              "_name": "서",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "서",
+                "써",
+                "섯",
+              ],
+              "_name": "써",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "서",
+                "써",
+                "섯",
+              ],
+              "_name": "섯",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "스",
+                "쓰",
+              ],
+              "_name": "스",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "스",
+                "쓰",
+              ],
+              "_name": "쓰",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "시",
+                "씨",
+              ],
+              "_name": "시",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "시",
+                "씨",
+              ],
+              "_name": "씨",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "심",
+              ],
+              "_name": "심",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "쓸",
+              ],
+              "_name": "쓸",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+        ],
+        "_name": "ㅅㅆ",
+      },
+      CharacterSet {
+        "_groups": Array [
+          Array [
+            Character {
+              "_group": Array [
+                "자",
+              ],
+              "_name": "자",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "절",
+                "쩔",
+                "철",
+              ],
+              "_name": "절",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "절",
+                "쩔",
+                "철",
+              ],
+              "_name": "쩔",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "절",
+                "쩔",
+                "철",
+              ],
+              "_name": "철",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "죽",
+                "쭉",
+                "축",
+              ],
+              "_name": "죽",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "죽",
+                "쭉",
+                "축",
+              ],
+              "_name": "쭉",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "죽",
+                "쭉",
+                "축",
+              ],
+              "_name": "축",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "짐",
+                "찜",
+                "침",
+              ],
+              "_name": "짐",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "짐",
+                "찜",
+                "침",
+              ],
+              "_name": "찜",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "짐",
+                "찜",
+                "침",
+              ],
+              "_name": "침",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+          Array [
+            Character {
+              "_group": Array [
+                "짜",
+                "차",
+              ],
+              "_name": "짜",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+            Character {
+              "_group": Array [
+                "짜",
+                "차",
+              ],
+              "_name": "차",
+              "_voices": Object {
+                "jane": 1,
+              },
+            },
+          ],
+        ],
+        "_name": "ㅈㅉㅊ",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  invertStickyHeaders={undefined}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={2}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
 >
-  <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#FFA500",
-        "borderRadius": 75,
-        "height": 75,
-        "justifyContent": "center",
-        "margin": 10,
-        "opacity": 1,
-        "width": 75,
-      }
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#000000",
-          "fontSize": 18,
-          "fontWeight": "bold",
-        }
-      }
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
     >
-      ㄱㄲㅋ
-    </Text>
-  </View>
-  <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#FFA500",
-        "borderRadius": 75,
-        "height": 75,
-        "justifyContent": "center",
-        "margin": 10,
-        "opacity": 1,
-        "width": 75,
-      }
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#000000",
-          "fontSize": 18,
-          "fontWeight": "bold",
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            undefined,
+          ]
         }
-      }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFA500",
+              "borderRadius": 75,
+              "height": 75,
+              "justifyContent": "center",
+              "margin": 20,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 18,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            ㄱㄲㅋ
+          </Text>
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFA500",
+              "borderRadius": 75,
+              "height": 75,
+              "justifyContent": "center",
+              "margin": 20,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 18,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            ㄷㄸㅌ
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
     >
-      ㄷㄸㅌ
-    </Text>
-  </View>
-  <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#FFA500",
-        "borderRadius": 75,
-        "height": 75,
-        "justifyContent": "center",
-        "margin": 10,
-        "opacity": 1,
-        "width": 75,
-      }
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#000000",
-          "fontSize": 18,
-          "fontWeight": "bold",
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            undefined,
+          ]
         }
-      }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFA500",
+              "borderRadius": 75,
+              "height": 75,
+              "justifyContent": "center",
+              "margin": 20,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 18,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            ㅂㅃㅍ
+          </Text>
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFA500",
+              "borderRadius": 75,
+              "height": 75,
+              "justifyContent": "center",
+              "margin": 20,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 18,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            ㅅㅆ
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
     >
-      ㅂㅃㅍ
-    </Text>
-  </View>
-  <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#FFA500",
-        "borderRadius": 75,
-        "height": 75,
-        "justifyContent": "center",
-        "margin": 10,
-        "opacity": 1,
-        "width": 75,
-      }
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#000000",
-          "fontSize": 18,
-          "fontWeight": "bold",
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            undefined,
+          ]
         }
-      }
-    >
-      ㅅㅆ
-    </Text>
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFA500",
+              "borderRadius": 75,
+              "height": 75,
+              "justifyContent": "center",
+              "margin": 20,
+              "opacity": 1,
+              "width": 75,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000000",
+                "fontSize": 18,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            ㅈㅉㅊ
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
-  <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#FFA500",
-        "borderRadius": 75,
-        "height": 75,
-        "justifyContent": "center",
-        "margin": 10,
-        "opacity": 1,
-        "width": 75,
-      }
-    }
-    testID={undefined}
-    tvParallaxProperties={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#000000",
-          "fontSize": 18,
-          "fontWeight": "bold",
-        }
-      }
-    >
-      ㅈㅉㅊ
-    </Text>
-  </View>
-</View>
+</RCTScrollView>
 `;

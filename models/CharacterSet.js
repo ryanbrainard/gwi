@@ -23,6 +23,7 @@ export default class CharacterSet {
   get characters() {
     return _.flatten(this.groups);
   }
+
   static _load() {
     if (this._list) {
       return;
