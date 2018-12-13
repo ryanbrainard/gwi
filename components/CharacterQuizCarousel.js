@@ -4,6 +4,7 @@ import { Dimensions, View } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import Character from "../models/Character";
 import CharacterQuizCard from "./CharacterQuizCard";
+import { DimensionsConsumer } from "./DimensionsContext";
 
 export default class CharacterQuizCarousel extends React.Component {
   static propTypes = {
@@ -12,17 +13,26 @@ export default class CharacterQuizCarousel extends React.Component {
 
   render() {
     const { characters } = this.props;
-    const windowDims = Dimensions.get("window");
 
     return (
-      <View style={{ height: windowDims.height * 0.75 }}>
+      <DimensionsConsumer>
+        {({ window: { width, height } }) =>
+          this.renderInternal(width, height, characters)
+        }
+      </DimensionsConsumer>
+    );
+  }
+
+  renderInternal(width, height, characters) {
+    return (
+      <View style={{ height: height * 0.8 }}>
         <Carousel
           ref={c => {
             this._carousel = c;
           }}
           loop={true}
-          sliderWidth={windowDims.width}
-          itemWidth={windowDims.width * 0.9}
+          sliderWidth={width}
+          itemWidth={width * 0.9}
           data={characters}
           renderItem={({ item }) => (
             <CharacterQuizCard

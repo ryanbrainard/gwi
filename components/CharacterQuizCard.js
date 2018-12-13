@@ -57,17 +57,47 @@ export default class CharacterQuizCard extends React.Component {
     const { charChoices, success } = this.state;
 
     return (
-      <View style={styles.container}>
-        <DimensionsConsumer>
-          {({ window: { width, height } }) => (
-            <CharacterTile
-              char={char}
-              show={!!success}
-              size={Math.min(width, height) * 0.3}
-            />
-          )}
-        </DimensionsConsumer>
-        <View style={styles.choicesContainer}>
+      <DimensionsConsumer>
+        {({ isPortrait, window: { width, height } }) =>
+          this.renderInternal(
+            isPortrait,
+            width,
+            height,
+            char,
+            gotoNext,
+            charChoices,
+            success
+          )
+        }
+      </DimensionsConsumer>
+    );
+  }
+
+  renderInternal(
+    isPortrait,
+    width,
+    height,
+    char,
+    gotoNext,
+    charChoices,
+    success
+  ) {
+    return (
+      <View
+        key={char.toString() + isPortrait}
+        style={[styles.container, { padding: isPortrait ? 50 : 15 }]}
+      >
+        <CharacterTile
+          char={char}
+          show={!!success}
+          size={Math.min(width, height) * 0.3}
+        />
+        <View
+          style={[
+            styles.choicesContainer,
+            { flexDirection: isPortrait ? "column" : "row" }
+          ]}
+        >
           {charChoices.map(cc => {
             const correctChoice = cc === char;
             return (
@@ -118,13 +148,13 @@ export default class CharacterQuizCard extends React.Component {
         return (
           <Feather
             name="check-circle"
-            size={48}
+            size={36}
             color={config.colors.success}
           />
         );
       case false:
         return (
-          <Feather name="x-circle" size={48} color={config.colors.error} />
+          <Feather name="x-circle" size={36} color={config.colors.error} />
         );
     }
   }
@@ -134,17 +164,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: config.colors.background,
-    alignItems: "center",
-    padding: 50
+    alignItems: "center"
   },
   choicesContainer: {
-    margin: 20
+    margin: 10
   },
   choicesButton: {
     backgroundColor: config.colors.neutral,
     borderRadius: 75,
     width: 75,
-    height: 50,
+    height: 40,
     alignItems: "center",
     justifyContent: "center",
     margin: 10

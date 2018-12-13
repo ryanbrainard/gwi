@@ -3,12 +3,16 @@
 exports[`renders correctly 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#FFFFFF",
-      "flex": 1,
-      "padding": 50,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+      Object {
+        "padding": 50,
+      },
+    ]
   }
 >
   <View
@@ -67,9 +71,14 @@ exports[`renders correctly 1`] = `
   </View>
   <View
     style={
-      Object {
-        "margin": 20,
-      }
+      Array [
+        Object {
+          "margin": 10,
+        },
+        Object {
+          "flexDirection": "column",
+        },
+      ]
     }
   >
     <View
@@ -94,7 +103,7 @@ exports[`renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "#A9A9A9",
           "borderRadius": 75,
-          "height": 50,
+          "height": 40,
           "justifyContent": "center",
           "margin": 10,
           "opacity": 1,
@@ -141,7 +150,7 @@ exports[`renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "#A9A9A9",
           "borderRadius": 75,
-          "height": 50,
+          "height": 40,
           "justifyContent": "center",
           "margin": 10,
           "opacity": 1,
@@ -188,7 +197,7 @@ exports[`renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "#A9A9A9",
           "borderRadius": 75,
-          "height": 50,
+          "height": 40,
           "justifyContent": "center",
           "margin": 10,
           "opacity": 1,

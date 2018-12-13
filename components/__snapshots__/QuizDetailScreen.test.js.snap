@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
   <View
     style={
       Object {
-        "height": 1000.5,
+        "height": 1067.2,
       }
     }
   >
