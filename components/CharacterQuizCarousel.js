@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import Character from "../models/Character";
 import CharacterQuizCard from "./CharacterQuizCard";
@@ -41,10 +41,18 @@ export default class CharacterQuizCarousel extends React.Component {
               gotoNext={this._carousel.snapToNext.bind(this._carousel)}
             />
           )}
-          onLayout={() => characters[0].play()}
+          onLayout={this.playFirstOnce.bind(this)}
           onSnapToItem={index => characters[index].play()}
         />
       </View>
     );
+  }
+
+  playFirstOnce() {
+    if (this.playedFirstOnce) {
+      return;
+    }
+    this.props.characters[0].play();
+    this.playedFirstOnce = true;
   }
 }

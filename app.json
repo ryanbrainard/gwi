@@ -1,6 +1,11 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "sdkVersion": "27.0.0",
+    "name": "gwi",
+    "slug": "gwi",
+    "version": "0.1.0",
+    "description": "",
+    "githubUrl": "https://github.com/ryanbrainard/gwi"
   },
   "assetBundlePatterns": [
     "assets/sounds/voices/jane/*"
