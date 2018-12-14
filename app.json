@@ -8,7 +8,11 @@
     "description": "Practice listening to commonly confused Korean sounds and quiz yourself to see if you can distinguish them.",
     "githubUrl": "https://github.com/ryanbrainard/gwi",
     "icon": "./assets/images/gwi-logo-green-1024.png",
-    "primaryColor": "#3CB371"
+    "primaryColor": "#3CB371",
+    "splash": {
+      "backgroundColor": "#3CB371",
+      "image": "./assets/images/gwi-logo-512.png"
+    }
   },
   "assetBundlePatterns": [
     "assets/sounds/voices/jane/*"
