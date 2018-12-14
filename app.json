@@ -5,7 +5,9 @@
     "slug": "gwi",
     "version": "0.1.0",
     "description": "",
-    "githubUrl": "https://github.com/ryanbrainard/gwi"
+    "githubUrl": "https://github.com/ryanbrainard/gwi",
+    "icon": "./assets/images/gwi-logo-green-1024.png",
+    "primaryColor": "#3CB371"
   },
   "assetBundlePatterns": [
     "assets/sounds/voices/jane/*"
