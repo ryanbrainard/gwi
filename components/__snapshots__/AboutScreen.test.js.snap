@@ -169,6 +169,51 @@ exports[`renders correctly 1`] = `
         Report an Issue
       </Text>
     </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#3CB371",
+          "borderRadius": 75,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Source Code
+      </Text>
+    </View>
   </View>
 </View>
 `;

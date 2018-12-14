@@ -64,6 +64,7 @@ export default class AboutScreen extends React.Component {
             text="Report an Issue"
             href={`${appJson.expo.githubUrl}/issues`}
           />
+          <LinkButton text="Source Code" href={appJson.expo.githubUrl} />
         </View>
       </View>
     );
