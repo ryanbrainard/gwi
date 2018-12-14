@@ -1,12 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import {
-  Dimensions,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "../config";
 import Character from "../models/Character";
 import ColorsContext from "./ColorsContext";
