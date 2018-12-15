@@ -34,8 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run:
-        - test -f .secrets.json || cat '{}' > .secrets.json
-        - yarn test
+      - run: test -f .secrets.json || cat '{}' > .secrets.json
+      - run: yarn test
 
 
