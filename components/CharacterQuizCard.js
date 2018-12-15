@@ -8,6 +8,7 @@ import Character from "../models/Character";
 import Settings from "../models/Settings";
 import CharacterTile from "./CharacterTile";
 import { DimensionsConsumer } from "./DimensionsContext";
+import { Segment } from "expo";
 
 export default class CharacterQuizCard extends React.Component {
   static propTypes = {
@@ -125,6 +126,30 @@ export default class CharacterQuizCard extends React.Component {
                   }
                 ]}
                 onPress={() => {
+                  const trackProperties = {
+                    charName: char.name,
+                    choiceName: cc.name
+                  };
+                  if (!success) {
+                    if (correctChoice) {
+                      Segment.trackWithProperties(
+                        "character-quiz-card-choice-success",
+                        trackProperties
+                      );
+                    } else {
+                      Segment.trackWithProperties(
+                        "character-quiz-card-choice-fail",
+                        trackProperties
+                      );
+                    }
+                  } else {
+                    // user tries other choices after success
+                    Segment.trackWithProperties(
+                      "character-quiz-card-choice-success-continue",
+                      trackProperties
+                    );
+                  }
+
                   this.setState({
                     success: success || correctChoice
                   });

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { Segment } from "expo";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "../config";
 import Character from "../models/Character";
@@ -32,7 +33,13 @@ export default class CharacterTile extends React.Component {
                   height: size
                 }
               ]}
-              onPress={char.play.bind(char)}
+              onPress={() => {
+                Segment.trackWithProperties("character-tile-play-press", {
+                  charName: char.name,
+                  charShow: show
+                });
+                char.play();
+              }}
             >
               {<Text style={styles.text}>{show ? char.name : "?"}</Text>}
             </TouchableOpacity>

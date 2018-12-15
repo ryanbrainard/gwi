@@ -13,12 +13,18 @@ import QuizListScreen from "./components/QuizListScreen";
 import SettingsScreen from "./components/SettingsScreen";
 import { provideColors } from "./components/ColorsContext";
 import config from "./config";
+import secrets from "./.secrets";
+import { Segment } from "expo";
+
+if (secrets && secrets.segment) {
+  Segment.initialize(secrets.segment);
+}
 
 export default class App extends React.Component {
   render() {
     return (
       <DimensionsProvider>
-        <RootStack />
+        <RootStack onNavigationStateChange={trackScreenChanges} />
       </DimensionsProvider>
     );
   }
@@ -35,11 +41,11 @@ const QuizStack = createStackNavigator({
 });
 
 const SettingsStack = createStackNavigator({
-  _: SettingsScreen
+  Settings: SettingsScreen
 });
 
 const AboutStack = createStackNavigator({
-  _: provideColors(config.colors.about, AboutScreen)
+  About: provideColors(config.colors.about, AboutScreen)
 });
 
 const RootStack = createBottomTabNavigator(
@@ -80,3 +86,32 @@ const RootStack = createBottomTabNavigator(
     }
   }
 );
+
+function trackScreenChanges(prevState, currentState) {
+  const currentScreen = getActiveRoute(currentState);
+  const prevScreen = getActiveRoute(prevState);
+
+  if (prevScreen.routeName !== currentScreen.routeName) {
+    const properties = {};
+    if (currentScreen.params) {
+      if (currentScreen.params.charSet) {
+        properties.charSetName = currentScreen.params.charSet.name;
+      }
+    }
+
+    Segment.screenWithProperties(currentScreen.routeName, properties);
+  }
+}
+
+// gets the current screen from navigation state
+function getActiveRoute(navigationState) {
+  if (!navigationState) {
+    return null;
+  }
+  const route = navigationState.routes[navigationState.index];
+  // dive into nested navigators
+  if (route.routes) {
+    return getActiveRoute(route);
+  }
+  return route;
+}
