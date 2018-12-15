@@ -16,7 +16,7 @@ import config from "./config";
 import secrets from "./.secrets";
 import { Segment } from "expo";
 
-if (secrets && secrets.segment) {
+if (secrets.segment) {
   Segment.initialize(secrets.segment);
 }
 
