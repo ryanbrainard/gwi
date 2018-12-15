@@ -82,10 +82,18 @@ export default class CharacterQuizCard extends React.Component {
     charChoices,
     success
   ) {
+    const containerPadding = Math.min(width, height) / 10;
+    const buttonWidth = Math.min(width, height) / 5;
+    const buttonHeight = buttonWidth / 2;
+    const buttonTextSize = buttonWidth / 5;
+    const buttonMargin = buttonWidth / 5;
+    const resultIconSize = buttonTextSize * 2;
+    const nextSize = buttonTextSize * 1.5;
+
     return (
       <View
         key={char.toString() + isPortrait}
-        style={[styles.container, { padding: isPortrait ? 50 : 15 }]}
+        style={[styles.container, { padding: containerPadding }]}
       >
         <CharacterTile
           char={char}
@@ -109,7 +117,11 @@ export default class CharacterQuizCard extends React.Component {
                     backgroundColor:
                       correctChoice && success
                         ? config.colors.success
-                        : config.colors.neutral
+                        : config.colors.neutral,
+                    borderRadius: buttonWidth,
+                    width: buttonWidth,
+                    height: buttonHeight,
+                    margin: buttonMargin
                   }
                 ]}
                 onPress={() => {
@@ -119,19 +131,23 @@ export default class CharacterQuizCard extends React.Component {
                   cc.play();
                 }}
               >
-                <Text style={styles.choicesText}>{cc.name}</Text>
+                <Text
+                  style={[styles.choicesText, { fontSize: buttonTextSize }]}
+                >
+                  {cc.name}
+                </Text>
               </TouchableOpacity>
             );
           })}
         </View>
 
-        {this.renderSuccessIcon(success, gotoNext)}
+        {this.renderResultIcon(success, resultIconSize)}
 
         {success && (
           <TouchableOpacity style={styles.nextButton} onPress={gotoNext}>
             <MaterialCommunityIcons
               name="skip-next"
-              size={30}
+              size={nextSize}
               color={config.colors.success}
             />
           </TouchableOpacity>
@@ -140,7 +156,7 @@ export default class CharacterQuizCard extends React.Component {
     );
   }
 
-  renderSuccessIcon(success) {
+  renderResultIcon(success, size) {
     switch (success) {
       case null:
         return null;
@@ -148,13 +164,13 @@ export default class CharacterQuizCard extends React.Component {
         return (
           <Feather
             name="check-circle"
-            size={36}
+            size={size}
             color={config.colors.success}
           />
         );
       case false:
         return (
-          <Feather name="x-circle" size={36} color={config.colors.error} />
+          <Feather name="x-circle" size={size} color={config.colors.error} />
         );
     }
   }
@@ -171,16 +187,11 @@ const styles = StyleSheet.create({
   },
   choicesButton: {
     backgroundColor: config.colors.neutral,
-    borderRadius: 75,
-    width: 75,
-    height: 40,
     alignItems: "center",
-    justifyContent: "center",
-    margin: 10
+    justifyContent: "center"
   },
   choicesText: {
     fontWeight: "bold",
-    fontSize: 18,
     color: config.colors.text
   },
   nextButton: {

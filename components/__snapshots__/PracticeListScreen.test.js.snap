@@ -790,12 +790,12 @@ exports[`renders correctly 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#6495ED",
-              "borderRadius": 75,
-              "height": 75,
+              "borderRadius": 187.5,
+              "height": 187.5,
               "justifyContent": "center",
-              "margin": 20,
+              "margin": 37.5,
               "opacity": 1,
-              "width": 75,
+              "width": 187.5,
             }
           }
           testID={undefined}
@@ -806,11 +806,15 @@ exports[`renders correctly 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#000000",
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "fontSize": 37.5,
+                },
+              ]
             }
           >
             ㄱㄲㅋ
@@ -837,12 +841,12 @@ exports[`renders correctly 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#6495ED",
-              "borderRadius": 75,
-              "height": 75,
+              "borderRadius": 187.5,
+              "height": 187.5,
               "justifyContent": "center",
-              "margin": 20,
+              "margin": 37.5,
               "opacity": 1,
-              "width": 75,
+              "width": 187.5,
             }
           }
           testID={undefined}
@@ -853,11 +857,15 @@ exports[`renders correctly 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#000000",
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "fontSize": 37.5,
+                },
+              ]
             }
           >
             ㄷㄸㅌ
@@ -900,12 +908,12 @@ exports[`renders correctly 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#6495ED",
-              "borderRadius": 75,
-              "height": 75,
+              "borderRadius": 187.5,
+              "height": 187.5,
               "justifyContent": "center",
-              "margin": 20,
+              "margin": 37.5,
               "opacity": 1,
-              "width": 75,
+              "width": 187.5,
             }
           }
           testID={undefined}
@@ -916,11 +924,15 @@ exports[`renders correctly 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#000000",
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "fontSize": 37.5,
+                },
+              ]
             }
           >
             ㅂㅃㅍ
@@ -947,12 +959,12 @@ exports[`renders correctly 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#6495ED",
-              "borderRadius": 75,
-              "height": 75,
+              "borderRadius": 187.5,
+              "height": 187.5,
               "justifyContent": "center",
-              "margin": 20,
+              "margin": 37.5,
               "opacity": 1,
-              "width": 75,
+              "width": 187.5,
             }
           }
           testID={undefined}
@@ -963,11 +975,15 @@ exports[`renders correctly 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#000000",
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "fontSize": 37.5,
+                },
+              ]
             }
           >
             ㅅㅆ
@@ -1010,12 +1026,12 @@ exports[`renders correctly 1`] = `
             Object {
               "alignItems": "center",
               "backgroundColor": "#6495ED",
-              "borderRadius": 75,
-              "height": 75,
+              "borderRadius": 187.5,
+              "height": 187.5,
               "justifyContent": "center",
-              "margin": 20,
+              "margin": 37.5,
               "opacity": 1,
-              "width": 75,
+              "width": 187.5,
             }
           }
           testID={undefined}
@@ -1026,11 +1042,15 @@ exports[`renders correctly 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#000000",
-                "fontSize": 18,
-                "fontWeight": "bold",
-              }
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "fontSize": 37.5,
+                },
+              ]
             }
           >
             ㅈㅉㅊ

@@ -20,14 +20,19 @@ export default class CharacterSetsButtonList extends React.Component {
   render() {
     return (
       <DimensionsConsumer>
-        {({ isPortrait }) => this.renderInternal(isPortrait)}
+        {({ window: { width, height }, isPortrait }) =>
+          this.renderInternal(Math.min(width, height), isPortrait)
+        }
       </DimensionsConsumer>
     );
   }
 
-  renderInternal(isPortrait) {
+  renderInternal(size, isPortrait) {
     const { navigation, onPressUrl } = this.props;
     const numCols = isPortrait ? 2 : 3;
+    const buttonSize = size / 4;
+    const buttonFontSize = buttonSize / 5;
+    const buttonMargin = buttonSize / 5;
 
     return (
       <ColorsContext.Consumer>
@@ -38,14 +43,25 @@ export default class CharacterSetsButtonList extends React.Component {
             renderItem={({ item: charSet }) => (
               <TouchableOpacity
                 key={charSet.key}
-                style={[styles.button, { backgroundColor: colors.primary }]}
+                style={[
+                  styles.button,
+                  {
+                    backgroundColor: colors.primary,
+                    borderRadius: buttonSize,
+                    width: buttonSize,
+                    height: buttonSize,
+                    margin: buttonMargin
+                  }
+                ]}
                 onPress={() =>
                   navigation.navigate(onPressUrl, {
                     charSet: charSet
                   })
                 }
               >
-                <Text style={styles.text}>{charSet.name}</Text>
+                <Text style={[styles.text, { fontSize: buttonFontSize }]}>
+                  {charSet.name}
+                </Text>
               </TouchableOpacity>
             )}
             contentContainerStyle={styles.container}
@@ -63,16 +79,11 @@ const styles = StyleSheet.create({
     padding: 20
   },
   button: {
-    borderRadius: 75,
-    width: 75,
-    height: 75,
     alignItems: "center",
-    justifyContent: "center",
-    margin: 20
+    justifyContent: "center"
   },
   text: {
     fontWeight: "bold",
-    fontSize: 18,
     color: config.colors.text
   }
 });
