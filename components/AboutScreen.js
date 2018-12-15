@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
+import { Segment } from "expo";
 import config from "../config";
 import { DimensionsConsumer } from "./DimensionsContext";
 import appJson from "../app.json";
@@ -32,7 +33,13 @@ export default class AboutScreen extends React.Component {
     const LinkButton = ({ text, href }) => (
       <TouchableOpacity
         style={styles.button}
-        onPress={() => Linking.openURL(href)}
+        onPress={() => {
+          Linking.openURL(href);
+          Segment.trackWithProperties("about-link-button-press", {
+            text,
+            href
+          });
+        }}
       >
         <Text style={styles.buttonText}>{text}</Text>
       </TouchableOpacity>
