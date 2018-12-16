@@ -3,7 +3,6 @@
     "sdkVersion": "27.0.0",
     "name": "Korean Ear Trainer",
     "slug": "gwi",
-
     "privacy": "public",
     "version": "0.1.0",
     "description": "Practice listening to commonly confused Korean sounds and quiz yourself to see if you can distinguish them.",
@@ -13,15 +12,26 @@
     "splash": {
       "image": "assets/images/gwi-logo-black-trans-1200.png"
     },
+    "assetBundlePatterns": [
+      "assets/sounds/voices/jane/*",
+      "assets/images/gwi-logo-green-trans-1200.png"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "ryanbrainardcom",
+            "project": "com-ryanbrainard-gwi"
+          }
+        }
+      ]
+    },
     "ios": {
       "bundleIdentifier": "com.ryanbrainard.gwi"
     },
     "android": {
       "package": "com.ryanbrainard.gwi"
     }
-  },
-  "assetBundlePatterns": [
-    "assets/sounds/voices/jane/*",
-    "assets/images/gwi-logo-green-trans-1200.png"
-  ]
+  }
 }

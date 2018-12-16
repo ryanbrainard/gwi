@@ -15,18 +15,39 @@ import { provideColors } from "./components/ColorsContext";
 import config from "./config";
 import secrets from "./.secrets";
 import { Segment } from "expo";
+import Sentry from "sentry-expo";
 
 if (secrets.segment) {
   Segment.initialize(secrets.segment);
 }
 
+if (secrets.sentry && secrets.sentry.publicDSN) {
+  Sentry.enableInExpoDevelopment = true;
+  Sentry.config(secrets.sentry.publicDSN).install();
+}
+
 export default class App extends React.Component {
   render() {
     return (
-      <DimensionsProvider>
-        <RootStack onNavigationStateChange={trackScreenChanges} />
-      </DimensionsProvider>
+      <ErrorBoundary>
+        <DimensionsProvider>
+          <RootStack onNavigationStateChange={trackScreenChanges} />
+        </DimensionsProvider>
+      </ErrorBoundary>
     );
+  }
+}
+
+class ErrorBoundary extends React.Component {
+  componentDidCatch(error, errorInfo) {
+    Sentry.captureException(error, {
+      extra: errorInfo
+    });
+  }
+
+  render() {
+    const { children } = this.props;
+    return children;
   }
 }
 
