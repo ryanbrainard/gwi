@@ -1,4 +1,4 @@
-import Expo from "expo";
+import VoicePlayer from "./VoicePlayer";
 
 export default class Character {
   static _chars = {};
@@ -16,6 +16,9 @@ export default class Character {
     this._name = name;
     this._group = group;
     this._voices = voices;
+
+    const voice = this._voices.jane;
+    this.player = new VoicePlayer(voice);
   }
 
   get key() {
@@ -30,25 +33,7 @@ export default class Character {
     return this._group.map(c => Character.find(c));
   }
 
-  // TODO: should this go here
-  // TODO: error handle
-  // TODO: show indicator while playing?
-  // TODO: pass in sound? make it controlled on model?
-  // TODO: customizable voice
-  // TODO: fix onFinish
-  play(onFinish) {
-    return Expo.Audio.Sound.create(this._voices.jane, {
-      shouldPlay: true
-    })
-      .then(playback => {
-        playback.setOnPlaybackStatusUpdate(playbackStatus => {
-          if (playbackStatus.didJustFinish) {
-            onFinish && onFinish();
-          }
-        });
-      })
-      .catch(rejection => {
-        /*TODO*/
-      });
+  async play() {
+    await this.player.play();
   }
 }
