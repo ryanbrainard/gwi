@@ -2,7 +2,7 @@ import Expo from "expo";
 
 export default class VoicePlayerMRU {
   static recentPlaybacks = [];
-  static maxPlaybacks = 5;
+  static maxPlaybacks = 12;
 
   constructor(voices) {
     this.voices = voices;
@@ -10,37 +10,37 @@ export default class VoicePlayerMRU {
   }
 
   async play() {
-    await this.preload();
+    await this.load();
     await this.playback.playFromPositionAsync(0);
   }
 
-  async preload() {
-    console.log("fn=VoicePlayerMRU.preload at=start");
+  async load() {
+    console.log("fn=VoicePlayerMRU.load at=start");
 
     if (VoicePlayerMRU.recentPlaybacks.find(pb => pb === this.playback)) {
-      console.log("fn=VoicePlayerMRU.preload at=noop-recent");
+      console.log("fn=VoicePlayerMRU.load at=noop-recent");
       return;
     }
 
     await this.playback.loadAsync(this.voices.jane); // TODO: settings
     VoicePlayerMRU.recentPlaybacks.unshift(this.playback);
 
-    console.log("fn=VoicePlayerMRU.preload at=mru.start");
+    console.log("fn=VoicePlayerMRU.load at=mru.start");
     while (
       VoicePlayerMRU.recentPlaybacks.length > VoicePlayerMRU.maxPlaybacks
     ) {
-      console.log("fn=VoicePlayerMRU.preload at=mru.pop");
+      console.log("fn=VoicePlayerMRU.load at=mru.pop");
       const pb = VoicePlayerMRU.recentPlaybacks.pop();
       if ((await pb.getStatusAsync()).isLoaded) {
-        console.log("fn=VoicePlayerMRU.preload at=mru.unload");
+        console.log("fn=VoicePlayerMRU.load at=mru.unload");
         await pb.unloadAsync();
       }
     }
     console.log(
-      "fn=VoicePlayerMRU.preload at=mru.count",
+      "fn=VoicePlayerMRU.load at=mru.count",
       VoicePlayerMRU.recentPlaybacks.length
     );
 
-    console.log("fn=VoicePlayerMRU.preload at=finish");
+    console.log("fn=VoicePlayerMRU.load at=finish");
   }
 }

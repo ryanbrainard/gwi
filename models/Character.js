@@ -32,6 +32,10 @@ export default class Character {
     return this._group.map(c => Character.find(c));
   }
 
+  async preloadPlay() {
+    await this.player.load();
+  }
+
   async play() {
     await this.player.play();
   }

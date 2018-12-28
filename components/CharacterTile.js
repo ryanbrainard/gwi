@@ -17,6 +17,10 @@ export default class CharacterTile extends React.Component {
     show: true
   };
 
+  componentDidMount() {
+    this.props.char.preloadPlay();
+  }
+
   render() {
     const { char, size, show } = this.props;
 
