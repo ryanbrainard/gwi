@@ -22,6 +22,12 @@ export default class VoicePlayerMRU {
       return;
     }
 
+    if (this.playback._loading) {
+      // isn't in status api...
+      console.log("fn=VoicePlayerMRU.load at=noop-loading");
+      return;
+    }
+
     await this.playback.loadAsync(this.voices.jane); // TODO: settings
     VoicePlayerMRU.recentPlaybacks.unshift(this.playback);
 
