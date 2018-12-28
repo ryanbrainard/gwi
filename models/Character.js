@@ -1,4 +1,4 @@
-import VoicePlayer from "./VoicePlayer";
+import VoicePlayerMRU from "./VoicePlayerMRU";
 
 export default class Character {
   static _chars = {};
@@ -17,8 +17,7 @@ export default class Character {
     this._group = group;
     this._voices = voices;
 
-    const voice = this._voices.jane;
-    this.player = new VoicePlayer(voice);
+    this.player = new VoicePlayerMRU(this._voices);
   }
 
   get key() {
