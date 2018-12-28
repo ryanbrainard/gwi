@@ -10,6 +10,12 @@ export default class PracticeDetailScreen extends React.Component {
     title: navigation.getParam("charSet").name
   });
 
+  componentDidMount() {
+    this.props.navigation
+      .getParam("charSet")
+      .characters.forEach(char => char.preloadPlay());
+  }
+
   render() {
     const { navigation } = this.props;
     const charSet = navigation.getParam("charSet");

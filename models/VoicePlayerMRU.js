@@ -7,43 +7,63 @@ export default class VoicePlayerMRU {
   constructor(voices) {
     this.voices = voices;
     this.playback = new Expo.Audio.Sound();
-  }
-
-  async play() {
-    await this.load();
-    await this.playback.playFromPositionAsync(0);
+    this.playAfterLoad = false;
   }
 
   async load() {
-    console.log("fn=VoicePlayerMRU.load at=start");
+    await this._loadAndMaybePlay(false);
+  }
 
-    if (VoicePlayerMRU.recentPlaybacks.find(pb => pb === this.playback)) {
-      console.log("fn=VoicePlayerMRU.load at=noop-recent");
-      return;
-    }
+  async play() {
+    await this._loadAndMaybePlay(true);
+  }
 
-    console.log("fn=VoicePlayerMRU.load at=mru.add");
-    VoicePlayerMRU.recentPlaybacks.unshift(this.playback);
+  async _loadAndMaybePlay(playAfterLoad) {
+    // de-dupe in-flight loadings
+    this.playAfterLoad = this.playAfterLoad || !!playAfterLoad;
 
-    console.log("fn=VoicePlayerMRU.load at=mru.gc");
-    while (
-      VoicePlayerMRU.recentPlaybacks.length > VoicePlayerMRU.maxPlaybacks
-    ) {
-      console.log("fn=VoicePlayerMRU.load at=mru.gc.pop");
-      const pb = VoicePlayerMRU.recentPlaybacks.pop();
-      if ((await pb.getStatusAsync()).isLoaded) {
-        console.log("fn=VoicePlayerMRU.load at=mru.unload");
-        pb.unloadAsync();
-      }
-    }
     console.log(
-      "fn=VoicePlayerMRU.load at=mru.count",
-      VoicePlayerMRU.recentPlaybacks.length
+      `fn=VoicePlayerMRU._loadAndMaybePlay at=start playAfterLoad=${
+        this.playAfterLoad
+      }`
     );
 
-    console.log("fn=VoicePlayerMRU.load at=mru.load");
-    await this.playback.loadAsync(this.voices.jane); // TODO: settings
+    if (VoicePlayerMRU.recentPlaybacks.find(pb => pb === this.playback)) {
+      console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=mru.found");
+    } else {
+      console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=mru.add");
+      VoicePlayerMRU.recentPlaybacks.unshift(this.playback);
 
-    console.log("fn=VoicePlayerMRU.load at=finish");
+      console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=mru.gc");
+      while (
+        VoicePlayerMRU.recentPlaybacks.length > VoicePlayerMRU.maxPlaybacks
+      ) {
+        console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=mru.gc.pop");
+        const pb = VoicePlayerMRU.recentPlaybacks.pop();
+        if ((await pb.getStatusAsync()).isLoaded) {
+          console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=mru.unload");
+          pb.unloadAsync();
+        }
+      }
+    }
+
+    if (this.playback._loading) {
+      console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=loading");
+      // this.playAfterLoad was set above, so return here and it let the loading one play if needed
+      return;
+    } else if ((await this.playback.getStatusAsync()).isLoaded) {
+      console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=mru.loaded");
+    } else {
+      console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=mru.load");
+      await this.playback.loadAsync(this.voices.jane);
+    }
+
+    if (this.playAfterLoad) {
+      console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=play");
+      await this.playback.playFromPositionAsync(0);
+      this.playAfterLoad = false;
+    }
+
+    console.log("fn=VoicePlayerMRU._loadAndMaybePlay at=finish");
   }
 }
