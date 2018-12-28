@@ -45,6 +45,10 @@ export default class CharacterQuizCard extends React.Component {
     return shuffledChoices;
   }
 
+  componentDidMount() {
+    this.state.charChoices.forEach(choice => choice.preloadPlay());
+  }
+
   componentDidUpdate(_, prevState) {
     if (this.props.gotoNext && this.state.success && !prevState.success) {
       Settings.get(Settings.KEYS.ADVANCE_ON_SUCCESS).then(
