@@ -24,6 +24,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -96,6 +97,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -168,6 +170,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -242,6 +245,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -314,6 +318,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -386,6 +391,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -460,6 +466,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -532,6 +539,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -604,6 +612,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -678,6 +687,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -750,6 +760,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -822,6 +833,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -901,6 +913,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -973,6 +986,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1045,6 +1059,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1119,6 +1134,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1191,6 +1207,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1263,6 +1280,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1337,6 +1355,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1409,6 +1428,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1481,6 +1501,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1555,6 +1576,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1627,6 +1649,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1699,6 +1722,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1778,6 +1802,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1850,6 +1875,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1922,6 +1948,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -1996,6 +2023,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2068,6 +2096,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2140,6 +2169,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2214,6 +2244,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2286,6 +2317,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2358,6 +2390,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2432,6 +2465,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2504,6 +2538,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2576,6 +2611,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2655,6 +2691,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2727,6 +2764,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2799,6 +2837,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2873,6 +2912,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -2945,6 +2985,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3017,6 +3058,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3090,6 +3132,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3161,6 +3204,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3234,6 +3278,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3305,6 +3350,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3377,6 +3423,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3449,6 +3496,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3526,6 +3574,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3600,6 +3649,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3672,6 +3722,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3744,6 +3795,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3818,6 +3870,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3890,6 +3943,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -3962,6 +4016,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -4036,6 +4091,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -4108,6 +4164,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -4180,6 +4237,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -4253,6 +4311,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
@@ -4324,6 +4383,7 @@ exports[`renders correctly 1`] = `
                 "jane": 1,
               },
               "player": VoicePlayerMRU {
+                "playAfterLoad": false,
                 "playback": Sound {
                   "_coalesceStatusUpdatesInMillis": 100,
                   "_errorCallback": [Function],
