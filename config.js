@@ -535,6 +535,26 @@ export default {
           voices: {
             jane: require("./assets/sounds/voices/jane/자자.mp3")
           }
+        },
+        짜: {
+          voices: {
+            jane: require("./assets/sounds/voices/jane/짜.mp3")
+          }
+        },
+        짜짜: {
+          voices: {
+            jane: require("./assets/sounds/voices/jane/짜짜.mp3")
+          }
+        },
+        차: {
+          voices: {
+            jane: require("./assets/sounds/voices/jane/차.mp3")
+          }
+        },
+        차차: {
+          voices: {
+            jane: require("./assets/sounds/voices/jane/차차.mp3")
+          }
         }
       },
       {
@@ -630,28 +650,6 @@ export default {
         침침: {
           voices: {
             jane: require("./assets/sounds/voices/jane/침침.mp3")
-          }
-        }
-      },
-      {
-        짜: {
-          voices: {
-            jane: require("./assets/sounds/voices/jane/짜.mp3")
-          }
-        },
-        짜짜: {
-          voices: {
-            jane: require("./assets/sounds/voices/jane/짜짜.mp3")
-          }
-        },
-        차: {
-          voices: {
-            jane: require("./assets/sounds/voices/jane/차.mp3")
-          }
-        },
-        차차: {
-          voices: {
-            jane: require("./assets/sounds/voices/jane/차차.mp3")
           }
         }
       }
