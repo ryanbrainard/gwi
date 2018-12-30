@@ -1,8 +1,9 @@
 import _ from "lodash";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import CharacterQuizItem from "../models/CharacterQuizItem";
 import CharacterQuizCarousel from "./CharacterQuizCarousel";
+import QuizScore from "./QuizScore";
 
 export default class QuizDetailScreen extends React.Component {
   // TODO: how to do prop types on navigation params
@@ -13,41 +14,59 @@ export default class QuizDetailScreen extends React.Component {
 
   constructor(props) {
     super(props);
-    this.setCharacterState = this.setCharacterState.bind(this);
+    this.setCharacterItemState = this.setCharacterItemState.bind(this);
+    this.restartQuiz = this.restartQuiz.bind(this);
 
     this.state = {
-      items: _.shuffle(
-        this.props.navigation
-          .getParam("charSet")
-          .characters.reduce((items, char) => {
-            const item = new CharacterQuizItem(char, this.setCharacterState);
-            items[char.key] = item;
-            return items;
-          }, {})
-      )
+      items: this.initializeItems(),
+      version: 0
     };
   }
 
-  setCharacterState(char) {
+  initializeItems() {
+    return _.shuffle(
+      this.props.navigation.getParam("charSet").characters
+    ).reduce((items, char) => {
+      items[char.key] = new CharacterQuizItem(char, this.setCharacterItemState);
+      return items;
+    }, {});
+  }
+
+  setCharacterItemState(item) {
     this.setState(state => {
       const items = { ...state.items };
-      items[char.key] = char;
+      items[item.character.key] = item;
       return {
         items
       };
     });
   }
 
+  restartQuiz() {
+    this.setState(({ version }) => ({
+      items: this.initializeItems(),
+      version: version + 1
+    }));
+  }
+
   componentDidMount() {
-    this.props.navigation
-      .getParam("charSet")
-      .characters.forEach(char => char.preloadPlay());
+    Object.values(this.state.items).forEach(item =>
+      item.character.preloadPlay()
+    );
   }
 
   render() {
+    const { items, version } = this.state;
+
+    const charItems = Object.values(items);
+    const scoreItem = (
+      <QuizScore items={charItems} restartQuiz={this.restartQuiz} />
+    );
+    const carouselItems = charItems.concat(scoreItem);
+
     return (
-      <View style={styles.container}>
-        <CharacterQuizCarousel items={Object.values(this.state.items)} />
+      <View key={version} style={styles.container}>
+        <CharacterQuizCarousel items={carouselItems} />
       </View>
     );
   }

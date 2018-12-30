@@ -1,71 +1,32 @@
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
-import _ from "lodash";
+import { Segment } from "expo";
 import PropTypes from "prop-types";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "../config";
 import CharacterQuizItem from "../models/CharacterQuizItem";
-import Settings from "../models/Settings";
 import CharacterTile from "./CharacterTile";
 import { DimensionsConsumer } from "./DimensionsContext";
-import { Segment } from "expo";
 
-export default class CharacterQuizCard extends React.Component {
+export default class CharacterQuizCard extends React.PureComponent {
   static propTypes = {
     charItem: PropTypes.instanceOf(CharacterQuizItem).isRequired,
-    gotoNext: PropTypes.func,
-    numChoices: PropTypes.number,
-    _shuffle: PropTypes.func
+    gotoNext: PropTypes.func
   };
-
-  static defaultProps = {
-    numChoices: 3,
-    _shuffle: _.shuffle
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      charChoices: this.generateChoices()
-    };
-  }
-
-  generateChoices() {
-    const { charItem, numChoices, _shuffle } = this.props;
-
-    const others = charItem.character.group.filter(
-      cu => cu !== charItem.character
-    );
-    const shuffledOthers = _shuffle(others);
-    const enoughShuffledOthers = shuffledOthers.slice(0, numChoices - 1);
-    const choices = enoughShuffledOthers.concat(charItem.character);
-    const shuffledChoices = _shuffle(choices);
-
-    return shuffledChoices;
-  }
 
   render() {
     const { charItem, gotoNext } = this.props;
-    const { charChoices } = this.state;
 
     return (
       <DimensionsConsumer>
         {({ isPortrait, window: { width, height } }) =>
-          this.renderInternal(
-            isPortrait,
-            width,
-            height,
-            charItem,
-            gotoNext,
-            charChoices
-          )
+          this.renderInternal(isPortrait, width, height, charItem, gotoNext)
         }
       </DimensionsConsumer>
     );
   }
 
-  renderInternal(isPortrait, width, height, charItem, gotoNext, charChoices) {
+  renderInternal(isPortrait, width, height, charItem, gotoNext) {
     const containerPadding = Math.min(width, height) / 10;
     const buttonWidth = Math.min(width, height) / 5;
     const buttonHeight = buttonWidth / 2;
@@ -76,7 +37,7 @@ export default class CharacterQuizCard extends React.Component {
 
     return (
       <View
-        key={charItem.character.toString() + isPortrait}
+        key={charItem.character.key + isPortrait}
         style={[styles.container, { padding: containerPadding }]}
       >
         <CharacterTile
@@ -90,7 +51,7 @@ export default class CharacterQuizCard extends React.Component {
             { flexDirection: isPortrait ? "column" : "row" }
           ]}
         >
-          {charChoices.map(cc => {
+          {charItem.choices.map(cc => {
             const correctChoice = cc === charItem.character;
             return (
               <TouchableOpacity

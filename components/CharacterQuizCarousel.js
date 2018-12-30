@@ -8,7 +8,12 @@ import { DimensionsConsumer } from "./DimensionsContext";
 
 export default class CharacterQuizCarousel extends React.Component {
   static propTypes = {
-    items: PropTypes.arrayOf(PropTypes.instanceOf(CharacterQuizItem)).isRequired
+    items: PropTypes.arrayOf(
+      PropTypes.oneOfType([
+        PropTypes.instanceOf(CharacterQuizItem),
+        PropTypes.element
+      ])
+    ).isRequired
   };
 
   constructor(props) {
@@ -35,18 +40,28 @@ export default class CharacterQuizCarousel extends React.Component {
           ref={c => {
             this._carousel = c;
           }}
-          loop={true}
+          loop={false}
           sliderWidth={width}
           itemWidth={width * 0.9}
           data={items}
-          renderItem={({ item }) => (
-            <CharacterQuizCard
-              charItem={item}
-              gotoNext={this._carousel.snapToNext.bind(this._carousel)}
-            />
-          )}
+          renderItem={({ item }) => {
+            if (item instanceof CharacterQuizItem) {
+              return (
+                <CharacterQuizCard
+                  charItem={item}
+                  gotoNext={this._carousel.snapToNext.bind(this._carousel)}
+                />
+              );
+            } else {
+              return item;
+            }
+          }}
           onLayout={this.playFirstOnce}
-          onSnapToItem={index => items[index].character.play()}
+          onSnapToItem={index => {
+            if (items[index] instanceof CharacterQuizItem) {
+              return items[index].character.play();
+            }
+          }}
         />
       </View>
     );

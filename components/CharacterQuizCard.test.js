@@ -11,17 +11,15 @@ test("renders correctly", () => {
 
   const char = Character.find("C");
   const stateSetter = jest.fn();
-  const charItem = new CharacterQuizItem(char, stateSetter);
+  const charItem = new CharacterQuizItem(char, stateSetter, s => s);
 
   const _CharacterQuizCard = provideColors(
     { primary: "#FFA500" },
     CharacterQuizCard
   );
 
-  const passthrough = s => s;
-
   const tree = renderer
-    .create(<_CharacterQuizCard charItem={charItem} _shuffle={passthrough} />)
+    .create(<_CharacterQuizCard charItem={charItem} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

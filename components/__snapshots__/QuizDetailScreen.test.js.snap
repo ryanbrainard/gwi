@@ -40,7 +40,14 @@ exports[`renders correctly 1`] = `
           },
         ]
       }
-      data={Array []}
+      data={
+        Array [
+          <QuizScore
+            items={Array []}
+            restartQuiz={[Function]}
+          />,
+        ]
+      }
       decelerationRate="fast"
       directionalLockEnabled={true}
       disableVirtualization={false}
@@ -64,7 +71,7 @@ exports[`renders correctly 1`] = `
       layout="default"
       lockScrollTimeoutDuration={1000}
       lockScrollWhileSnapping={false}
-      loop={true}
+      loop={false}
       loopClonesPerSide={3}
       maxToRenderPerBatch={15}
       numColumns={1}
@@ -105,7 +112,19 @@ exports[`renders correctly 1`] = `
       viewabilityConfigCallbackPairs={Array []}
       windowSize={15}
     >
-      <View />
+      <View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        />
+      </View>
     </RCTScrollView>
   </View>
 </View>
