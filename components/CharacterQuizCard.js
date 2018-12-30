@@ -27,8 +27,7 @@ export default class CharacterQuizCard extends React.Component {
     super(props);
 
     this.state = {
-      charChoices: this.generateChoices(),
-      success: undefined
+      charChoices: this.generateChoices()
     };
   }
 
@@ -46,17 +45,9 @@ export default class CharacterQuizCard extends React.Component {
     return shuffledChoices;
   }
 
-  componentDidUpdate(_, prevState) {
-    if (this.props.gotoNext && this.state.success && !prevState.success) {
-      Settings.get(Settings.KEYS.ADVANCE_ON_SUCCESS).then(
-        setting => setting && this.props.gotoNext()
-      );
-    }
-  }
-
   render() {
     const { charItem, gotoNext } = this.props;
-    const { charChoices, success } = this.state;
+    const { charChoices } = this.state;
 
     return (
       <DimensionsConsumer>
@@ -67,23 +58,14 @@ export default class CharacterQuizCard extends React.Component {
             height,
             charItem,
             gotoNext,
-            charChoices,
-            success
+            charChoices
           )
         }
       </DimensionsConsumer>
     );
   }
 
-  renderInternal(
-    isPortrait,
-    width,
-    height,
-    charItem,
-    gotoNext,
-    charChoices,
-    success
-  ) {
+  renderInternal(isPortrait, width, height, charItem, gotoNext, charChoices) {
     const containerPadding = Math.min(width, height) / 10;
     const buttonWidth = Math.min(width, height) / 5;
     const buttonHeight = buttonWidth / 2;
@@ -99,7 +81,7 @@ export default class CharacterQuizCard extends React.Component {
       >
         <CharacterTile
           char={charItem.character}
-          show={!!success}
+          show={!!charItem.success}
           size={Math.min(width, height) * 0.3}
         />
         <View
@@ -117,7 +99,7 @@ export default class CharacterQuizCard extends React.Component {
                   styles.choicesButton,
                   {
                     backgroundColor:
-                      correctChoice && success
+                      correctChoice && charItem.success
                         ? config.colors.success
                         : config.colors.neutral,
                     borderRadius: buttonWidth,
@@ -131,7 +113,7 @@ export default class CharacterQuizCard extends React.Component {
                     charName: charItem.character.name,
                     choiceName: cc.name
                   };
-                  if (!success) {
+                  if (!charItem.success) {
                     if (correctChoice) {
                       Segment.trackWithProperties(
                         "character-quiz-card-choice-success",
@@ -151,9 +133,7 @@ export default class CharacterQuizCard extends React.Component {
                     );
                   }
 
-                  this.setState({
-                    success: success || correctChoice
-                  });
+                  charItem.success = charItem.success || correctChoice;
                   cc.play();
                 }}
               >
@@ -167,9 +147,9 @@ export default class CharacterQuizCard extends React.Component {
           })}
         </View>
 
-        {this.renderResultIcon(success, resultIconSize)}
+        {this.renderResultIcon(charItem.success, resultIconSize)}
 
-        {success && (
+        {charItem.success && (
           <TouchableOpacity style={styles.nextButton} onPress={gotoNext}>
             <MaterialCommunityIcons
               name="skip-next"

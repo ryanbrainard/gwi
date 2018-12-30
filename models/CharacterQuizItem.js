@@ -2,7 +2,6 @@ export default class CharacterQuizItem {
   constructor(char, stateSetter) {
     this._char = char;
     this._stateSetter = stateSetter;
-    this._success = false;
   }
 
   get character() {
