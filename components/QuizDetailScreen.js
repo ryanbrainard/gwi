@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React from "react";
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import CharacterQuizItem from "../models/CharacterQuizItem";
 import CharacterQuizCarousel from "./CharacterQuizCarousel";
 
 export default class QuizDetailScreen extends React.Component {
@@ -10,6 +11,33 @@ export default class QuizDetailScreen extends React.Component {
     title: navigation.getParam("charSet").name
   });
 
+  constructor(props) {
+    super(props);
+    this.setCharacterState = this.setCharacterState.bind(this);
+
+    this.state = {
+      items: _.shuffle(
+        this.props.navigation
+          .getParam("charSet")
+          .characters.reduce((items, char) => {
+            const item = new CharacterQuizItem(char, this.setCharacterState);
+            items[char.key] = item;
+            return items;
+          }, {})
+      )
+    };
+  }
+
+  setCharacterState(char) {
+    this.setState(state => {
+      const items = { ...state.items };
+      items[char.key] = char;
+      return {
+        items
+      };
+    });
+  }
+
   componentDidMount() {
     this.props.navigation
       .getParam("charSet")
@@ -17,19 +45,18 @@ export default class QuizDetailScreen extends React.Component {
   }
 
   render() {
-    const { navigation } = this.props;
-    const charSet = navigation.getParam("charSet");
-
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center"
-        }}
-      >
-        <CharacterQuizCarousel characters={_.shuffle(charSet.characters)} />
+      <View style={styles.container}>
+        <CharacterQuizCarousel items={Object.values(this.state.items)} />
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});

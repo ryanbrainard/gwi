@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import config from "../config";
-import Character from "../models/Character";
+import CharacterQuizItem from "../models/CharacterQuizItem";
 import Settings from "../models/Settings";
 import CharacterTile from "./CharacterTile";
 import { DimensionsConsumer } from "./DimensionsContext";
@@ -12,8 +12,7 @@ import { Segment } from "expo";
 
 export default class CharacterQuizCard extends React.Component {
   static propTypes = {
-    char: PropTypes.instanceOf(Character).isRequired,
-    universe: PropTypes.arrayOf(PropTypes.instanceOf(Character)).isRequired,
+    charItem: PropTypes.instanceOf(CharacterQuizItem).isRequired,
     gotoNext: PropTypes.func,
     numChoices: PropTypes.number,
     _shuffle: PropTypes.func
@@ -34,12 +33,14 @@ export default class CharacterQuizCard extends React.Component {
   }
 
   generateChoices() {
-    const { char, universe, numChoices, _shuffle } = this.props;
+    const { charItem, numChoices, _shuffle } = this.props;
 
-    const others = universe.filter(cu => cu !== char);
+    const others = charItem.character.group.filter(
+      cu => cu !== charItem.character
+    );
     const shuffledOthers = _shuffle(others);
     const enoughShuffledOthers = shuffledOthers.slice(0, numChoices - 1);
-    const choices = enoughShuffledOthers.concat(char);
+    const choices = enoughShuffledOthers.concat(charItem.character);
     const shuffledChoices = _shuffle(choices);
 
     return shuffledChoices;
@@ -54,7 +55,7 @@ export default class CharacterQuizCard extends React.Component {
   }
 
   render() {
-    const { char, gotoNext } = this.props;
+    const { charItem, gotoNext } = this.props;
     const { charChoices, success } = this.state;
 
     return (
@@ -64,7 +65,7 @@ export default class CharacterQuizCard extends React.Component {
             isPortrait,
             width,
             height,
-            char,
+            charItem,
             gotoNext,
             charChoices,
             success
@@ -78,7 +79,7 @@ export default class CharacterQuizCard extends React.Component {
     isPortrait,
     width,
     height,
-    char,
+    charItem,
     gotoNext,
     charChoices,
     success
@@ -93,11 +94,11 @@ export default class CharacterQuizCard extends React.Component {
 
     return (
       <View
-        key={char.toString() + isPortrait}
+        key={charItem.character.toString() + isPortrait}
         style={[styles.container, { padding: containerPadding }]}
       >
         <CharacterTile
-          char={char}
+          char={charItem.character}
           show={!!success}
           size={Math.min(width, height) * 0.3}
         />
@@ -108,7 +109,7 @@ export default class CharacterQuizCard extends React.Component {
           ]}
         >
           {charChoices.map(cc => {
-            const correctChoice = cc === char;
+            const correctChoice = cc === charItem.character;
             return (
               <TouchableOpacity
                 key={cc.key}
@@ -127,7 +128,7 @@ export default class CharacterQuizCard extends React.Component {
                 ]}
                 onPress={() => {
                   const trackProperties = {
-                    charName: char.name,
+                    charName: charItem.character.name,
                     choiceName: cc.name
                   };
                   if (!success) {
