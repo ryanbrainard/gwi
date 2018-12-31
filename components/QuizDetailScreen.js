@@ -25,7 +25,7 @@ export default class QuizDetailScreen extends React.Component {
 
   initializeItems() {
     return _.shuffle(
-      this.props.navigation.getParam("charSet").characters.slice(0, 2)
+      this.props.navigation.getParam("charSet").characters
     ).reduce((items, char) => {
       const item = new CharacterQuizItem(char, this.setCharacterItemState);
       items[item.key] = item;
