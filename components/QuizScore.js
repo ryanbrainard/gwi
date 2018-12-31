@@ -26,6 +26,17 @@ export default class QuizScore extends React.PureComponent {
     const percSuccess =
       numAnswered === 0 ? 0 : Math.round((numSuccess / numAnswered) * 100);
 
+    const difficultChars = Object.entries(
+      items.reduce((stats, item) => {
+        if (item.answered && !item.success) {
+          stats[item.char.name] = (stats[item.char.name] || 0) + 1;
+        }
+        return stats;
+      }, {})
+    )
+      .sort((a, b) => b[1] - a[1])
+      .map(e => e[0]);
+
     return (
       <View style={styles.container}>
         <Text style={styles.titleText}>{percSuccess}%</Text>
@@ -33,6 +44,15 @@ export default class QuizScore extends React.PureComponent {
           ({numSuccess} / {numAnswered})
         </Text>
         <Text>{}</Text>
+        <Text>{}</Text>
+        {difficultChars.length > 0 && (
+          <View style={styles.difficultCharsContainer}>
+            <Text>Most difficult characters:</Text>
+            <Text>{difficultChars.slice(0, 5).join(", ")}</Text>
+            <Text>{}</Text>
+            <Text>{}</Text>
+          </View>
+        )}
         <TouchableOpacity style={styles.button} onPress={restartQuiz}>
           <Text style={styles.buttonText}>Try Again</Text>
         </TouchableOpacity>
@@ -47,8 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  bodyContainer: {
-    flex: 1,
+  difficultCharsContainer: {
     alignItems: "center"
   },
   titleText: {
