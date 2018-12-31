@@ -27,7 +27,8 @@ export default class QuizDetailScreen extends React.Component {
     return _.shuffle(
       this.props.navigation.getParam("charSet").characters
     ).reduce((items, char) => {
-      items[char.key] = new CharacterQuizItem(char, this.setCharacterItemState);
+      const item = new CharacterQuizItem(char, this.setCharacterItemState);
+      items[item.key] = item;
       return items;
     }, {});
   }
@@ -35,7 +36,16 @@ export default class QuizDetailScreen extends React.Component {
   setCharacterItemState(item) {
     this.setState(state => {
       const items = { ...state.items };
-      items[item.character.key] = item;
+      items[item.key] = item;
+
+      if (!item.success) {
+        const newItem = new CharacterQuizItem(
+          item.character,
+          this.setCharacterItemState
+        );
+        items[newItem.key] = newItem;
+      }
+
       return {
         items
       };
@@ -59,6 +69,8 @@ export default class QuizDetailScreen extends React.Component {
     const { items, version } = this.state;
 
     const charItems = Object.values(items);
+    console.log(charItems.map(item => item.character.key)); // TODO
+
     const scoreItem = (
       <QuizScore items={charItems} restartQuiz={this.restartQuiz} />
     );
