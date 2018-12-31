@@ -33,17 +33,10 @@ export default class Character {
   }
 
   async preloadPlay() {
-    console.log(`fn=Character.preloadPlay char=${this.name}`);
-    await this.player.load();
+    return await this.player.load();
   }
 
   async play() {
-    const start = new Date();
-    console.log(`fn=Character.play at=start char=${this.name}`);
-    await this.player.play();
-    console.log(
-      `fn=Character.play at=finish char=${this.name} elapsed=${new Date() -
-        start}`
-    );
+    return await this.player.play();
   }
 }
