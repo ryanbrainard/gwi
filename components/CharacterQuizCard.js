@@ -2,7 +2,13 @@ import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import { Segment } from "expo";
 import PropTypes from "prop-types";
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  TouchableOpacity,
+  View
+} from "react-native";
 import config from "../config";
 import CharacterQuizItem from "../models/CharacterQuizItem";
 import CharacterTile from "./CharacterTile";
@@ -33,7 +39,7 @@ export default class CharacterQuizCard extends React.PureComponent {
     const buttonTextSize = buttonWidth / 5;
     const buttonMargin = buttonWidth / 5;
     const resultIconSize = buttonTextSize * 2;
-    const nextSize = buttonTextSize * 1.5;
+    const nextSize = buttonTextSize * 2.5;
 
     return (
       <View
@@ -42,7 +48,7 @@ export default class CharacterQuizCard extends React.PureComponent {
       >
         <CharacterTile
           char={charItem.character}
-          show={!!charItem.success}
+          show={!!charItem.answered}
           size={Math.min(width, height) * 0.3}
         />
         <View
@@ -51,17 +57,20 @@ export default class CharacterQuizCard extends React.PureComponent {
             { flexDirection: isPortrait ? "column" : "row" }
           ]}
         >
-          {charItem.choices.map(cc => {
-            const correctChoice = cc === charItem.character;
+          {charItem.choices.map(choice => {
+            const correctChoice = choice === charItem.character;
+
             return (
-              <TouchableOpacity
-                key={cc.key}
+              <TouchableHighlight
+                key={choice.key}
                 style={[
                   styles.choicesButton,
                   {
                     backgroundColor:
-                      correctChoice && charItem.success
-                        ? config.colors.success
+                      choice === charItem.answered
+                        ? charItem.success
+                          ? config.colors.success
+                          : config.colors.error
                         : config.colors.neutral,
                     borderRadius: buttonWidth,
                     width: buttonWidth,
@@ -69,53 +78,45 @@ export default class CharacterQuizCard extends React.PureComponent {
                     margin: buttonMargin
                   }
                 ]}
+                activeOpacity={0.2}
+                underlayColor={
+                  correctChoice ? config.colors.success : config.colors.error
+                }
                 onPress={() => {
-                  const trackProperties = {
-                    charName: charItem.character.name,
-                    choiceName: cc.name
-                  };
-                  if (!charItem.success) {
-                    if (correctChoice) {
-                      Segment.trackWithProperties(
-                        "character-quiz-card-choice-success",
-                        trackProperties
-                      );
-                    } else {
-                      Segment.trackWithProperties(
-                        "character-quiz-card-choice-fail",
-                        trackProperties
-                      );
-                    }
-                  } else {
-                    // user tries other choices after success
+                  choice.play();
+
+                  if (!charItem.answered) {
+                    charItem.answered = choice;
+
                     Segment.trackWithProperties(
-                      "character-quiz-card-choice-success-continue",
-                      trackProperties
+                      "character-quiz-card-choice-success",
+                      {
+                        charName: charItem.character.name,
+                        choiceName: choice.name,
+                        success: correctChoice
+                      }
                     );
                   }
-
-                  charItem.success = charItem.success || correctChoice;
-                  cc.play();
                 }}
               >
                 <Text
                   style={[styles.choicesText, { fontSize: buttonTextSize }]}
                 >
-                  {cc.name}
+                  {choice.name}
                 </Text>
-              </TouchableOpacity>
+              </TouchableHighlight>
             );
           })}
         </View>
 
         {this.renderResultIcon(charItem.success, resultIconSize)}
 
-        {charItem.success && (
+        {charItem.answered && (
           <TouchableOpacity style={styles.nextButton} onPress={gotoNext}>
             <MaterialCommunityIcons
               name="skip-next"
               size={nextSize}
-              color={config.colors.success}
+              color={config.colors.neutral}
             />
           </TouchableOpacity>
         )}
@@ -153,7 +154,6 @@ const styles = StyleSheet.create({
     margin: 10
   },
   choicesButton: {
-    backgroundColor: config.colors.neutral,
     alignItems: "center",
     justifyContent: "center"
   },

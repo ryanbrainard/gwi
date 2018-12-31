@@ -16,11 +16,11 @@ export default class QuizScore extends React.PureComponent {
     const { items, restartQuiz } = this.props;
 
     const numSuccess = items.reduce((sum, item) => {
-      return sum + (item.success === true ? 1 : 0);
+      return sum + (item.success ? 1 : 0);
     }, 0);
 
     const numAnswered = items.reduce((sum, item) => {
-      return sum + (item.success !== undefined ? 1 : 0);
+      return sum + (item.answered ? 1 : 0);
     }, 0);
 
     const percSuccess =

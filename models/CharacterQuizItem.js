@@ -5,7 +5,7 @@ export default class CharacterQuizItem {
     this._char = char;
     this._stateSetter = stateSetter;
     this._choices = this._generateChoices(_shuffle);
-    this._success = undefined;
+    this._answered = undefined;
   }
 
   get character() {
@@ -16,13 +16,17 @@ export default class CharacterQuizItem {
     return this._choices;
   }
 
-  get success() {
-    return this._success;
+  set answered(value) {
+    this._answered = value;
+    this._stateSetter(this);
   }
 
-  set success(value) {
-    this._success = value;
-    this._stateSetter(this); // TODO: good idea or just gross?
+  get answered() {
+    return this._answered;
+  }
+
+  get success() {
+    return this._answered && this._answered === this._char;
   }
 
   _generateChoices(_shuffle) {

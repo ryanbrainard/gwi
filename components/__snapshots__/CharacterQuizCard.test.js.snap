@@ -86,7 +86,6 @@ exports[`renders correctly 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
       hasTVPreferredFocus={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
@@ -99,16 +98,19 @@ exports[`renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#A9A9A9",
-          "borderRadius": 150,
-          "height": 75,
-          "justifyContent": "center",
-          "margin": 30,
-          "opacity": 1,
-          "width": 150,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "#A9A9A9",
+            "borderRadius": 150,
+            "height": 75,
+            "margin": 30,
+            "width": 150,
+          },
+        ]
       }
       testID={undefined}
       tvParallaxProperties={undefined}
@@ -137,7 +139,6 @@ exports[`renders correctly 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
       hasTVPreferredFocus={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
@@ -150,16 +151,19 @@ exports[`renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#A9A9A9",
-          "borderRadius": 150,
-          "height": 75,
-          "justifyContent": "center",
-          "margin": 30,
-          "opacity": 1,
-          "width": 150,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "#A9A9A9",
+            "borderRadius": 150,
+            "height": 75,
+            "margin": 30,
+            "width": 150,
+          },
+        ]
       }
       testID={undefined}
       tvParallaxProperties={undefined}
@@ -188,7 +192,6 @@ exports[`renders correctly 1`] = `
       accessibilityLabel={undefined}
       accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
       hasTVPreferredFocus={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
@@ -201,16 +204,19 @@ exports[`renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#A9A9A9",
-          "borderRadius": 150,
-          "height": 75,
-          "justifyContent": "center",
-          "margin": 30,
-          "opacity": 1,
-          "width": 150,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "#A9A9A9",
+            "borderRadius": 150,
+            "height": 75,
+            "margin": 30,
+            "width": 150,
+          },
+        ]
       }
       testID={undefined}
       tvParallaxProperties={undefined}
