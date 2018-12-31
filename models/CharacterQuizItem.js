@@ -6,7 +6,7 @@ export default class CharacterQuizItem {
     this._key = uuidv4();
     this._char = char;
     this._stateSetter = stateSetter;
-    this._choices = this._generateChoices(_shuffle);
+    this._choices = this._generateChoices(char.group, _shuffle);
     this._answered = undefined;
   }
 
@@ -40,8 +40,8 @@ export default class CharacterQuizItem {
     return this._answered && this._answered === this._char;
   }
 
-  _generateChoices(_shuffle) {
-    const others = this.character.group.filter(cu => cu !== this.character);
+  _generateChoices(group, _shuffle) {
+    const others = group.filter(cu => cu !== this.character);
     const shuffledOthers = _shuffle(others);
     const enoughShuffledOthers = shuffledOthers.slice(0, 2);
     const choices = enoughShuffledOthers.concat(this.character);
