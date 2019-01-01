@@ -31,7 +31,6 @@ export default class App extends React.Component {
   render() {
     return (
       <ErrorBoundary>
-        // Android status bar is controlled in app.json
         {Platform.OS === "ios" && <StatusBar barStyle="dark-content" />}
         <DimensionsProvider>
           <RootStack onNavigationStateChange={trackScreenChanges} />
