@@ -49,7 +49,7 @@ export default class AboutScreen extends React.Component {
         />
         <Text style={styles.titleText}>{appJson.expo.name}</Text>
         <Text>Made in cooperation with Motivate Korean</Text>
-        <Text>Apache License 2.0 Open Source Licensed</Text>
+        <Text>Open Source Apache License 2.0</Text>
         <Text>© 2018 Ryan Brainard</Text>
         <Text>v{appJson.expo.version}</Text>
         <Text />

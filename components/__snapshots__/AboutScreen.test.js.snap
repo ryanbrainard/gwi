@@ -44,7 +44,7 @@ exports[`renders correctly 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
   >
-    Apache License 2.0 Open Source Licensed
+    Open Source Apache License 2.0
   </Text>
   <Text
     accessible={true}
