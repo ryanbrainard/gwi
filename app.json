@@ -4,7 +4,7 @@
     "name": "Korean Ear",
     "slug": "gwi",
     "privacy": "public",
-    "version": "0.1.10",
+    "version": "0.2.0",
     "description": "Practice listening to commonly confused Korean sounds and quiz yourself to see if you can distinguish them.",
     "githubUrl": "https://github.com/ryanbrainard/gwi",
     "icon": "assets/images/gwi-logo-white-green-1024.png",
