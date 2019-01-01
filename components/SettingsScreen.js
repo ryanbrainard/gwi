@@ -3,10 +3,6 @@ import { Switch, Text, View } from "react-native";
 import Settings from "../models/Settings";
 
 export default class SettingsScreen extends React.Component {
-  static navigationOptions = {
-    title: "Settings"
-  };
-
   constructor(props) {
     super(props);
     this.state = {

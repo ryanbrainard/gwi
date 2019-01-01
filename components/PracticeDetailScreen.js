@@ -4,12 +4,6 @@ import config from "../config";
 import CharacterGrid from "./CharacterGrid";
 
 export default class PracticeDetailScreen extends React.Component {
-  // TODO: how to do prop types on navigation params
-
-  static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam("charSet").name
-  });
-
   componentDidMount() {
     this.props.navigation
       .getParam("charSet")

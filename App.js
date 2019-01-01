@@ -51,23 +51,57 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-const PracticeStack = createStackNavigator({
-  PracticeList: provideColors(config.colors.practice, PracticeListScreen),
-  PracticeDetail: provideColors(config.colors.practice, PracticeDetailScreen)
-});
+const PracticeStack = createStackNavigator(
+  {
+    PracticeList: provideColors(config.colors.practice, PracticeListScreen),
+    PracticeDetail: provideColors(config.colors.practice, PracticeDetailScreen)
+  },
+  {
+    navigationOptions: ({ navigation }) => {
+      const charSet = navigation.getParam("charSet");
+      return {
+        title: charSet ? charSet.name : "Practice"
+      };
+    }
+  }
+);
 
-const QuizStack = createStackNavigator({
-  QuizList: provideColors(config.colors.quiz, QuizListScreen),
-  QuizDetail: provideColors(config.colors.quiz, QuizDetailScreen)
-});
+const QuizStack = createStackNavigator(
+  {
+    QuizList: provideColors(config.colors.quiz, QuizListScreen),
+    QuizDetail: provideColors(config.colors.quiz, QuizDetailScreen)
+  },
+  {
+    navigationOptions: ({ navigation }) => {
+      const charSet = navigation.getParam("charSet");
+      return {
+        title: charSet ? charSet.name : "Quiz"
+      };
+    }
+  }
+);
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen
-});
+const SettingsStack = createStackNavigator(
+  {
+    Settings: SettingsScreen
+  },
+  {
+    navigationOptions: {
+      title: "Settings"
+    }
+  }
+);
 
-const AboutStack = createStackNavigator({
-  About: provideColors(config.colors.about, AboutScreen)
-});
+const AboutStack = createStackNavigator(
+  {
+    About: provideColors(config.colors.about, AboutScreen)
+  },
+  {
+    navigationOptions: {
+      title: "About"
+    }
+  }
+);
 
 const RootStack = createBottomTabNavigator(
   {

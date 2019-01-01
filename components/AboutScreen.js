@@ -13,10 +13,6 @@ import { DimensionsConsumer } from "./DimensionsContext";
 import appJson from "../app.json";
 
 export default class AboutScreen extends React.Component {
-  static navigationOptions = {
-    title: "About"
-  };
-
   render() {
     return (
       <DimensionsConsumer>

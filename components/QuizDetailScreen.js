@@ -18,10 +18,6 @@ export default class QuizDetailScreen extends React.Component {
     _genKey: undefined // use default of CharacterQuizItem
   };
 
-  static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam("charSet").name
-  });
-
   constructor(props) {
     super(props);
     this.setCharacterItemState = this.setCharacterItemState.bind(this);

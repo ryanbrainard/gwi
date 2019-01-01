@@ -7,10 +7,6 @@ export default class QuizListScreen extends React.Component {
     navigation: PropTypes.object.isRequired
   };
 
-  static navigationOptions = {
-    title: "Quiz"
-  };
-
   render() {
     const { navigation } = this.props;
 

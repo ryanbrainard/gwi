@@ -7,10 +7,6 @@ export default class PracticeListScreen extends React.Component {
     navigation: PropTypes.object.isRequired
   };
 
-  static navigationOptions = {
-    title: "Practice"
-  };
-
   render() {
     const { navigation } = this.props;
 
