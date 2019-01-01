@@ -1,12 +1,22 @@
 import _ from "lodash";
+import PropTypes from "prop-types";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import CharacterQuizItem from "../models/CharacterQuizItem";
 import CharacterQuizCarousel from "./CharacterQuizCarousel";
 import QuizScore from "./QuizScore";
 
 export default class QuizDetailScreen extends React.Component {
-  // TODO: how to do prop types on navigation params
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+    _shuffle: PropTypes.func,
+    _genKey: PropTypes.func
+  };
+
+  static defaultProps = {
+    _shuffle: _.shuffle,
+    _genKey: undefined // use default of CharacterQuizItem
+  };
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam("charSet").name
@@ -23,26 +33,39 @@ export default class QuizDetailScreen extends React.Component {
     };
   }
 
+  initializeItem(char) {
+    const { _shuffle, _genKey } = this.props;
+
+    return new CharacterQuizItem(
+      char,
+      this.setCharacterItemState,
+      _genKey,
+      _shuffle
+    );
+  }
+
   initializeItems() {
-    return _.shuffle(
-      this.props.navigation.getParam("charSet").characters
-    ).reduce((items, char) => {
-      const item = new CharacterQuizItem(char, this.setCharacterItemState);
-      items[item.key] = item;
-      return items;
-    }, {});
+    const { navigation, _shuffle, _genKey } = this.props;
+
+    return _shuffle(navigation.getParam("charSet").characters).reduce(
+      (items, char) => {
+        const item = this.initializeItem(char);
+        items[item.key] = item;
+        return items;
+      },
+      {}
+    );
   }
 
   setCharacterItemState(item) {
+    const { _shuffle, _genKey } = this.props;
+
     this.setState(state => {
       const items = { ...state.items };
       items[item.key] = item;
 
       if (!item.success) {
-        const newItem = new CharacterQuizItem(
-          item.character,
-          this.setCharacterItemState
-        );
+        const newItem = this.initializeItem(item.character);
         items[newItem.key] = newItem;
       }
 

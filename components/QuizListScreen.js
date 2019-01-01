@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import config from "../config";
 import CharacterSetsButtonList from "./CharacterSetsButtonList";
 
 export default class QuizListScreen extends React.Component {

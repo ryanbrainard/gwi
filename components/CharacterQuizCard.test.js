@@ -17,7 +17,12 @@ describe("renders correctly", () => {
   const incorrectChar = Character.find("D");
   const stateSetter = jest.fn();
   const newItem = tap => {
-    const item = new CharacterQuizItem(correctChar, stateSetter, s => s);
+    const item = new CharacterQuizItem(
+      correctChar,
+      stateSetter,
+      () => "00000000-0000-0000-0000-000000000000",
+      s => s
+    );
     if (tap != null) {
       tap(item);
     }
