@@ -28,13 +28,19 @@
       ]
     },
     "ios": {
-      "bundleIdentifier": "com.ryanbrainard.gwi"
+      "bundleIdentifier": "com.ryanbrainard.gwi",
+      "supportsTablet": true,
+      "usesIcloudStorage": false
     },
     "android": {
       "package": "com.ryanbrainard.gwi",
       "adaptiveIcon": {
         "backgroundColor": "#3CB371"
       }
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#3CB371"
     }
   }
 }
