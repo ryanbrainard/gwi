@@ -35,7 +35,7 @@
     "android": {
       "package": "com.ryanbrainard.gwi",
       "adaptiveIcon": {
-        "foregroundImage":"assets/images/gwi-logo-white-trans-1400.png",
+        "foregroundImage": "assets/images/gwi-logo-white-trans-1400.png",
         "backgroundColor": "#3CB371"
       }
     },
