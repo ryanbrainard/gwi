@@ -1,0 +1,960 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": 1067.2,
+    }
+  }
+>
+  <RCTScrollView
+    activeAnimationOptions={null}
+    activeAnimationType="timing"
+    activeSlideAlignment="center"
+    activeSlideOffset={20}
+    apparitionDelay={0}
+    automaticallyAdjustContentInsets={false}
+    autoplay={false}
+    autoplayDelay={5000}
+    autoplayInterval={3000}
+    callbackOffsetMargin={5}
+    collapsable={undefined}
+    containerCustomStyle={Object {}}
+    contentContainerCustomStyle={Object {}}
+    contentContainerStyle={
+      Array [
+        Object {},
+        Object {
+          "paddingLeft": 37.5,
+          "paddingRight": 37.5,
+        },
+      ]
+    }
+    data={
+      Array [
+        CharacterQuizItem {
+          "_answered": undefined,
+          "_char": Character {
+            "_group": Array [
+              "A",
+              "B",
+            ],
+            "_name": "A",
+            "_voices": undefined,
+            "player": VoicePlayerMRU {
+              "playAfterLoad": false,
+              "playback": Sound {
+                "_coalesceStatusUpdatesInMillis": 100,
+                "_errorCallback": [Function],
+                "_eventEmitter": NativeEventEmitter {
+                  "_nativeModule": Object {
+                    "addListener": [MockFunction],
+                    "getAudioRecordingStatus": [MockFunction],
+                    "getStatusForSound": [MockFunction],
+                    "getStatusForVideo": [MockFunction],
+                    "loadForSound": [MockFunction],
+                    "loadForVideo": [MockFunction],
+                    "pauseAudioRecording": [MockFunction],
+                    "prepareAudioRecorder": [MockFunction],
+                    "removeListeners": [MockFunction],
+                    "replaySound": [MockFunction],
+                    "replayVideo": [MockFunction],
+                    "setAudioIsEnabled": [MockFunction],
+                    "setAudioMode": [MockFunction],
+                    "setErrorCallbackForSound": [MockFunction],
+                    "setStatusForSound": [MockFunction],
+                    "setStatusForVideo": [MockFunction],
+                    "startAudioRecording": [MockFunction],
+                    "stopAudioRecording": [MockFunction],
+                    "unloadAudioRecorder": [MockFunction],
+                    "unloadForSound": [MockFunction],
+                    "unloadForVideo": [MockFunction],
+                  },
+                  "_subscriber": EventSubscriptionVendor {
+                    "_currentSubscription": null,
+                    "_subscriptionsForType": Object {
+                      "didUpdateDimensions": Array [
+                        EmitterSubscription {
+                          "context": undefined,
+                          "emitter": RCTDeviceEventEmitter {
+                            "_subscriber": [Circular],
+                            "sharedSubscriber": [Circular],
+                          },
+                          "eventType": "didUpdateDimensions",
+                          "key": 0,
+                          "listener": [Function],
+                          "subscriber": [Circular],
+                        },
+                      ],
+                    },
+                  },
+                },
+                "_internalStatusUpdateCallback": [Function],
+                "_key": -1,
+                "_lastStatusUpdate": null,
+                "_lastStatusUpdateTime": null,
+                "_loaded": false,
+                "_loading": false,
+                "_onPlaybackStatusUpdate": null,
+                "_subscriptions": Array [],
+                "getStatusAsync": [Function],
+              },
+              "voices": undefined,
+            },
+          },
+          "_choices": Array [
+            Character {
+              "_group": Array [
+                "A",
+                "B",
+              ],
+              "_name": "B",
+              "_voices": undefined,
+              "player": VoicePlayerMRU {
+                "playAfterLoad": false,
+                "playback": Sound {
+                  "_coalesceStatusUpdatesInMillis": 100,
+                  "_errorCallback": [Function],
+                  "_eventEmitter": NativeEventEmitter {
+                    "_nativeModule": Object {
+                      "addListener": [MockFunction],
+                      "getAudioRecordingStatus": [MockFunction],
+                      "getStatusForSound": [MockFunction],
+                      "getStatusForVideo": [MockFunction],
+                      "loadForSound": [MockFunction],
+                      "loadForVideo": [MockFunction],
+                      "pauseAudioRecording": [MockFunction],
+                      "prepareAudioRecorder": [MockFunction],
+                      "removeListeners": [MockFunction],
+                      "replaySound": [MockFunction],
+                      "replayVideo": [MockFunction],
+                      "setAudioIsEnabled": [MockFunction],
+                      "setAudioMode": [MockFunction],
+                      "setErrorCallbackForSound": [MockFunction],
+                      "setStatusForSound": [MockFunction],
+                      "setStatusForVideo": [MockFunction],
+                      "startAudioRecording": [MockFunction],
+                      "stopAudioRecording": [MockFunction],
+                      "unloadAudioRecorder": [MockFunction],
+                      "unloadForSound": [MockFunction],
+                      "unloadForVideo": [MockFunction],
+                    },
+                    "_subscriber": EventSubscriptionVendor {
+                      "_currentSubscription": null,
+                      "_subscriptionsForType": Object {
+                        "didUpdateDimensions": Array [
+                          EmitterSubscription {
+                            "context": undefined,
+                            "emitter": RCTDeviceEventEmitter {
+                              "_subscriber": [Circular],
+                              "sharedSubscriber": [Circular],
+                            },
+                            "eventType": "didUpdateDimensions",
+                            "key": 0,
+                            "listener": [Function],
+                            "subscriber": [Circular],
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "_internalStatusUpdateCallback": [Function],
+                  "_key": -1,
+                  "_lastStatusUpdate": null,
+                  "_lastStatusUpdateTime": null,
+                  "_loaded": false,
+                  "_loading": false,
+                  "_onPlaybackStatusUpdate": null,
+                  "_subscriptions": Array [],
+                  "getStatusAsync": [Function],
+                },
+                "voices": undefined,
+              },
+            },
+            Character {
+              "_group": Array [
+                "A",
+                "B",
+              ],
+              "_name": "A",
+              "_voices": undefined,
+              "player": VoicePlayerMRU {
+                "playAfterLoad": false,
+                "playback": Sound {
+                  "_coalesceStatusUpdatesInMillis": 100,
+                  "_errorCallback": [Function],
+                  "_eventEmitter": NativeEventEmitter {
+                    "_nativeModule": Object {
+                      "addListener": [MockFunction],
+                      "getAudioRecordingStatus": [MockFunction],
+                      "getStatusForSound": [MockFunction],
+                      "getStatusForVideo": [MockFunction],
+                      "loadForSound": [MockFunction],
+                      "loadForVideo": [MockFunction],
+                      "pauseAudioRecording": [MockFunction],
+                      "prepareAudioRecorder": [MockFunction],
+                      "removeListeners": [MockFunction],
+                      "replaySound": [MockFunction],
+                      "replayVideo": [MockFunction],
+                      "setAudioIsEnabled": [MockFunction],
+                      "setAudioMode": [MockFunction],
+                      "setErrorCallbackForSound": [MockFunction],
+                      "setStatusForSound": [MockFunction],
+                      "setStatusForVideo": [MockFunction],
+                      "startAudioRecording": [MockFunction],
+                      "stopAudioRecording": [MockFunction],
+                      "unloadAudioRecorder": [MockFunction],
+                      "unloadForSound": [MockFunction],
+                      "unloadForVideo": [MockFunction],
+                    },
+                    "_subscriber": EventSubscriptionVendor {
+                      "_currentSubscription": null,
+                      "_subscriptionsForType": Object {
+                        "didUpdateDimensions": Array [
+                          EmitterSubscription {
+                            "context": undefined,
+                            "emitter": RCTDeviceEventEmitter {
+                              "_subscriber": [Circular],
+                              "sharedSubscriber": [Circular],
+                            },
+                            "eventType": "didUpdateDimensions",
+                            "key": 0,
+                            "listener": [Function],
+                            "subscriber": [Circular],
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "_internalStatusUpdateCallback": [Function],
+                  "_key": -1,
+                  "_lastStatusUpdate": null,
+                  "_lastStatusUpdateTime": null,
+                  "_loaded": false,
+                  "_loading": false,
+                  "_onPlaybackStatusUpdate": null,
+                  "_subscriptions": Array [],
+                  "getStatusAsync": [Function],
+                },
+                "voices": undefined,
+              },
+            },
+          ],
+          "_key": "00000000-0000-0000-0000-000000000000",
+          "_stateSetter": [MockFunction],
+        },
+        CharacterQuizItem {
+          "_answered": undefined,
+          "_char": Character {
+            "_group": Array [
+              "A",
+              "B",
+            ],
+            "_name": "B",
+            "_voices": undefined,
+            "player": VoicePlayerMRU {
+              "playAfterLoad": false,
+              "playback": Sound {
+                "_coalesceStatusUpdatesInMillis": 100,
+                "_errorCallback": [Function],
+                "_eventEmitter": NativeEventEmitter {
+                  "_nativeModule": Object {
+                    "addListener": [MockFunction],
+                    "getAudioRecordingStatus": [MockFunction],
+                    "getStatusForSound": [MockFunction],
+                    "getStatusForVideo": [MockFunction],
+                    "loadForSound": [MockFunction],
+                    "loadForVideo": [MockFunction],
+                    "pauseAudioRecording": [MockFunction],
+                    "prepareAudioRecorder": [MockFunction],
+                    "removeListeners": [MockFunction],
+                    "replaySound": [MockFunction],
+                    "replayVideo": [MockFunction],
+                    "setAudioIsEnabled": [MockFunction],
+                    "setAudioMode": [MockFunction],
+                    "setErrorCallbackForSound": [MockFunction],
+                    "setStatusForSound": [MockFunction],
+                    "setStatusForVideo": [MockFunction],
+                    "startAudioRecording": [MockFunction],
+                    "stopAudioRecording": [MockFunction],
+                    "unloadAudioRecorder": [MockFunction],
+                    "unloadForSound": [MockFunction],
+                    "unloadForVideo": [MockFunction],
+                  },
+                  "_subscriber": EventSubscriptionVendor {
+                    "_currentSubscription": null,
+                    "_subscriptionsForType": Object {
+                      "didUpdateDimensions": Array [
+                        EmitterSubscription {
+                          "context": undefined,
+                          "emitter": RCTDeviceEventEmitter {
+                            "_subscriber": [Circular],
+                            "sharedSubscriber": [Circular],
+                          },
+                          "eventType": "didUpdateDimensions",
+                          "key": 0,
+                          "listener": [Function],
+                          "subscriber": [Circular],
+                        },
+                      ],
+                    },
+                  },
+                },
+                "_internalStatusUpdateCallback": [Function],
+                "_key": -1,
+                "_lastStatusUpdate": null,
+                "_lastStatusUpdateTime": null,
+                "_loaded": false,
+                "_loading": false,
+                "_onPlaybackStatusUpdate": null,
+                "_subscriptions": Array [],
+                "getStatusAsync": [Function],
+              },
+              "voices": undefined,
+            },
+          },
+          "_choices": Array [
+            Character {
+              "_group": Array [
+                "A",
+                "B",
+              ],
+              "_name": "A",
+              "_voices": undefined,
+              "player": VoicePlayerMRU {
+                "playAfterLoad": false,
+                "playback": Sound {
+                  "_coalesceStatusUpdatesInMillis": 100,
+                  "_errorCallback": [Function],
+                  "_eventEmitter": NativeEventEmitter {
+                    "_nativeModule": Object {
+                      "addListener": [MockFunction],
+                      "getAudioRecordingStatus": [MockFunction],
+                      "getStatusForSound": [MockFunction],
+                      "getStatusForVideo": [MockFunction],
+                      "loadForSound": [MockFunction],
+                      "loadForVideo": [MockFunction],
+                      "pauseAudioRecording": [MockFunction],
+                      "prepareAudioRecorder": [MockFunction],
+                      "removeListeners": [MockFunction],
+                      "replaySound": [MockFunction],
+                      "replayVideo": [MockFunction],
+                      "setAudioIsEnabled": [MockFunction],
+                      "setAudioMode": [MockFunction],
+                      "setErrorCallbackForSound": [MockFunction],
+                      "setStatusForSound": [MockFunction],
+                      "setStatusForVideo": [MockFunction],
+                      "startAudioRecording": [MockFunction],
+                      "stopAudioRecording": [MockFunction],
+                      "unloadAudioRecorder": [MockFunction],
+                      "unloadForSound": [MockFunction],
+                      "unloadForVideo": [MockFunction],
+                    },
+                    "_subscriber": EventSubscriptionVendor {
+                      "_currentSubscription": null,
+                      "_subscriptionsForType": Object {
+                        "didUpdateDimensions": Array [
+                          EmitterSubscription {
+                            "context": undefined,
+                            "emitter": RCTDeviceEventEmitter {
+                              "_subscriber": [Circular],
+                              "sharedSubscriber": [Circular],
+                            },
+                            "eventType": "didUpdateDimensions",
+                            "key": 0,
+                            "listener": [Function],
+                            "subscriber": [Circular],
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "_internalStatusUpdateCallback": [Function],
+                  "_key": -1,
+                  "_lastStatusUpdate": null,
+                  "_lastStatusUpdateTime": null,
+                  "_loaded": false,
+                  "_loading": false,
+                  "_onPlaybackStatusUpdate": null,
+                  "_subscriptions": Array [],
+                  "getStatusAsync": [Function],
+                },
+                "voices": undefined,
+              },
+            },
+            Character {
+              "_group": Array [
+                "A",
+                "B",
+              ],
+              "_name": "B",
+              "_voices": undefined,
+              "player": VoicePlayerMRU {
+                "playAfterLoad": false,
+                "playback": Sound {
+                  "_coalesceStatusUpdatesInMillis": 100,
+                  "_errorCallback": [Function],
+                  "_eventEmitter": NativeEventEmitter {
+                    "_nativeModule": Object {
+                      "addListener": [MockFunction],
+                      "getAudioRecordingStatus": [MockFunction],
+                      "getStatusForSound": [MockFunction],
+                      "getStatusForVideo": [MockFunction],
+                      "loadForSound": [MockFunction],
+                      "loadForVideo": [MockFunction],
+                      "pauseAudioRecording": [MockFunction],
+                      "prepareAudioRecorder": [MockFunction],
+                      "removeListeners": [MockFunction],
+                      "replaySound": [MockFunction],
+                      "replayVideo": [MockFunction],
+                      "setAudioIsEnabled": [MockFunction],
+                      "setAudioMode": [MockFunction],
+                      "setErrorCallbackForSound": [MockFunction],
+                      "setStatusForSound": [MockFunction],
+                      "setStatusForVideo": [MockFunction],
+                      "startAudioRecording": [MockFunction],
+                      "stopAudioRecording": [MockFunction],
+                      "unloadAudioRecorder": [MockFunction],
+                      "unloadForSound": [MockFunction],
+                      "unloadForVideo": [MockFunction],
+                    },
+                    "_subscriber": EventSubscriptionVendor {
+                      "_currentSubscription": null,
+                      "_subscriptionsForType": Object {
+                        "didUpdateDimensions": Array [
+                          EmitterSubscription {
+                            "context": undefined,
+                            "emitter": RCTDeviceEventEmitter {
+                              "_subscriber": [Circular],
+                              "sharedSubscriber": [Circular],
+                            },
+                            "eventType": "didUpdateDimensions",
+                            "key": 0,
+                            "listener": [Function],
+                            "subscriber": [Circular],
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "_internalStatusUpdateCallback": [Function],
+                  "_key": -1,
+                  "_lastStatusUpdate": null,
+                  "_lastStatusUpdateTime": null,
+                  "_loaded": false,
+                  "_loading": false,
+                  "_onPlaybackStatusUpdate": null,
+                  "_subscriptions": Array [],
+                  "getStatusAsync": [Function],
+                },
+                "voices": undefined,
+              },
+            },
+          ],
+          "_key": "00000000-0000-0000-0000-000000000000",
+          "_stateSetter": [MockFunction],
+        },
+      ]
+    }
+    decelerationRate="fast"
+    directionalLockEnabled={true}
+    disableVirtualization={false}
+    enableMomentum={false}
+    enableSnap={true}
+    firstItem={0}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    getItemLayout={undefined}
+    hasParallaxImages={false}
+    horizontal={true}
+    inactiveSlideOpacity={0.7}
+    inactiveSlideScale={0.9}
+    inactiveSlideShift={0}
+    initialNumToRender={2}
+    initialScrollIndex={undefined}
+    invertStickyHeaders={false}
+    inverted={false}
+    itemWidth={675}
+    keyExtractor={[Function]}
+    layout="default"
+    lockScrollTimeoutDuration={1000}
+    lockScrollWhileSnapping={false}
+    loop={false}
+    loopClonesPerSide={3}
+    maxToRenderPerBatch={2}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onResponderRelease={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    onSnapToItem={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    onTouchStart={[Function]}
+    overScrollMode="never"
+    pinchGestureEnabled={false}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    scrollEventThrottle={1}
+    scrollsToTop={false}
+    shouldOptimizeUpdates={true}
+    showsHorizontalScrollIndicator={false}
+    showsVerticalScrollIndicator={false}
+    slideStyle={Object {}}
+    sliderWidth={750}
+    stickyHeaderIndices={Array []}
+    style={
+      Object {
+        "flexDirection": "row",
+        "opacity": 0,
+        "width": 750,
+      }
+    }
+    swipeThreshold={20}
+    updateCellsBatchingPeriod={50}
+    useScrollView={false}
+    vertical={false}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={2}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={undefined}
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 1,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+              "width": 675,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flex": 1,
+                },
+                Object {
+                  "padding": 75,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderColor": "#FFFFFF",
+                  "borderWidth": 2,
+                }
+              }
+            >
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                collapsable={undefined}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": undefined,
+                    "height": 225,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "width": 225,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#000000",
+                      "fontSize": 24,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  ?
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "margin": 10,
+                  },
+                  Object {
+                    "flexDirection": "column",
+                  },
+                ]
+              }
+            >
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "backgroundColor": "#A9A9A9",
+                      "borderRadius": 150,
+                      "height": 75,
+                      "margin": 30,
+                      "width": 150,
+                    },
+                  ]
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontWeight": "bold",
+                      },
+                      Object {
+                        "fontSize": 30,
+                      },
+                    ]
+                  }
+                >
+                  B
+                </Text>
+              </View>
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "backgroundColor": "#A9A9A9",
+                      "borderRadius": 150,
+                      "height": 75,
+                      "margin": 30,
+                      "width": 150,
+                    },
+                  ]
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontWeight": "bold",
+                      },
+                      Object {
+                        "fontSize": 30,
+                      },
+                    ]
+                  }
+                >
+                  A
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          collapsable={undefined}
+          pointerEvents="box-none"
+          style={
+            Object {
+              "opacity": 0.7,
+              "transform": Array [
+                Object {
+                  "scale": 0.9,
+                },
+              ],
+              "width": 675,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flex": 1,
+                },
+                Object {
+                  "padding": 75,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderColor": "#FFFFFF",
+                  "borderWidth": 2,
+                }
+              }
+            >
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                collapsable={undefined}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": undefined,
+                    "height": 225,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "width": 225,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#000000",
+                      "fontSize": 24,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  ?
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "margin": 10,
+                  },
+                  Object {
+                    "flexDirection": "column",
+                  },
+                ]
+              }
+            >
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "backgroundColor": "#A9A9A9",
+                      "borderRadius": 150,
+                      "height": 75,
+                      "margin": 30,
+                      "width": 150,
+                    },
+                  ]
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontWeight": "bold",
+                      },
+                      Object {
+                        "fontSize": 30,
+                      },
+                    ]
+                  }
+                >
+                  A
+                </Text>
+              </View>
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "backgroundColor": "#A9A9A9",
+                      "borderRadius": 150,
+                      "height": 75,
+                      "margin": 30,
+                      "width": 150,
+                    },
+                  ]
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontWeight": "bold",
+                      },
+                      Object {
+                        "fontSize": 30,
+                      },
+                    ]
+                  }
+                >
+                  B
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
