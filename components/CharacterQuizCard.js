@@ -78,9 +78,13 @@ export default class CharacterQuizCard extends React.PureComponent {
                     margin: buttonMargin
                   }
                 ]}
-                activeOpacity={0.2}
+                activeOpacity={0.4}
                 underlayColor={
-                  correctChoice ? config.colors.success : config.colors.error
+                  charItem.answered
+                    ? correctChoice
+                      ? config.colors.success
+                      : config.colors.error
+                    : config.colors.neutral
                 }
                 onPress={() => {
                   choice.play();
