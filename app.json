@@ -31,7 +31,10 @@
       "bundleIdentifier": "com.ryanbrainard.gwi"
     },
     "android": {
-      "package": "com.ryanbrainard.gwi"
+      "package": "com.ryanbrainard.gwi",
+      "adaptiveIcon": {
+        "backgroundColor": "#3CB371"
+      }
     }
   }
 }
