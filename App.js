@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
+import { Platform, StatusBar } from "react-native";
 import {
   createBottomTabNavigator,
   createStackNavigator
@@ -30,6 +31,8 @@ export default class App extends React.Component {
   render() {
     return (
       <ErrorBoundary>
+        // Android status bar is controlled in app.json
+        {Platform.OS === "ios" && <StatusBar barStyle="dark-content" />}
         <DimensionsProvider>
           <RootStack onNavigationStateChange={trackScreenChanges} />
         </DimensionsProvider>
