@@ -69,8 +69,6 @@ export default class QuizDetailScreen extends React.Component {
     const { items, version } = this.state;
 
     const charItems = Object.values(items);
-    console.log(charItems.map(item => item.character.key)); // TODO
-
     const scoreItem = (
       <QuizScore items={charItems} restartQuiz={this.restartQuiz} />
     );

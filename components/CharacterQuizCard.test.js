@@ -5,21 +5,37 @@ import CharacterQuizItem from "../models/CharacterQuizItem";
 import CharacterQuizCard from "./CharacterQuizCard";
 import { provideColors } from "./ColorsContext";
 
-test("renders correctly", () => {
+const _CharacterQuizCard = provideColors(
+  { primary: "#FFA500" },
+  CharacterQuizCard
+);
+
+describe("renders correctly", () => {
   const group = ["A", "B", "C", "D"];
   group.forEach(char => Character.register(new Character(char, group)));
-
-  const char = Character.find("C");
+  const correctChar = Character.find("C");
+  const incorrectChar = Character.find("D");
   const stateSetter = jest.fn();
-  const charItem = new CharacterQuizItem(char, stateSetter, s => s);
+  const newItem = tap => {
+    const item = new CharacterQuizItem(correctChar, stateSetter, s => s);
+    if (tap != null) {
+      tap(item);
+    }
+    return item;
+  };
 
-  const _CharacterQuizCard = provideColors(
-    { primary: "#FFA500" },
-    CharacterQuizCard
-  );
+  const tests = {
+    new: newItem(),
+    success: newItem(item => (item.answered = correctChar)),
+    fail: newItem(item => (item.answered = incorrectChar))
+  };
 
-  const tree = renderer
-    .create(<_CharacterQuizCard charItem={charItem} />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+  Object.entries(tests).forEach(([testName, testItem]) => {
+    test(testName, () => {
+      const tree = renderer
+        .create(<_CharacterQuizCard charItem={testItem} />)
+        .toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
 });

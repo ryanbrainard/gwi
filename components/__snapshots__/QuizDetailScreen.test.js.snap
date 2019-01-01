@@ -62,7 +62,7 @@ exports[`renders correctly 1`] = `
       inactiveSlideOpacity={0.7}
       inactiveSlideScale={0.9}
       inactiveSlideShift={0}
-      initialNumToRender={7}
+      initialNumToRender={2}
       initialScrollIndex={undefined}
       invertStickyHeaders={false}
       inverted={false}
@@ -73,7 +73,7 @@ exports[`renders correctly 1`] = `
       lockScrollWhileSnapping={false}
       loop={false}
       loopClonesPerSide={3}
-      maxToRenderPerBatch={15}
+      maxToRenderPerBatch={2}
       numColumns={1}
       onContentSizeChange={[Function]}
       onEndReachedThreshold={2}
@@ -110,7 +110,7 @@ exports[`renders correctly 1`] = `
       useScrollView={false}
       vertical={false}
       viewabilityConfigCallbackPairs={Array []}
-      windowSize={15}
+      windowSize={2}
     >
       <View>
         <View

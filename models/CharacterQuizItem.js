@@ -18,11 +18,12 @@ export default class CharacterQuizItem {
     return this._char;
   }
 
-  // alias
+  // alias of character
   get char() {
     return this.character;
   }
 
+  // returns random choices in char's group
   get choices() {
     return this._choices;
   }
@@ -32,10 +33,12 @@ export default class CharacterQuizItem {
     this._stateSetter(this);
   }
 
+  // returns value answered and undefined if not yet answered. truthy test can be used to determine if answered yet
   get answered() {
     return this._answered;
   }
 
+  // returns undefined (not yet answered), true (answered and correct), or false (answered and incorrect)
   get success() {
     return this._answered && this._answered === this._char;
   }

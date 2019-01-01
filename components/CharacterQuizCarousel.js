@@ -34,6 +34,8 @@ export default class CharacterQuizCarousel extends React.Component {
   }
 
   renderInternal(width, height, items) {
+    const batchSize = 2;
+
     return (
       <View style={{ height: height * 0.8 }}>
         <Carousel
@@ -43,6 +45,9 @@ export default class CharacterQuizCarousel extends React.Component {
           loop={false}
           sliderWidth={width}
           itemWidth={width * 0.9}
+          initialNumToRender={batchSize}
+          maxToRenderPerBatch={batchSize}
+          windowSize={batchSize}
           data={items}
           renderItem={({ item }) => {
             if (item instanceof CharacterQuizItem) {

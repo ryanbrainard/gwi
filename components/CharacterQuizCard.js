@@ -126,8 +126,6 @@ export default class CharacterQuizCard extends React.PureComponent {
 
   renderResultIcon(success, size) {
     switch (success) {
-      case null:
-        return null;
       case true:
         return (
           <Feather

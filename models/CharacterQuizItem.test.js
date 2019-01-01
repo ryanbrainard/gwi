@@ -7,7 +7,10 @@ const testChar2 = new Character("b", [], {});
 const testChar3 = new Character("c", [], {});
 const testChar4 = new Character("d", [], {});
 const testStateSetter = jest.fn();
-const testCharQuizItem = new CharacterQuizItem(testChar, testStateSetter);
+let testCharQuizItem;
+beforeEach(() => {
+  testCharQuizItem = new CharacterQuizItem(testChar, testStateSetter);
+});
 
 it("#key", () => {
   expect(testCharQuizItem.key).toEqual(
@@ -48,11 +51,11 @@ it("#answered", () => {
 });
 
 it("#success", () => {
-  expect(testCharQuizItem.success).toBeFalsy();
+  expect(testCharQuizItem.success).toBe(undefined);
 
   testCharQuizItem.answered = testChar2;
-  expect(testCharQuizItem.success).toBeFalsy();
+  expect(testCharQuizItem.success).toBe(false);
 
   testCharQuizItem.answered = testChar;
-  expect(testCharQuizItem.success).toBeTruthy();
+  expect(testCharQuizItem.success).toBe(true);
 });
