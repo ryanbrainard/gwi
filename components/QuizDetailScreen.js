@@ -41,7 +41,7 @@ export default class QuizDetailScreen extends React.Component {
   }
 
   initializeItems() {
-    const { navigation, _shuffle, _genKey } = this.props;
+    const { navigation, _shuffle } = this.props;
 
     return _shuffle(navigation.getParam("charSet").characters).reduce(
       (items, char) => {
@@ -54,8 +54,6 @@ export default class QuizDetailScreen extends React.Component {
   }
 
   setCharacterItemState(item) {
-    const { _shuffle, _genKey } = this.props;
-
     this.setState(state => {
       const items = { ...state.items };
       items[item.key] = item;

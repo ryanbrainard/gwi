@@ -85,17 +85,15 @@ export default class CharacterQuizCard extends React.PureComponent {
                 onPress={() => {
                   choice.play();
 
+                  Segment.trackWithProperties("character-quiz-card-choice", {
+                    charName: charItem.character.name,
+                    choiceName: choice.name,
+                    success: correctChoice,
+                    previouslyAnswered: !!charItem.answered
+                  });
+
                   if (!charItem.answered) {
                     charItem.answered = choice;
-
-                    Segment.trackWithProperties(
-                      "character-quiz-card-choice-success",
-                      {
-                        charName: charItem.character.name,
-                        choiceName: choice.name,
-                        success: correctChoice
-                      }
-                    );
                   }
                 }}
               >
