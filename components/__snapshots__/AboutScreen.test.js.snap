@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    Korean Ear Trainer
+    Korean Ear
   </Text>
   <Text
     accessible={true}
