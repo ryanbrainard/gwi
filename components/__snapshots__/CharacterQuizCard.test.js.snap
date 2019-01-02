@@ -10,7 +10,7 @@ exports[`renders correctly fail 1`] = `
         "flex": 1,
       },
       Object {
-        "padding": 75,
+        "padding": 10,
       },
     ]
   }
@@ -44,10 +44,10 @@ exports[`renders correctly fail 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFA500",
-          "height": 225,
+          "height": 35,
           "justifyContent": "center",
           "opacity": 1,
-          "width": 225,
+          "width": 35,
         }
       }
       testID={undefined}
@@ -105,10 +105,10 @@ exports[`renders correctly fail 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -126,7 +126,7 @@ exports[`renders correctly fail 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -158,10 +158,10 @@ exports[`renders correctly fail 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -179,7 +179,7 @@ exports[`renders correctly fail 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -211,10 +211,10 @@ exports[`renders correctly fail 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -232,7 +232,7 @@ exports[`renders correctly fail 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -293,7 +293,7 @@ exports[`renders correctly new 1`] = `
         "flex": 1,
       },
       Object {
-        "padding": 75,
+        "padding": 10,
       },
     ]
   }
@@ -327,10 +327,10 @@ exports[`renders correctly new 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFA500",
-          "height": 225,
+          "height": 35,
           "justifyContent": "center",
           "opacity": 1,
-          "width": 225,
+          "width": 35,
         }
       }
       testID={undefined}
@@ -388,10 +388,10 @@ exports[`renders correctly new 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -409,7 +409,7 @@ exports[`renders correctly new 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -441,10 +441,10 @@ exports[`renders correctly new 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -462,7 +462,7 @@ exports[`renders correctly new 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -494,10 +494,10 @@ exports[`renders correctly new 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -515,7 +515,7 @@ exports[`renders correctly new 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -537,7 +537,7 @@ exports[`renders correctly success 1`] = `
         "flex": 1,
       },
       Object {
-        "padding": 75,
+        "padding": 10,
       },
     ]
   }
@@ -571,10 +571,10 @@ exports[`renders correctly success 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFA500",
-          "height": 225,
+          "height": 35,
           "justifyContent": "center",
           "opacity": 1,
-          "width": 225,
+          "width": 35,
         }
       }
       testID={undefined}
@@ -632,10 +632,10 @@ exports[`renders correctly success 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -653,7 +653,7 @@ exports[`renders correctly success 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -685,10 +685,10 @@ exports[`renders correctly success 1`] = `
           },
           Object {
             "backgroundColor": "#A9A9A9",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -706,7 +706,7 @@ exports[`renders correctly success 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }
@@ -738,10 +738,10 @@ exports[`renders correctly success 1`] = `
           },
           Object {
             "backgroundColor": "#2E8B57",
-            "borderRadius": 150,
-            "height": 75,
-            "margin": 30,
-            "width": 150,
+            "borderRadius": 25,
+            "height": 12.5,
+            "margin": 5,
+            "width": 25,
           },
         ]
       }
@@ -759,7 +759,7 @@ exports[`renders correctly success 1`] = `
               "fontWeight": "bold",
             },
             Object {
-              "fontSize": 30,
+              "fontSize": 5,
             },
           ]
         }

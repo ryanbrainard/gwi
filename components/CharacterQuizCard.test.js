@@ -38,7 +38,13 @@ describe("renders correctly", () => {
   Object.entries(tests).forEach(([testName, testItem]) => {
     test(testName, () => {
       const tree = renderer
-        .create(<_CharacterQuizCard charItem={testItem} />)
+        .create(
+          <_CharacterQuizCard
+            charItem={testItem}
+            parentLayout={{ width: 100, height: 200 }}
+            gotoNext={jest.fn()}
+          />
+        )
         .toJSON();
       expect(tree).toMatchSnapshot();
     });

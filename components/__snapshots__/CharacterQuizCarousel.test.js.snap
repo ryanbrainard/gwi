@@ -557,7 +557,7 @@ exports[`renders correctly 1`] = `
                   "flex": 1,
                 },
                 Object {
-                  "padding": 75,
+                  "padding": 9,
                 },
               ]
             }
@@ -591,10 +591,10 @@ exports[`renders correctly 1`] = `
                   Object {
                     "alignItems": "center",
                     "backgroundColor": undefined,
-                    "height": 225,
+                    "height": 31.499999999999996,
                     "justifyContent": "center",
                     "opacity": 1,
-                    "width": 225,
+                    "width": 31.499999999999996,
                   }
                 }
                 testID={undefined}
@@ -652,10 +652,10 @@ exports[`renders correctly 1`] = `
                     },
                     Object {
                       "backgroundColor": "#A9A9A9",
-                      "borderRadius": 150,
-                      "height": 75,
-                      "margin": 30,
-                      "width": 150,
+                      "borderRadius": 22.5,
+                      "height": 11.25,
+                      "margin": 4.5,
+                      "width": 22.5,
                     },
                   ]
                 }
@@ -673,7 +673,7 @@ exports[`renders correctly 1`] = `
                         "fontWeight": "bold",
                       },
                       Object {
-                        "fontSize": 30,
+                        "fontSize": 4.5,
                       },
                     ]
                   }
@@ -705,10 +705,10 @@ exports[`renders correctly 1`] = `
                     },
                     Object {
                       "backgroundColor": "#A9A9A9",
-                      "borderRadius": 150,
-                      "height": 75,
-                      "margin": 30,
-                      "width": 150,
+                      "borderRadius": 22.5,
+                      "height": 11.25,
+                      "margin": 4.5,
+                      "width": 22.5,
                     },
                   ]
                 }
@@ -726,7 +726,7 @@ exports[`renders correctly 1`] = `
                         "fontWeight": "bold",
                       },
                       Object {
-                        "fontSize": 30,
+                        "fontSize": 4.5,
                       },
                     ]
                   }
@@ -773,7 +773,7 @@ exports[`renders correctly 1`] = `
                   "flex": 1,
                 },
                 Object {
-                  "padding": 75,
+                  "padding": 9,
                 },
               ]
             }
@@ -807,10 +807,10 @@ exports[`renders correctly 1`] = `
                   Object {
                     "alignItems": "center",
                     "backgroundColor": undefined,
-                    "height": 225,
+                    "height": 31.499999999999996,
                     "justifyContent": "center",
                     "opacity": 1,
-                    "width": 225,
+                    "width": 31.499999999999996,
                   }
                 }
                 testID={undefined}
@@ -868,10 +868,10 @@ exports[`renders correctly 1`] = `
                     },
                     Object {
                       "backgroundColor": "#A9A9A9",
-                      "borderRadius": 150,
-                      "height": 75,
-                      "margin": 30,
-                      "width": 150,
+                      "borderRadius": 22.5,
+                      "height": 11.25,
+                      "margin": 4.5,
+                      "width": 22.5,
                     },
                   ]
                 }
@@ -889,7 +889,7 @@ exports[`renders correctly 1`] = `
                         "fontWeight": "bold",
                       },
                       Object {
-                        "fontSize": 30,
+                        "fontSize": 4.5,
                       },
                     ]
                   }
@@ -921,10 +921,10 @@ exports[`renders correctly 1`] = `
                     },
                     Object {
                       "backgroundColor": "#A9A9A9",
-                      "borderRadius": 150,
-                      "height": 75,
-                      "margin": 30,
-                      "width": 150,
+                      "borderRadius": 22.5,
+                      "height": 11.25,
+                      "margin": 4.5,
+                      "width": 22.5,
                     },
                   ]
                 }
@@ -942,7 +942,7 @@ exports[`renders correctly 1`] = `
                         "fontWeight": "bold",
                       },
                       Object {
-                        "fontSize": 30,
+                        "fontSize": 4.5,
                       },
                     ]
                   }

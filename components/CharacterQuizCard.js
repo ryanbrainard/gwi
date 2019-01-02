@@ -17,44 +17,43 @@ import { DimensionsConsumer } from "./DimensionsContext";
 export default class CharacterQuizCard extends React.PureComponent {
   static propTypes = {
     charItem: PropTypes.instanceOf(CharacterQuizItem).isRequired,
-    gotoNext: PropTypes.func
+    gotoNext: PropTypes.func.isRequired,
+    parentLayout: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number
+    }).isRequired
   };
 
   render() {
-    const { charItem, gotoNext } = this.props;
+    const { charItem, gotoNext, parentLayout } = this.props;
 
-    return (
-      <DimensionsConsumer>
-        {({ isPortrait, window: { width, height } }) =>
-          this.renderInternal(isPortrait, width, height, charItem, gotoNext)
-        }
-      </DimensionsConsumer>
-    );
-  }
-
-  renderInternal(isPortrait, width, height, charItem, gotoNext) {
-    const containerPadding = Math.min(width, height) / 10;
-    const buttonWidth = Math.min(width, height) / 5;
+    const containerPadding =
+      Math.min(parentLayout.width, parentLayout.height) / 10;
+    const charTileSize =
+      Math.min(parentLayout.width, parentLayout.height) * 0.35;
+    const buttonWidth = Math.min(parentLayout.width, parentLayout.height) / 4;
     const buttonHeight = buttonWidth / 2;
     const buttonTextSize = buttonWidth / 5;
     const buttonMargin = buttonWidth / 5;
+    const buttonsOrientation =
+      parentLayout.height / buttonHeight > 8 ? "column" : "row";
     const resultIconSize = buttonTextSize * 2;
-    const nextSize = buttonTextSize * 2.5;
 
+    const nextSize = buttonTextSize * 2.5;
     return (
       <View
-        key={charItem.character.key + isPortrait}
+        key={charItem.character.key + parentLayout.width}
         style={[styles.container, { padding: containerPadding }]}
       >
         <CharacterTile
           char={charItem.character}
           show={!!charItem.answered}
-          size={Math.min(width, height) * 0.3}
+          size={charTileSize}
         />
         <View
           style={[
             styles.choicesContainer,
-            { flexDirection: isPortrait ? "column" : "row" }
+            { flexDirection: buttonsOrientation }
           ]}
         >
           {charItem.choices.map(choice => {

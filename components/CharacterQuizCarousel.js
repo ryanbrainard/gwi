@@ -35,15 +35,19 @@ export default class CharacterQuizCarousel extends React.Component {
       );
     }
 
+    const itemHeight = parentLayout.height * 0.9;
+    const itemWidth = parentLayout.width * 0.9;
+    const itemLayout = { height: itemHeight, width: itemWidth };
+
     return (
-      <View style={{ height: parentLayout.height * 0.9 }}>
+      <View style={{ height: itemHeight }}>
         <Carousel
           ref={c => {
             this._carousel = c;
           }}
           loop={false}
           sliderWidth={parentLayout.width}
-          itemWidth={parentLayout.width * 0.9}
+          itemWidth={itemWidth}
           initialNumToRender={batchSize}
           maxToRenderPerBatch={batchSize}
           windowSize={batchSize}
@@ -53,6 +57,7 @@ export default class CharacterQuizCarousel extends React.Component {
               return (
                 <CharacterQuizCard
                   charItem={item}
+                  parentLayout={itemLayout}
                   gotoNext={this._carousel.snapToNext.bind(this._carousel)}
                 />
               );

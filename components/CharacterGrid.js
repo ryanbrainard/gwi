@@ -26,8 +26,11 @@ export default class CharacterGrid extends React.Component {
       );
     }
 
-    const isPortrait = parentLayout.height > parentLayout.width;
-    const cols = isPortrait ? 3 : 5;
+    const baseCols = 3;
+    const baseColWidth = parentLayout.width / baseCols;
+    const sizeDiff = Math.max(0, parentLayout.width - parentLayout.height);
+    const extraCols = Math.floor(sizeDiff / baseColWidth);
+    const cols = baseCols + extraCols;
     const size = (parentLayout.width / cols) * 0.9;
 
     return (
