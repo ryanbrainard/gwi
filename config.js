@@ -499,18 +499,18 @@ export default {
           }
         }
       },
-      {
-        심: {
-          voices: {
-            jane: require("./assets/sounds/voices/jane/심.mp3")
-          }
-        },
-        씸씸: {
-          voices: {
-            jane: require("./assets/sounds/voices/jane/씸씸.mp3")
-          }
-        }
-      },
+      // {
+      //   심: {
+      //     voices: {
+      //       jane: require("./assets/sounds/voices/jane/심.mp3")
+      //     }
+      //   },
+      //   씸씸: {
+      //     voices: {
+      //       jane: require("./assets/sounds/voices/jane/씸씸.mp3")
+      //     }
+      //   }
+      // },
       {
         쓸: {
           voices: {
