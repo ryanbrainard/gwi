@@ -45,6 +45,10 @@ export default class QuizDetailScreen extends React.Component {
 
     return _shuffle(navigation.getParam("charSet").characters).reduce(
       (items, char) => {
+        if (char.group.length < 2) {
+          return items;
+        }
+
         const item = this.initializeItem(char);
         items[item.key] = item;
         return items;
