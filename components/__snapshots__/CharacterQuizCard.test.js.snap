@@ -10,7 +10,7 @@ exports[`renders correctly fail 1`] = `
         "flex": 1,
       },
       Object {
-        "padding": 10,
+        "padding": 6.666666666666667,
       },
     ]
   }
@@ -107,7 +107,7 @@ exports[`renders correctly fail 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -160,7 +160,7 @@ exports[`renders correctly fail 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -213,7 +213,7 @@ exports[`renders correctly fail 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -293,7 +293,7 @@ exports[`renders correctly new 1`] = `
         "flex": 1,
       },
       Object {
-        "padding": 10,
+        "padding": 6.666666666666667,
       },
     ]
   }
@@ -390,7 +390,7 @@ exports[`renders correctly new 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -443,7 +443,7 @@ exports[`renders correctly new 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -496,7 +496,7 @@ exports[`renders correctly new 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -537,7 +537,7 @@ exports[`renders correctly success 1`] = `
         "flex": 1,
       },
       Object {
-        "padding": 10,
+        "padding": 6.666666666666667,
       },
     ]
   }
@@ -634,7 +634,7 @@ exports[`renders correctly success 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -687,7 +687,7 @@ exports[`renders correctly success 1`] = `
             "backgroundColor": "#A9A9A9",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]
@@ -740,7 +740,7 @@ exports[`renders correctly success 1`] = `
             "backgroundColor": "#2E8B57",
             "borderRadius": 25,
             "height": 12.5,
-            "margin": 4.166666666666667,
+            "margin": 3.125,
             "width": 25,
           },
         ]

@@ -28,13 +28,13 @@ export default class CharacterQuizCard extends React.PureComponent {
     const { charItem, gotoNext, parentLayout } = this.props;
 
     const containerPadding =
-      Math.min(parentLayout.width, parentLayout.height) / 10;
+      Math.min(parentLayout.width, parentLayout.height) / 15;
     const charTileSize =
       Math.min(parentLayout.width, parentLayout.height) * 0.35;
     const buttonWidth = Math.min(parentLayout.width, parentLayout.height) / 4;
     const buttonHeight = buttonWidth / 2;
     const buttonTextSize = buttonWidth / 5;
-    const buttonMargin = buttonWidth / 6;
+    const buttonMargin = buttonWidth / 8;
     const buttonsOrientation =
       parentLayout.height / buttonHeight > 8 ? "column" : "row";
     const resultIconSize = buttonTextSize * 2;

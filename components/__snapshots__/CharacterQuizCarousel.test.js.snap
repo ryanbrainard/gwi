@@ -557,7 +557,7 @@ exports[`renders correctly 1`] = `
                   "flex": 1,
                 },
                 Object {
-                  "padding": 9,
+                  "padding": 6,
                 },
               ]
             }
@@ -654,7 +654,7 @@ exports[`renders correctly 1`] = `
                       "backgroundColor": "#A9A9A9",
                       "borderRadius": 22.5,
                       "height": 11.25,
-                      "margin": 3.75,
+                      "margin": 2.8125,
                       "width": 22.5,
                     },
                   ]
@@ -707,7 +707,7 @@ exports[`renders correctly 1`] = `
                       "backgroundColor": "#A9A9A9",
                       "borderRadius": 22.5,
                       "height": 11.25,
-                      "margin": 3.75,
+                      "margin": 2.8125,
                       "width": 22.5,
                     },
                   ]
@@ -773,7 +773,7 @@ exports[`renders correctly 1`] = `
                   "flex": 1,
                 },
                 Object {
-                  "padding": 9,
+                  "padding": 6,
                 },
               ]
             }
@@ -870,7 +870,7 @@ exports[`renders correctly 1`] = `
                       "backgroundColor": "#A9A9A9",
                       "borderRadius": 22.5,
                       "height": 11.25,
-                      "margin": 3.75,
+                      "margin": 2.8125,
                       "width": 22.5,
                     },
                   ]
@@ -923,7 +923,7 @@ exports[`renders correctly 1`] = `
                       "backgroundColor": "#A9A9A9",
                       "borderRadius": 22.5,
                       "height": 11.25,
-                      "margin": 3.75,
+                      "margin": 2.8125,
                       "width": 22.5,
                     },
                   ]
