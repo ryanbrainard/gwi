@@ -78,7 +78,7 @@ export default class CharacterQuizCard extends React.PureComponent {
                     margin: buttonMargin
                   }
                 ]}
-                activeOpacity={0.4}
+                activeOpacity={0.5}
                 underlayColor={
                   charItem.answered
                     ? correctChoice
