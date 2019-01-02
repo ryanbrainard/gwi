@@ -1,22 +1,22 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Segment } from "expo";
 import React from "react";
-import { Platform, StatusBar } from "react-native";
+import { Platform, SafeAreaView, StatusBar } from "react-native";
 import {
   createBottomTabNavigator,
   createStackNavigator
 } from "react-navigation";
+import Sentry from "sentry-expo";
+import secrets from "./.secrets";
 import AboutScreen from "./components/AboutScreen";
+import { provideColors } from "./components/ColorsContext";
 import { DimensionsProvider } from "./components/DimensionsContext";
 import PracticeDetailScreen from "./components/PracticeDetailScreen";
 import PracticeListScreen from "./components/PracticeListScreen";
 import QuizDetailScreen from "./components/QuizDetailScreen";
 import QuizListScreen from "./components/QuizListScreen";
 import SettingsScreen from "./components/SettingsScreen";
-import { provideColors } from "./components/ColorsContext";
 import config from "./config";
-import secrets from "./.secrets";
-import { Segment } from "expo";
-import Sentry from "sentry-expo";
 
 if (secrets.segment) {
   Segment.initialize(secrets.segment);
@@ -33,7 +33,14 @@ export default class App extends React.Component {
       <ErrorBoundary>
         {Platform.OS === "ios" && <StatusBar barStyle="dark-content" />}
         <DimensionsProvider>
-          <RootStack onNavigationStateChange={trackScreenChanges} />
+          <SafeAreaView
+            style={{
+              flex: 1,
+              backgroundColor: config.colors.navigation.header.background
+            }}
+          >
+            <RootStack onNavigationStateChange={trackScreenChanges} />
+          </SafeAreaView>
         </DimensionsProvider>
       </ErrorBoundary>
     );

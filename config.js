@@ -658,6 +658,7 @@ export default {
   colors: {
     background: "#FFFFFF",
     text: "#000000",
+    primary: "#3CB371",
     neutral: "#A9A9A9",
     success: "#2E8B57",
     error: "#FF6347",
@@ -669,6 +670,11 @@ export default {
     },
     about: {
       primary: "#3CB371"
+    },
+    navigation: {
+      header: {
+        background: "#F7F7F7"
+      }
     }
   }
 };
