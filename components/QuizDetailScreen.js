@@ -87,8 +87,7 @@ export default class QuizDetailScreen extends React.Component {
   }
 
   render() {
-    const { items, version } = this.state;
-
+    const { items, version, layout } = this.state;
     const charItems = Object.values(items);
     const scoreItem = (
       <QuizScore items={charItems} restartQuiz={this.restartQuiz} />
@@ -96,8 +95,14 @@ export default class QuizDetailScreen extends React.Component {
     const carouselItems = charItems.concat(scoreItem);
 
     return (
-      <View key={version} style={styles.container}>
-        <CharacterQuizCarousel items={carouselItems} />
+      <View
+        key={version}
+        style={styles.container}
+        onLayout={event => {
+          this.setState({ layout: event.nativeEvent.layout });
+        }}
+      >
+        <CharacterQuizCarousel items={carouselItems} parentLayout={layout} />
       </View>
     );
   }

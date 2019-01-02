@@ -212,10 +212,10 @@ exports[`renders correctly 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": undefined,
-                  "height": 225,
+                  "height": 30.000000000000004,
                   "justifyContent": "center",
                   "opacity": 1,
-                  "width": 225,
+                  "width": 30.000000000000004,
                 }
               }
               testID={undefined}
@@ -266,10 +266,10 @@ exports[`renders correctly 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": undefined,
-                  "height": 225,
+                  "height": 30.000000000000004,
                   "justifyContent": "center",
                   "opacity": 1,
-                  "width": 225,
+                  "width": 30.000000000000004,
                 }
               }
               testID={undefined}

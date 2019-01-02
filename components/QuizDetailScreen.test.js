@@ -26,6 +26,7 @@ test("renders correctly", () => {
     />
   );
   const inst = elem.getInstance();
+  inst.setState({ layout: { width: 100, height: 200 } });
 
   expect(Object.keys(inst.state.items)).toEqual(["0", "1"]);
   expect(elem.toJSON()).toMatchSnapshot();

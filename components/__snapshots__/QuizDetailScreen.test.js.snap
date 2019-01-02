@@ -2,6 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <View
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -13,7 +14,7 @@ exports[`renders correctly 1`] = `
   <View
     style={
       Object {
-        "height": 1067.2,
+        "height": 180,
       }
     }
   >
@@ -35,8 +36,8 @@ exports[`renders correctly 1`] = `
         Array [
           Object {},
           Object {
-            "paddingLeft": 37.5,
-            "paddingRight": 37.5,
+            "paddingLeft": 5,
+            "paddingRight": 5,
           },
         ]
       }
@@ -913,7 +914,7 @@ exports[`renders correctly 1`] = `
       initialScrollIndex={undefined}
       invertStickyHeaders={false}
       inverted={false}
-      itemWidth={675}
+      itemWidth={90}
       keyExtractor={[Function]}
       layout="default"
       lockScrollTimeoutDuration={1000}
@@ -943,13 +944,13 @@ exports[`renders correctly 1`] = `
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
       slideStyle={Object {}}
-      sliderWidth={750}
+      sliderWidth={100}
       stickyHeaderIndices={Array []}
       style={
         Object {
           "flexDirection": "row",
           "opacity": 0,
-          "width": 750,
+          "width": 100,
         }
       }
       swipeThreshold={20}
@@ -997,6 +998,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly 2`] = `
 <View
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -1008,7 +1010,7 @@ exports[`renders correctly 2`] = `
   <View
     style={
       Object {
-        "height": 1067.2,
+        "height": 180,
       }
     }
   >
@@ -1030,8 +1032,8 @@ exports[`renders correctly 2`] = `
         Array [
           Object {},
           Object {
-            "paddingLeft": 37.5,
-            "paddingRight": 37.5,
+            "paddingLeft": 5,
+            "paddingRight": 5,
           },
         ]
       }
@@ -2464,7 +2466,7 @@ exports[`renders correctly 2`] = `
       initialScrollIndex={undefined}
       invertStickyHeaders={false}
       inverted={false}
-      itemWidth={675}
+      itemWidth={90}
       keyExtractor={[Function]}
       layout="default"
       lockScrollTimeoutDuration={1000}
@@ -2494,13 +2496,13 @@ exports[`renders correctly 2`] = `
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
       slideStyle={Object {}}
-      sliderWidth={750}
+      sliderWidth={100}
       stickyHeaderIndices={Array []}
       style={
         Object {
           "flexDirection": "row",
           "opacity": 0,
-          "width": 750,
+          "width": 100,
         }
       }
       swipeThreshold={20}
@@ -2548,6 +2550,7 @@ exports[`renders correctly 2`] = `
 
 exports[`renders correctly 3`] = `
 <View
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -2559,7 +2562,7 @@ exports[`renders correctly 3`] = `
   <View
     style={
       Object {
-        "height": 1067.2,
+        "height": 180,
       }
     }
   >
@@ -2581,8 +2584,8 @@ exports[`renders correctly 3`] = `
         Array [
           Object {},
           Object {
-            "paddingLeft": 37.5,
-            "paddingRight": 37.5,
+            "paddingLeft": 5,
+            "paddingRight": 5,
           },
         ]
       }
@@ -4149,7 +4152,7 @@ exports[`renders correctly 3`] = `
       initialScrollIndex={undefined}
       invertStickyHeaders={false}
       inverted={false}
-      itemWidth={675}
+      itemWidth={90}
       keyExtractor={[Function]}
       layout="default"
       lockScrollTimeoutDuration={1000}
@@ -4179,13 +4182,13 @@ exports[`renders correctly 3`] = `
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
       slideStyle={Object {}}
-      sliderWidth={750}
+      sliderWidth={100}
       stickyHeaderIndices={Array []}
       style={
         Object {
           "flexDirection": "row",
           "opacity": 0,
-          "width": 750,
+          "width": 100,
         }
       }
       swipeThreshold={20}
@@ -4233,6 +4236,7 @@ exports[`renders correctly 3`] = `
 
 exports[`renders correctly 4`] = `
 <View
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -4244,7 +4248,7 @@ exports[`renders correctly 4`] = `
   <View
     style={
       Object {
-        "height": 1067.2,
+        "height": 180,
       }
     }
   >
@@ -4266,8 +4270,8 @@ exports[`renders correctly 4`] = `
         Array [
           Object {},
           Object {
-            "paddingLeft": 37.5,
-            "paddingRight": 37.5,
+            "paddingLeft": 5,
+            "paddingRight": 5,
           },
         ]
       }
@@ -5144,7 +5148,7 @@ exports[`renders correctly 4`] = `
       initialScrollIndex={undefined}
       invertStickyHeaders={false}
       inverted={false}
-      itemWidth={675}
+      itemWidth={90}
       keyExtractor={[Function]}
       layout="default"
       lockScrollTimeoutDuration={1000}
@@ -5174,13 +5178,13 @@ exports[`renders correctly 4`] = `
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
       slideStyle={Object {}}
-      sliderWidth={750}
+      sliderWidth={100}
       stickyHeaderIndices={Array []}
       style={
         Object {
           "flexDirection": "row",
           "opacity": 0,
-          "width": 750,
+          "width": 100,
         }
       }
       swipeThreshold={20}

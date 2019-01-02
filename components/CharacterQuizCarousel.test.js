@@ -21,7 +21,12 @@ test("renders correctly", () => {
   const items = [newItem(Character.find("A")), newItem(Character.find("B"))];
 
   const tree = renderer
-    .create(<_CharacterQuizCarousel items={items} />)
+    .create(
+      <_CharacterQuizCarousel
+        items={items}
+        parentLayout={{ width: 100, height: 200 }}
+      />
+    )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

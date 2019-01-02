@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { View } from "react-native";
+import { ActivityIndicator, View } from "react-native";
 import Carousel from "react-native-snap-carousel";
+import config from "../config";
 import CharacterQuizItem from "../models/CharacterQuizItem";
 import CharacterQuizCard from "./CharacterQuizCard";
-import { DimensionsConsumer } from "./DimensionsContext";
 
 export default class CharacterQuizCarousel extends React.Component {
   static propTypes = {
@@ -13,7 +13,11 @@ export default class CharacterQuizCarousel extends React.Component {
         PropTypes.instanceOf(CharacterQuizItem),
         PropTypes.element
       ])
-    ).isRequired
+    ).isRequired,
+    parentLayout: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number
+    })
   };
 
   constructor(props) {
@@ -22,29 +26,24 @@ export default class CharacterQuizCarousel extends React.Component {
   }
 
   render() {
-    const { items } = this.props;
-
-    return (
-      <DimensionsConsumer>
-        {({ window: { width, height } }) =>
-          this.renderInternal(width, height, items)
-        }
-      </DimensionsConsumer>
-    );
-  }
-
-  renderInternal(width, height, items) {
     const batchSize = 2;
+    const { items, parentLayout } = this.props;
+
+    if (!parentLayout) {
+      return (
+        <ActivityIndicator size="large" color={config.colors.quiz.primary} />
+      );
+    }
 
     return (
-      <View style={{ height: height * 0.8 }}>
+      <View style={{ height: parentLayout.height * 0.9 }}>
         <Carousel
           ref={c => {
             this._carousel = c;
           }}
           loop={false}
-          sliderWidth={width}
-          itemWidth={width * 0.9}
+          sliderWidth={parentLayout.width}
+          itemWidth={parentLayout.width * 0.9}
           initialNumToRender={batchSize}
           maxToRenderPerBatch={batchSize}
           windowSize={batchSize}

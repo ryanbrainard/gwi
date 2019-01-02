@@ -1,14 +1,16 @@
 import React from "react";
-import PracticeDetailScreen from "./PracticeDetailScreen";
 import renderer from "react-test-renderer";
+import PracticeDetailScreen from "./PracticeDetailScreen";
 
 test("renders correctly", () => {
   const navigation = {
     getParam: jest.fn(() => ({ characters: [] }))
   };
 
-  const tree = renderer
-    .create(<PracticeDetailScreen navigation={navigation} />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+  const elem = renderer.create(
+    <PracticeDetailScreen navigation={navigation} />
+  );
+  const inst = elem.getInstance();
+  inst.setState({ layout: { width: 100, height: 200 } });
+  expect(elem.toJSON()).toMatchSnapshot();
 });

@@ -7,7 +7,12 @@ import { provideColors } from "./ColorsContext";
 test("renders correctly", () => {
   const _CharacterGrid = provideColors({}, CharacterGrid);
   const tree = renderer
-    .create(<_CharacterGrid chars={[new Character("A"), new Character("B")]} />)
+    .create(
+      <_CharacterGrid
+        chars={[new Character("A"), new Character("B")]}
+        parentLayout={{ width: 100, height: 200 }}
+      />
+    )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
