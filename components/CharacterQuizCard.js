@@ -34,7 +34,7 @@ export default class CharacterQuizCard extends React.PureComponent {
     const buttonWidth = Math.min(parentLayout.width, parentLayout.height) / 4;
     const buttonHeight = buttonWidth / 2;
     const buttonTextSize = buttonWidth / 5;
-    const buttonMargin = buttonWidth / 5;
+    const buttonMargin = buttonWidth / 6;
     const buttonsOrientation =
       parentLayout.height / buttonHeight > 8 ? "column" : "row";
     const resultIconSize = buttonTextSize * 2;
