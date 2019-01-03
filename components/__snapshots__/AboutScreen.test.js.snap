@@ -59,7 +59,7 @@ exports[`renders correctly 1`] = `
     ellipsizeMode="tail"
   >
     v
-    0.2.9
+    1.0.0
   </Text>
   <Text
     accessible={true}
