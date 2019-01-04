@@ -1,6 +1,6 @@
 ![Korean Ear](dist/marketing/feature-graphic.png)
 
-This project, code named `gwi` (귀, Korean for "ear"), is an iOS and Android mobile app that where users practice listening to commonly confused Korean sounds and quiz themselves to see if they can distinguish them.
+This project, code named `gwi` (귀, Korean for "ear"), is an iOS and Android mobile app where users practice listening to commonly confused Korean sounds and quiz themselves to see if they can distinguish them.
 
 ---
 
