@@ -19,11 +19,14 @@ export default class CharacterTile extends React.Component {
 
   render() {
     const { char, size, show } = this.props;
+    const fontSize = size / 4;
+    const borderWidth = size / 60;
+    console.log({ borderWidth });
 
     return (
       <ColorsContext.Consumer>
         {colors => (
-          <View style={styles.container}>
+          <View style={[styles.container, { borderWidth }]}>
             <TouchableOpacity
               style={[
                 styles.button,
@@ -41,7 +44,11 @@ export default class CharacterTile extends React.Component {
                 char.play();
               }}
             >
-              {<Text style={styles.text}>{show ? char.name : "?"}</Text>}
+              {
+                <Text style={[styles.text, { fontSize }]}>
+                  {show ? char.name : "?"}
+                </Text>
+              }
             </TouchableOpacity>
           </View>
         )}
@@ -52,7 +59,6 @@ export default class CharacterTile extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 2,
     borderColor: config.colors.background
   },
   button: {
@@ -61,7 +67,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: "bold",
-    fontSize: 24,
     color: config.colors.text
   }
 });

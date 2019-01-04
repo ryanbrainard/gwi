@@ -564,10 +564,14 @@ exports[`renders correctly 1`] = `
           >
             <View
               style={
-                Object {
-                  "borderColor": "#FFFFFF",
-                  "borderWidth": 2,
-                }
+                Array [
+                  Object {
+                    "borderColor": "#FFFFFF",
+                  },
+                  Object {
+                    "borderWidth": 0.5249999999999999,
+                  },
+                ]
               }
             >
               <View
@@ -605,11 +609,15 @@ exports[`renders correctly 1`] = `
                   allowFontScaling={true}
                   ellipsizeMode="tail"
                   style={
-                    Object {
-                      "color": "#000000",
-                      "fontSize": 24,
-                      "fontWeight": "bold",
-                    }
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontWeight": "bold",
+                      },
+                      Object {
+                        "fontSize": 7.874999999999999,
+                      },
+                    ]
                   }
                 >
                   ?
@@ -780,10 +788,14 @@ exports[`renders correctly 1`] = `
           >
             <View
               style={
-                Object {
-                  "borderColor": "#FFFFFF",
-                  "borderWidth": 2,
-                }
+                Array [
+                  Object {
+                    "borderColor": "#FFFFFF",
+                  },
+                  Object {
+                    "borderWidth": 0.5249999999999999,
+                  },
+                ]
               }
             >
               <View
@@ -821,11 +833,15 @@ exports[`renders correctly 1`] = `
                   allowFontScaling={true}
                   ellipsizeMode="tail"
                   style={
-                    Object {
-                      "color": "#000000",
-                      "fontSize": 24,
-                      "fontWeight": "bold",
-                    }
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontWeight": "bold",
+                      },
+                      Object {
+                        "fontSize": 7.874999999999999,
+                      },
+                    ]
                   }
                 >
                   ?

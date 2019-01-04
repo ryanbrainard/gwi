@@ -17,10 +17,14 @@ exports[`renders correctly fail 1`] = `
 >
   <View
     style={
-      Object {
-        "borderColor": "#FFFFFF",
-        "borderWidth": 2,
-      }
+      Array [
+        Object {
+          "borderColor": "#FFFFFF",
+        },
+        Object {
+          "borderWidth": 0.5833333333333334,
+        },
+      ]
     }
   >
     <View
@@ -58,11 +62,15 @@ exports[`renders correctly fail 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "#000000",
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "color": "#000000",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontSize": 8.75,
+            },
+          ]
         }
       >
         C
@@ -300,10 +308,14 @@ exports[`renders correctly new 1`] = `
 >
   <View
     style={
-      Object {
-        "borderColor": "#FFFFFF",
-        "borderWidth": 2,
-      }
+      Array [
+        Object {
+          "borderColor": "#FFFFFF",
+        },
+        Object {
+          "borderWidth": 0.5833333333333334,
+        },
+      ]
     }
   >
     <View
@@ -341,11 +353,15 @@ exports[`renders correctly new 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "#000000",
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "color": "#000000",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontSize": 8.75,
+            },
+          ]
         }
       >
         ?
@@ -544,10 +560,14 @@ exports[`renders correctly success 1`] = `
 >
   <View
     style={
-      Object {
-        "borderColor": "#FFFFFF",
-        "borderWidth": 2,
-      }
+      Array [
+        Object {
+          "borderColor": "#FFFFFF",
+        },
+        Object {
+          "borderWidth": 0.5833333333333334,
+        },
+      ]
     }
   >
     <View
@@ -585,11 +605,15 @@ exports[`renders correctly success 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "#000000",
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
+          Array [
+            Object {
+              "color": "#000000",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontSize": 8.75,
+            },
+          ]
         }
       >
         C

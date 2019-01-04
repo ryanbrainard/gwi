@@ -26,12 +26,13 @@ export default class CharacterGrid extends React.Component {
       );
     }
 
+    const shrinkage = 0.9;
     const baseCols = 3;
-    const baseColWidth = parentLayout.width / baseCols;
+    const baseColWidth = (parentLayout.width * shrinkage) / baseCols;
     const sizeDiff = Math.max(0, parentLayout.width - parentLayout.height);
     const extraCols = Math.floor(sizeDiff / baseColWidth);
     const cols = baseCols + extraCols;
-    const size = (parentLayout.width / cols) * 0.9;
+    const size = (parentLayout.width / cols) * shrinkage;
 
     return (
       <View style={styles.container}>
