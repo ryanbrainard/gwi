@@ -1,4 +1,6 @@
-# gwi (귀): Korean Ear Training Mobile App
+![Korean Ear](dist/marketing/feature-graphic.png)
+
+This project is an iOS and Android mobile app that where users practice listening to commonly confused Korean sounds and quiz themselves to see if they can distinguish them.
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
